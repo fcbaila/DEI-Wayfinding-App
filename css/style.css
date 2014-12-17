@@ -1,0 +1,80 @@
+html {
+font-family: 'Raleway', serif;
+font-size: 16px;
+font-weight: 400;
+vertical-align:baseline;
+line-height: 18px;
+color: black;
+}
+
+html, body {
+margin: 0;
+padding: 0;
+background-color: white;
+}
+
+a, a:link, a:active, a:visited { text-decoration: none; color: rgb(133, 107, 80); }
+a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
+
+
+#wrapper
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#construct_container {
+	width: 1280px;
+	height: 1024px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -512px;
+	margin-left: -640px;
+	background-color: rgb(31, 31, 31);
+}
+
+#construct_mapa {
+	width: 960px;
+	height: 480px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -475px;
+	margin-top: -235px;
+}
+
+.mapa_slot {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#grid_container {
+	width: 1280px;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.grid {
+	width: 159px;
+	border-right: 1px solid rgba(207, 207, 207, 0.1);
+	height: 100%;
+	float: left;
+}
