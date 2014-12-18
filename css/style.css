@@ -50,6 +50,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   position: absolute;
   top:0;
   left: 0;
+  display:none;
 }
 
 #container {
@@ -105,14 +106,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 
 
-
-.line{
-  line-height:130%;
-}
+/* GENERAL----------------------*/
 .text{
   font-family: Ed-regular;
   font-size: 52px;
   color:white;
+  line-height:130%;
 }
 .bold{
   font-family: Ed-bold !important;
@@ -129,7 +128,13 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   width: 300px;
   border-bottom: 3px solid white;
 }
-
+.grid-5{
+  margin-left:795px;
+}
+.grid-1{
+  margin-left:159px;
+}
+/* INDEX----------------------*/
 #initial-message{
   height:50px;
   /* 1024 / 2 = 512 - 25 = 487*/
@@ -153,6 +158,38 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-top: 900px;
   margin-left: 159px;
   display:none;
+}
+/* PROFESSORS-PAGE--------------*/
+#page-title{
+  height:50px;
+  margin-top: 200px;
+  margin-left: 159px;
+}
+#search-professors{
+  height:50px;
+  margin-top: 200px;
+}
+#professors-filter{
+  margin-top: 200px;
+  max-width: 318px;
+}
+#professors-list{
+  margin-top: 200px;
+  max-width: 477px;
+}
+
+
+#rooms-list{
+  margin-top: 200px;
+  max-width: 477px;
+}
+#search-rooms{
+  height:50px;
+  margin-top: 200px;
+}
+#rooms-filter{
+  margin-top: 200px;
+  max-width: 318px;
 }
 
 
@@ -189,4 +226,35 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -ms-animation: move-top 2s infinite;
   -o-animation: move-top 2s infinite;
   animation: move-top 2s infinite;
+}
+
+
+
+
+@-webkit-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-moz-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-ms-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-o-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+.move-top-search{
+  -webkit-animation: move-top-search 2s ease forwards;
+  -moz-animation: move-top-search 2s ease forwards;
+  -ms-animation: move-top-search 2s ease forwards;
+  -o-animation: move-top-search 2s ease forwards;
+  animation: move-top-search 2s ease forwards;
 }
