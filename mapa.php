@@ -20,7 +20,7 @@ require('core/functions.php');
 		}
 		?>
 	</div>
-	
+
 	<div id="construct_mapa">
 		<?php
 		for ($i = 1; $i <= 8; $i++) {
@@ -31,7 +31,7 @@ require('core/functions.php');
 				} else {
 					$fetch_query = mysql_fetch_object($query);
 					$image_link = 'css/images/icons/icon_'.$fetch_query->slot_tipo.'.png';
-					echo '<div class="mapa_slot"> <img src="'.$image_link.'" style="width: 100%;"></div>';	
+					echo '<div class="mapa_slot"> <img src="'.$image_link.'" style="width: 100%;"></div>';
 				}
 			}
 		}
