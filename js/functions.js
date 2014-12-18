@@ -58,4 +58,9 @@ app.events = function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "rooms.php";
   });
+
+  $("#close-page").click(function() {
+    $("#wrapper").fadeOut(300);
+    window.location.href = "index.php";
+  });
 }

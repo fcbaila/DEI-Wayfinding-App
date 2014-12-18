@@ -50,6 +50,10 @@ require('core/functions.php');
         <p>Floor: 1, 2, 3, 4, 5, 6</p>
       </div>
 
+      <div id="close-page" class="close text absolute grid-7">
+        <img class="img-close" src="../css/images/close.png" />
+      </div>
+
     </div>
   </div>
 </div>

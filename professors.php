@@ -54,6 +54,10 @@ require('core/functions.php');
         <p>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, X, W, Y, Z</p>
       </div>
 
+      <div id="close-page" class="close text absolute grid-7">
+        <img class="img-close" src="../css/images/close.png" />
+      </div>
+
     </div>
   </div>
 </div>
