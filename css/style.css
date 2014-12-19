@@ -154,6 +154,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .opts{
   display:none;
   cursor:pointer;
+  text-decoration: underline;
 }
 .search-bar{
   height:50px;
@@ -180,7 +181,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 #initial-message{
   height:50px;
   /* 1024 / 2 = 512 - 25 = 487*/
-  margin-top: 487px;
+  margin-top: 437px;
   margin-left: 159px;
 }
 #find-message{
@@ -197,8 +198,9 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 #search{
   height:50px;
-  margin-top: 900px;
+  margin-top: 800px;
   margin-left: 159px;
+  text-decoration: underline;
   cursor:pointer;
   display:none;
 }

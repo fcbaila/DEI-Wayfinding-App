@@ -22,7 +22,7 @@ require('core/functions.php');
 
       <div id="initial-message" class="text absolute">
         <p>Hi, <b>welcome to DEI.</b></p>
-        <p>(Department of Informatics Engineering<br>University of Coimbra)</p>
+        <p>Department of Informatics Engineering<br>- University of Coimbra</p>
       </div>
 
       <div id="find-message" class="text bold absolute">
@@ -30,9 +30,9 @@ require('core/functions.php');
       </div>
 
       <div id="find-options" class="text absolute">
-        <p id="opt-1" class="opts">— a professor</p>
-        <p id="opt-2" class="opts">— a room</p>
-        <p id="opt-3" class="opts">— a service</p>
+        <p id="opt-1" class="opts">A Professor</p>
+        <p id="opt-2" class="opts">A Room</p>
+        <p id="opt-3" class="opts">A Service</p>
       </div>
 <!--
       <div id="search" class="search-bar">
