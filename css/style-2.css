@@ -1,0 +1,166 @@
+/* GENERIC----------------------*/
+.text{
+  font-family: Ed-regular;
+  font-size: 52px;
+  color:white;
+  line-height:130%;
+}
+.medium{
+  font-family: Ed-medium !important;
+}
+.bold{
+  font-family: Ed-bold !important;
+}
+.absolute{
+  position: absolute;
+}
+.opts{
+  display:none;
+  cursor:pointer;
+}
+.search-bar{
+  height:50px;
+  width: 230px;
+  border-bottom: 3px solid white;
+}
+.close{
+  margin-top:210px;
+  cursor:pointer;
+}
+.grid-7{
+  margin-left:1113px;
+}
+.grid-6{
+  margin-left:954px;
+}
+.grid-5{
+  margin-left:795px;
+}
+.grid-1{
+  margin-left:159px;
+}
+/* INDEX----------------------*/
+#initial-message{
+  height:50px;
+  /* 1024 / 2 = 512 - 25 = 487*/
+  margin-top: 487px;
+  margin-left: 159px;
+}
+#find-message{
+  height:50px;
+  margin-top: 200px;
+  margin-left: 159px;
+  display:none;
+}
+#find-options{
+  height:50px;
+  margin-top: 400px;
+  margin-left: 159px;
+}
+
+#search{
+  height:50px;
+  margin-top: 900px;
+  margin-left: 159px;
+  cursor:pointer;
+  display:none;
+}
+/* PROFESSORS-PAGE--------------*/
+#page-title{
+  height:50px;
+  margin-top: 200px;
+  margin-left: 159px;
+}
+#search-professors{
+  height:50px;
+  margin-top: 200px;
+}
+#professors-filter{
+  margin-top: 200px;
+  max-width: 318px;
+}
+#professors-list{
+  margin-top: 200px;
+  max-width: 477px;
+}
+
+
+#rooms-list{
+  margin-top: 200px;
+  max-width: 477px;
+}
+#search-rooms{
+  height:50px;
+  margin-top: 200px;
+}
+#rooms-filter{
+  margin-top: 200px;
+  max-width: 318px;
+}
+
+
+
+
+
+
+
+
+/*-----ANIMATIONS----------------------------------------------------------------------*/
+@-webkit-keyframes move-top {
+  from { margin-top: 487px; }
+  to { margin-top: 100px; }
+}
+@-moz-keyframes move-top {
+  from { margin-top: 487px; }
+  to { margin-top: 100px; }
+}
+@-ms-keyframes move-top {
+  from { margin-top: 487px; }
+  to { margin-top: 100px; }
+}
+@-o-keyframes move-top {
+  from { margin-top: 487px; }
+  to { margin-top: 100px; }
+}
+@keyframes move-top {
+  from { margin-top: 487px; }
+  to { margin-top: 100px; }
+}
+.move-top{
+  -webkit-animation: move-top 2s infinite;
+  -moz-animation: move-top 2s infinite;
+  -ms-animation: move-top 2s infinite;
+  -o-animation: move-top 2s infinite;
+  animation: move-top 2s infinite;
+}
+
+
+
+
+@-webkit-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-moz-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-ms-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@-o-keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+@keyframes move-top-search {
+  from { margin-top: 900px; }
+  to { margin-top: 200px; }
+}
+.move-top-search{
+  -webkit-animation: move-top-search 2s ease forwards;
+  -moz-animation: move-top-search 2s ease forwards;
+  -ms-animation: move-top-search 2s ease forwards;
+  -o-animation: move-top-search 2s ease forwards;
+  animation: move-top-search 2s ease forwards;
+}

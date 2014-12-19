@@ -9,9 +9,7 @@ $(document).ready(function() {
 
 app.init = function() {
   var self = this;
-
-  $("#wrapper").fadeIn(300);
-
+  $("#wrapper").fadeIn(600);
   app.events();
 }
 
@@ -48,9 +46,13 @@ app.events = function() {
   });
 
   $("#search").click(function() {
+    $("#wrapper").fadeOut(300);
+    window.location.href = "mapa.php";
+    /*
     $("#find-message").fadeOut(300);
     $("#find-options").fadeOut(300);
     $("#search").addClass('move-top-search');
+    */
   });
 
   $("#opt-1").click(function() {
@@ -67,28 +69,23 @@ app.events = function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "index.php";
   });
-  
+
 }
 
 
 	function updateMap() {
 		setTimeout(function() {
-			var map_count = $('#construct_mapa > .mapa_slot').length; 
+			var map_count = $('#construct_mapa > .mapa_slot').length;
 			var string = $('.search_area').val();
-			
+
 			for (var i = 1; i <= map_count; i++) {
 					var slot = $(".slot_"+i).attr("slot");
 					if(slot.substring(0, string.length) == string) {
 						$('.slot_'+i).animate({opacity: '1.0'}, 300);
 					} else {
-						$('.slot_'+i).animate({opacity: '0.2'}, 300);	
-					}		
+						$('.slot_'+i).animate({opacity: '0.2'}, 300);
+					}
 			}
 			console.log('room '+string);
 		}, 0);
 	}
-  
-  
-  
-  
-  

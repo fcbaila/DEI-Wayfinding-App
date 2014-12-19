@@ -34,13 +34,17 @@ require('core/functions.php');
         <p id="opt-2" class="opts">— a room</p>
         <p id="opt-3" class="opts">— a service</p>
       </div>
-
+<!--
       <div id="search" class="search-bar">
         <form action="demo_form.asp">
           <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
         </form>
       </div>
+-->
 
+      <div id="search" class="text absolute">
+        <p>Free Search</p>
+      </div>
     </div>
   </div>
 </div>
