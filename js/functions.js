@@ -85,7 +85,7 @@ app.events = function() {
 					}		
 			}
 			console.log('room '+string);
-		}, 100);
+		}, 0);
 	}
   
   
