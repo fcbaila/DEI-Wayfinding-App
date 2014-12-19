@@ -21,6 +21,8 @@ require('core/functions.php');
 		?>
 	</div>
 
+	<div id="construct_mapa_1"></div>
+
 	<div id="construct_mapa">
 		<?php
 		$count = 0;
@@ -42,7 +44,7 @@ require('core/functions.php');
 		}
 		?>
 	</div>
-	
+
 	<div id="construct_search"><input type="text" class="search_area" placeholder="Search for a room" onkeydown="updateMap();"></div>
 </div>
 
