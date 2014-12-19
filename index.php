@@ -22,7 +22,7 @@ require('core/functions.php');
 
       <div id="initial-message" class="text absolute">
         <p>Hi, <b>welcome to DEI.</b></p>
-        <p>(Computer Engineering Department<br> of University of Coimbra)</p>
+        <p>(Department of Informatics Engineering<br>University of Coimbra)</p>
       </div>
 
       <div id="find-message" class="text bold absolute">
