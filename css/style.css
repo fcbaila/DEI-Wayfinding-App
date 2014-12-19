@@ -39,6 +39,11 @@ b{
   font-family:Ed-bold !important;
 }
 
+b2{
+  font-weight:normal;
+  font-family:Ed-medium !important;
+}
+
 a, a:link, a:active, a:visited { text-decoration: none; color: rgb(133, 107, 80); }
 a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
@@ -124,6 +129,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 	border-right: 1px solid rgba(207, 207, 207, 0.1);
 	height: 100%;
 	float: left;
+  display:none;
 }
 
 
@@ -133,6 +139,9 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   font-size: 52px;
   color:white;
   line-height:130%;
+}
+.medium{
+  font-family: Ed-medium !important;
 }
 .bold{
   font-family: Ed-bold !important;

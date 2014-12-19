@@ -44,10 +44,8 @@ require('core/functions.php');
 
       <div id="rooms-filter" class="text grid-5 absolute">
         <br>
-        <br>
-        <p>Tower: A, B, C, D, E, F, G</p>
-        <br>
-        <p>Floor: 1, 2, 3, 4, 5, 6</p>
+        <p><b2>Tower:</b2> A, B, C, D, E, F, G</p>
+        <p><b2>Floor:</b2> 1, 2, 3, 4, 5, 6</p>
       </div>
 
       <div id="close-page" class="close text absolute grid-7">

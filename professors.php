@@ -47,11 +47,12 @@ require('core/functions.php');
 
       <div id="professors-filter" class="text grid-5 absolute">
         <br>
+        <p>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, X, W, Y, Z</p>
         <br>
         <p>engineering</p>
         <p>design</p>
         <br>
-        <p>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, X, W, Y, Z</p>
+
       </div>
 
       <div id="close-page" class="close text absolute grid-7">
