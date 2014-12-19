@@ -88,6 +88,26 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 	float: left;
 }
 
+#construct_search {
+	width: 600px;
+	height: 100px;
+	position: absolute;
+	bottom: 100px;
+	left: 160px;
+}
+
+.search_area {
+	min-width: 100px;
+	height: 40px;
+	border-bottom: 1px solid rgb(90, 145, 255);
+	font-size: 40px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-family: Ed-bold !important;
+	color: rgb(240, 240, 240);
+	text-transform: uppercase;
+}
+
 #grid_container {
 	width: 1280px;
 	height: 100%;

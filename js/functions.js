@@ -15,6 +15,10 @@ app.init = function() {
   app.events();
 }
 
+updateMap();
+var slots = Array();
+
+
 app.events = function() {
   var self = this;
   $("body").click(function() {
@@ -63,4 +67,28 @@ app.events = function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "index.php";
   });
+  
 }
+
+
+	function updateMap() {
+		setTimeout(function() {
+			var map_count = $('#construct_mapa > .mapa_slot').length; 
+			var string = $('.search_area').val();
+			
+			for (var i = 1; i <= map_count; i++) {
+					var slot = $(".slot_"+i).attr("slot");
+					if(slot.substring(0, string.length) == string) {
+						$('.slot_'+i).animate({opacity: '1.0'}, 300);
+					} else {
+						$('.slot_'+i).animate({opacity: '0.2'}, 300);	
+					}		
+			}
+			console.log('room '+string);
+		}, 100);
+	}
+  
+  
+  
+  
+  
