@@ -10,6 +10,7 @@ $(document).ready(function() {
 app.init = function() {
   var self = this;
   $("#wrapper").fadeIn(600);
+
   app.events();
 }
 

@@ -20,9 +20,6 @@ require('core/functions.php');
 		}
 		?>
 	</div>
-
-	<div id="construct_mapa_1"></div>
-
 	<div id="construct_mapa">
 		<?php
 		$count = 0;

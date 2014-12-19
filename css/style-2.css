@@ -1,0 +1,43 @@
+
+
+/* Container box to set the sides relative to */
+.cube {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  height: 100px;
+
+  -webkit-transition: -webkit-transform .33s;
+  transition: transform .33s; /* Animate the transform properties */
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; /* <-NB */
+}
+
+/* The two faces of the cube */
+.flippety,.flop {
+  background: rgb(247, 247, 247);
+  border: 1px solid rgba(147, 184, 189, .8);
+
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  height: 100px;
+}
+
+/* Position the faces */
+.flippety {
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+
+.flop {
+  -webkit-transform: rotateX(-90deg) translateZ(-50px);
+  transform: rotateX(-90deg) translateZ(-50px);
+}
+
+/* Rotate the cube */
+.cube:hover {
+  -webkit-transform: rotateX(89deg);
+  transform: rotateX(89deg); /* Text bleed at 90º */
+}
