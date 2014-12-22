@@ -18,6 +18,12 @@ require('core/functions.php');
           echo '<div class="grid"></div>';
         }
         ?>
+
+        <?php
+        for($i = 1; $i <= 7; $i++) {
+          echo '<div class="grid-h"></div>';
+        }
+        ?>
       </div>
 
       <div id="page-title" class="text absolute">

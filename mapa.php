@@ -15,8 +15,13 @@ require('core/functions.php');
 
 	<div id="grid_container">
 		<?php
-		for($i = 1; $i <= 7; $i++) {
-			echo '<div class="grid"></div>';
+		for($i = 1; $i <= 22; $i++) {
+			echo '<div class="grid-2"></div>';
+		}
+		?>
+		<?php
+		for($i = 1; $i <= 18; $i++) {
+			echo '<div class="grid-2-h"></div>';
 		}
 		?>
 	</div>

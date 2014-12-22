@@ -18,33 +18,33 @@ require('core/functions.php');
           echo '<div class="grid"></div>';
         }
         ?>
+
+        <?php
+        for($i = 1; $i <= 7; $i++) {
+          echo '<div class="grid-h"></div>';
+        }
+        ?>
       </div>
 
-      <div id="initial-message" class="text absolute">
+      <div id="initial-message" class="text absolute grid-1 grid-h-3">
         <p>Hi, <b>welcome to DEI.</b></p>
         <p>Department of Informatics Engineering<br>- University of Coimbra</p>
       </div>
 
-      <div id="find-message" class="text bold absolute">
+      <div id="find-message" class="text bold absolute grid-h-1 grid-1">
         <p>What would you like to find?</p>
       </div>
 
-      <div id="find-options" class="text absolute">
+      <div id="find-options" class="text absolute grid-h-2 grid-1">
         <p id="opt-1" class="opts">A Professor</p>
         <p id="opt-2" class="opts">A Room</p>
         <p id="opt-3" class="opts">A Service</p>
       </div>
-<!--
-      <div id="search" class="search-bar">
-        <form action="demo_form.asp">
-          <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
-        </form>
-      </div>
--->
 
-      <div id="search" class="text absolute">
-        <p>Free Search</p>
+      <div id="search" class="text absolute grid-h-5 grid-1">
+        <p><b2>› Free Search</b2></p>
       </div>
+
     </div>
   </div>
 </div>

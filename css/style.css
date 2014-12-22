@@ -84,7 +84,6 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 	left: 50%;
 	margin-left: -475px;
 	margin-top: -235px;
-  display:none;
 }
 
 .mapa_slot {
@@ -127,12 +126,39 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 .grid {
 	width: 159px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 	border-right: 1px solid rgba(207, 207, 207, 0.1);
 	height: 100%;
 	float: left;
-  display:none;
+}
+.grid-h {
+  width: 100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.1);
+  height: 146px;
 }
 
+.grid-2 {
+  width: 58.2px;
+  height: 100%;
+  float: left;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border-right: 1px solid rgba(207, 207, 207, 0.1);
+}
+.grid-2-h {
+  width: 100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.1);
+  height: 57px;
+}
 
 
 
@@ -166,6 +192,21 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-top:210px;
   cursor:pointer;
 }
+.grid-h-1{
+  margin-top:146px;
+}
+.grid-h-2{
+  margin-top:292px;
+}
+.grid-h-3{
+  margin-top:438px;
+}
+.grid-h-4{
+  margin-top:584px;
+}
+.grid-h-5{
+  margin-top:730px;
+}
 .grid-7{
   margin-left:1113px;
 }
@@ -181,27 +222,18 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 /* INDEX----------------------*/
 #initial-message{
   height:50px;
-  /* 1024 / 2 = 512 - 25 = 487*/
-  margin-top: 437px;
-  margin-left: 159px;
 }
 #find-message{
   height:50px;
-  margin-top: 200px;
-  margin-left: 159px;
   display:none;
 }
 #find-options{
   height:50px;
-  margin-top: 400px;
-  margin-left: 159px;
 }
 
 #search{
   height:50px;
-  margin-top: 800px;
-  margin-left: 159px;
-  text-decoration: underline;
+  //text-decoration: underline;
   cursor:pointer;
   display:none;
 }
@@ -257,23 +289,23 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top: 487px; }
+  from { margin-top:438px; }
   to { margin-top: 100px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top: 487px; }
+  from { margin-top:438px; }
   to { margin-top: 100px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top: 487px; }
+  from { margin-top:438px; }
   to { margin-top: 100px; }
 }
 @-o-keyframes move-top {
-  from { margin-top: 487px; }
+  from { margin-top:438px; }
   to { margin-top: 100px; }
 }
 @keyframes move-top {
-  from { margin-top: 487px; }
+  from { margin-top:438px; }
   to { margin-top: 100px; }
 }
 .move-top{
@@ -283,7 +315,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -o-animation: move-top 2s infinite;
   animation: move-top 2s infinite;
 }
-
+/*
 @-webkit-keyframes move-top-search {
   from { margin-top: 900px; }
   to { margin-top: 200px; }
@@ -311,3 +343,4 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -o-animation: move-top-search 2s ease forwards;
   animation: move-top-search 2s ease forwards;
 }
+*/
