@@ -12,6 +12,7 @@ app.init = function() {
   $("#wrapper").fadeIn(600);
 
   app.events();
+  app.keyboard();
 }
 
 updateMap();
@@ -49,11 +50,6 @@ app.events = function() {
   $("#search").click(function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "mapa.php";
-    /*
-    $("#find-message").fadeOut(300);
-    $("#find-options").fadeOut(300);
-    $("#search").addClass('move-top-search');
-    */
   });
 
   $("#opt-1").click(function() {
@@ -70,7 +66,6 @@ app.events = function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "index.php";
   });
-
 }
 
 
@@ -90,3 +85,21 @@ app.events = function() {
 			console.log('room '+string);
 		}, 0);
 	}
+
+
+
+
+app.keyboard = function() {
+  var input = document.getElementById("text-search");
+  var value = input.value;
+
+  $(".key").click(function() {
+    input.value += this.id;
+  });
+  $("#space").click(function() {
+    input.value += " ";
+  });
+  $("#back").click(function() {
+    input.value = input.value.slice(0, -1);
+  });
+}

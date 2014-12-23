@@ -5,6 +5,7 @@
 <title>DEI-WAYFINDING</title>
 
 <link href="./css/style.css" rel="stylesheet" type="text/css">
+<link href="./css/grid.css" rel="stylesheet" type="text/css">
 <link href="./css/style-2.css" rel="stylesheet" type="text/css">
 <link href="./css/css-reset.css" rel="stylesheet" type="text/css">
 

@@ -114,58 +114,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 	text-transform: uppercase;
 }
 
-#grid_container {
-	width: 1280px;
-	height: 100%;
-	z-index: 10;
-	pointer-events: none;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-.grid {
-	width: 159px;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-	border-right: 1px solid rgba(207, 207, 207, 0.1);
-	height: 100%;
-	float: left;
-}
-.grid-h {
-  width: 100%;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.1);
-  height: 146px;
-}
-
-.grid-2 {
-  width: 58.2px;
-  height: 100%;
-  float: left;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  border-right: 1px solid rgba(207, 207, 207, 0.1);
-}
-.grid-2-h {
-  width: 100%;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.1);
-  height: 57px;
-}
-
 
 
 /* GENERIC----------------------*/
 .text{
   font-family: Ed-regular;
-  font-size: 52px;
+  font-size: 42px;
   color:white;
   line-height:130%;
 }
@@ -189,35 +143,17 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   border-bottom: 3px solid white;
 }
 .close{
-  margin-top:210px;
+  cursor:pointer;
+  margin-top: calc(57px * 2 + 8px);
+}
+.key, .key-2{
+  float: left;
+  margin-right: 40px;
+  text-decoration: underline;
   cursor:pointer;
 }
-.grid-h-1{
-  margin-top:146px;
-}
-.grid-h-2{
-  margin-top:292px;
-}
-.grid-h-3{
-  margin-top:438px;
-}
-.grid-h-4{
-  margin-top:584px;
-}
-.grid-h-5{
-  margin-top:730px;
-}
-.grid-7{
-  margin-left:1113px;
-}
-.grid-6{
-  margin-left:954px;
-}
-.grid-5{
-  margin-left:795px;
-}
-.grid-1{
-  margin-left:159px;
+.search{
+  max-width: calc(58.2px * 4);
 }
 /* INDEX----------------------*/
 #initial-message{
@@ -233,27 +169,22 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 #search{
   height:50px;
-  //text-decoration: underline;
   cursor:pointer;
   display:none;
 }
 /* PROFESSORS-PAGE--------------*/
 #page-title{
   height:50px;
-  margin-top: 200px;
-  margin-left: 159px;
 }
 #search-professors{
   height:50px;
-  margin-top: 200px;
 }
 #professors-filter{
-  margin-top: 200px;
-  max-width: 318px;
+  max-width: calc(58.2px * 6);
 }
 #professors-list{
-  margin-top: 200px;
-  max-width: 477px;
+  max-width: calc(58.2px * 10);
+  max-height: calc(57px * 13);
 }
 /* ROOMS-PAGE--------------*/
 #rooms-list{
@@ -289,23 +220,23 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top:438px; }
+  from { margin-top: calc(57px * 8) }
   to { margin-top: 100px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top:438px; }
+  from { margin-top: calc(57px * 8) }
   to { margin-top: 100px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top:438px; }
+  from { margin-top: calc(57px * 8) }
   to { margin-top: 100px; }
 }
 @-o-keyframes move-top {
-  from { margin-top:438px; }
+  from { margin-top: calc(57px * 8) }
   to { margin-top: 100px; }
 }
 @keyframes move-top {
-  from { margin-top:438px; }
+  from { margin-top: calc(57px * 8) }
   to { margin-top: 100px; }
 }
 .move-top{
