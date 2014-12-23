@@ -188,15 +188,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 /* ROOMS-PAGE--------------*/
 #rooms-list{
-  margin-top: 200px;
   max-width: 477px;
 }
 #search-rooms{
   height:50px;
-  margin-top: 200px;
 }
 #rooms-filter{
-  margin-top: 200px;
   max-width: 318px;
 }
 /* ROOMS-PAGE--------------*/
