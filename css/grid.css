@@ -9,7 +9,7 @@
 }
 
 .grid{
-  width: 58.2px;
+  width: 58px;
   height: 100%;
   float: left;
   box-sizing:border-box;
@@ -23,7 +23,7 @@
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   border-bottom: 1px solid rgba(207, 207, 207, 0.1);
-  height: 57px;
+  height: 58px;
 }
 
 /* HORIZONTAL MARGINS------------------------*/
@@ -31,70 +31,70 @@
   margin-left:0px;
 }
 .grid-1{
-  margin-left:58.2px;
+  margin-left:58px;
 }
 .grid-2{
-  margin-left: calc(58.2px * 2);
+  margin-left: calc(58px * 2);
 }
 .grid-3{
-  margin-left: calc(58.2px * 3);
+  margin-left: calc(58px * 3);
 }
 .grid-4{
-  margin-left: calc(58.2px * 4);
+  margin-left: calc(58px * 4);
 }
 .grid-5{
-  margin-left: calc(58.2px * 5);
+  margin-left: calc(58px * 5);
 }
 .grid-6{
-  margin-left: calc(58.2px * 6);
+  margin-left: calc(58px * 6);
 }
 .grid-7{
-  margin-left: calc(58.2px * 7);
+  margin-left: calc(58px * 7);
 }
 .grid-8{
-  margin-left: calc(58.2px * 8);
+  margin-left: calc(58px * 8);
 }
 .grid-9{
-  margin-left: calc(58.2px * 9);
+  margin-left: calc(58px * 9);
 }
 .grid-10{
-  margin-left: calc(58.2px * 10);
+  margin-left: calc(58px * 10);
 }
 .grid-11{
-  margin-left: calc(58.2px * 11);
+  margin-left: calc(58px * 11);
 }
 .grid-12{
-  margin-left: calc(58.2px * 12);
+  margin-left: calc(58px * 12);
 }
 .grid-13{
-  margin-left: calc(58.2px * 13);
+  margin-left: calc(58px * 13);
 }
 .grid-14{
-  margin-left: calc(58.2px * 14);
+  margin-left: calc(58px * 14);
 }
 .grid-15{
-  margin-left: calc(58.2px * 15);
+  margin-left: calc(58px * 15);
 }
 .grid-16{
-  margin-left: calc(58.2px * 16);
+  margin-left: calc(58px * 16);
 }
 .grid-17{
-  margin-left: calc(58.2px * 17);
+  margin-left: calc(58px * 17);
 }
 .grid-18{
-  margin-left: calc(58.2px * 18);
+  margin-left: calc(58px * 18);
 }
 .grid-19{
-  margin-left: calc(58.2px * 19);
+  margin-left: calc(58px * 19);
 }
 .grid-20{
-  margin-left: calc(58.2px * 20);
+  margin-left: calc(58px * 20);
 }
 .grid-21{
-  margin-left: calc(58.2px * 21);
+  margin-left: calc(58px * 21);
 }
 .grid-22{
-  margin-left: calc(58.2px * 22);
+  margin-left: calc(58px * 22);
 }
 
 /* VERTICAL MARGINS----------------------------*/
@@ -102,53 +102,53 @@
   margin-top:0px;
 }
 .grid-h-1{
-  margin-top:57px;
+  margin-top:58px;
 }
 .grid-h-2{
-  margin-top: calc(57px * 2);
+  margin-top: calc(58px * 2);
 }
 .grid-h-3{
-  margin-top: calc(57px * 3);
+  margin-top: calc(58px * 3);
 }
 .grid-h-4{
-  margin-top: calc(57px * 4);
+  margin-top: calc(58px * 4);
 }
 .grid-h-5{
-  margin-top: calc(57px * 5);
+  margin-top: calc(58px * 5);
 }
 .grid-h-6{
-  margin-top: calc(57px * 6);
+  margin-top: calc(58px * 6);
 }
 .grid-h-7{
-  margin-top: calc(57px * 7);
+  margin-top: calc(58px * 7);
 }
 .grid-h-8{
-  margin-top: calc(57px * 8);
+  margin-top: calc(58px * 8);
 }
 .grid-h-9{
-  margin-top: calc(57px * 9);
+  margin-top: calc(58px * 9);
 }
 .grid-h-10{
-  margin-top: calc(57px * 10);
+  margin-top: calc(58px * 10);
 }
 .grid-h-11{
-  margin-top: calc(57px * 11);
+  margin-top: calc(58px * 11);
 }
 .grid-h-12{
-  margin-top: calc(57px * 12);
+  margin-top: calc(58px * 12);
 }
 .grid-h-13{
-  margin-top: calc(57px * 13);
+  margin-top: calc(58px * 13);
 }
 .grid-h-14{
-  margin-top: calc(57px * 14);
+  margin-top: calc(58px * 14);
 }
 .grid-h-15{
-  margin-top: calc(57px * 15);
+  margin-top: calc(58px * 15);
 }
 .grid-h-16{
-  margin-top: calc(57px * 16);
+  margin-top: calc(58px * 16);
 }
 .grid-h-17{
-  margin-top: calc(57px * 17);
+  margin-top: calc(58px * 17);
 }

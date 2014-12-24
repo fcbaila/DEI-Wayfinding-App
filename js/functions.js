@@ -18,9 +18,9 @@ app.init = function() {
 updateMap();
 var slots = Array();
 
-
 app.events = function() {
   var self = this;
+/*TRANSITIONS-----------------*/
   $("body").click(function() {
     if (self.firstTouch){
       $("#initial-message").addClass('move-top');
@@ -46,7 +46,7 @@ app.events = function() {
       self.firstTouch = false;
     }
   });
-
+/*REDIRECTIONS-----------------*/
   $("#search").click(function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "mapa.php";
@@ -65,6 +65,37 @@ app.events = function() {
   $("#close-page").click(function() {
     $("#wrapper").fadeOut(300);
     window.location.href = "index.php";
+  });
+/*SCROLL--------------------------*/
+var anchor = 0;
+  $("#down-arrow").click(function() {
+    anchor += 600;
+    $("#professors-list").animate({scrollTop: anchor});
+  });
+  $("#up-arrow").click(function() {
+    anchor -= 600;
+    if(anchor < 600){
+      anchor = 0;
+    }
+    $("#professors-list").animate({scrollTop: anchor});
+  });
+}
+
+app.keyboard = function() {
+  var input = document.getElementById("text-search");
+  var value = input.value;
+/*KEYBOARD-----------------*/
+  $(".key").click(function() {
+    input.value += this.id;
+  });
+  $("#space").click(function() {
+    input.value += " ";
+  });
+  $("#back").click(function() {
+    input.value = input.value.slice(0, -1);
+  });
+  $("#clean").click(function() {
+    input.value = "";
   });
 }
 
@@ -85,21 +116,3 @@ app.events = function() {
 			console.log('room '+string);
 		}, 0);
 	}
-
-
-
-
-app.keyboard = function() {
-  var input = document.getElementById("text-search");
-  var value = input.value;
-
-  $(".key").click(function() {
-    input.value += this.id;
-  });
-  $("#space").click(function() {
-    input.value += " ";
-  });
-  $("#back").click(function() {
-    input.value = input.value.slice(0, -1);
-  });
-}

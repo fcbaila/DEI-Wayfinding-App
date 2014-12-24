@@ -42,6 +42,56 @@ require('core/functions.php');
         <p>Delphia Walston;</p>
         <p>Ezekiel Luter;</p>
         <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
+        <p>Nila Gemmell;</p>
+        <p>Earleen Severa;</p>
+        <p>Delphia Walston;</p>
+        <p>Ezekiel Luter;</p>
+        <p>Danae Arcuri;</p>
       </div>
 
       <div id="search-professors" class="search-bar grid-14 grid-h-2 absolute">
@@ -51,7 +101,7 @@ require('core/functions.php');
       </div>
 
       <div id="professors-filter" class="text grid-14 grid-h-3 absolute">
-        <p>
+        <p id="inside-p-filter">
           <div class="key" id="a">A</div>
           <div class="key" id="b">B</div>
           <div class="key" id="c">C</div>
@@ -79,15 +129,22 @@ require('core/functions.php');
           <div class="key" id="w">W</div>
           <div class="key" id="z">Z</div>
           <div class="key-2" id="space">" "</div>
-          <div class="key-2" id="back"><</div>
+          <div class="key-2" id="back"><—</div>
         </p>
-        <p>engineering</p>
-        <p>design</p>
+        <p class="button underline" id="clean">clean</p>
         <br>
-
+        <p class="button underline">engineering</p>
+        <p class="button underline">design</p>
       </div>
 
-      <div id="close-page" class="close text absolute grid-20">
+      <div id="up-arrow" class="close text absolute button">
+        <img class="img-arrow" src="../css/images/up.png" />
+      </div>
+      <div id="down-arrow" class="close text absolute grid-12 grid-h-15 button">
+        <img class="img-arrow" src="../css/images/down.png" />
+      </div>
+
+      <div id="close-page" class="close text absolute grid-20 button">
         <img class="img-close" src="../css/images/close.png" />
       </div>
 

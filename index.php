@@ -41,7 +41,7 @@ require('core/functions.php');
         <p id="opt-3" class="opts">A Service</p>
       </div>
 
-      <div id="search" class="text absolute grid-h-15 grid-2">
+      <div id="search" class="text absolute grid-h-15 grid-2 button">
         <p><b2>› Free Search</b2></p>
       </div>
 
