@@ -48,6 +48,10 @@ require('core/functions.php');
 	</div>
 
 	<div id="construct_search"><input type="text" class="search_area" placeholder="Search for a room" onkeydown="updateMap();"></div>
+
+	<div id="close-page" class="close text absolute grid-20 button">
+		<img class="img-close" src="../css/images/close.png" />
+	</div>
 </div>
 
 </div>

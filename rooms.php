@@ -51,7 +51,7 @@ require('core/functions.php');
         <p><b2>Floor:</b2> 1, 2, 3, 4, 5, 6</p>
       </div>
 
-      <div id="close-page" class="close text absolute grid-20">
+      <div id="close-page" class="close text absolute grid-20 button">
         <img class="img-close" src="../css/images/close.png" />
       </div>
 
