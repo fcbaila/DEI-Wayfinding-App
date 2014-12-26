@@ -84,7 +84,6 @@ var anchor = 0;
 
 app.keyboard = function() {
   var input = document.getElementById("text-search");
-  //var value = input.value;
 /*KEYBOARD-----------------*/
   $(".key").click(function() {
     input.value += this.id;
@@ -97,6 +96,49 @@ app.keyboard = function() {
   });
   $("#clean").click(function() {
     input.value = "";
+  });
+/*FILTER-----------------*/
+  var engineer = false;
+  var designer = false;
+  $("#engineer").click(function() {
+    if(engineer == false){
+      $('#engineer').css({
+        "font-family": "Ed-medium"
+      });
+      $('#designer').css({
+        "font-family": "Ed-regular"
+      });
+      engineer = true;
+      designer = false;
+    } else{
+      $('#engineer').css({
+        "font-family": "Ed-regular"
+      });
+      $('#designer').css({
+        "font-family": "Ed-regular"
+      });
+      engineer = false;
+    }
+  });
+  $("#designer").click(function() {
+    if(designer == false){
+      $('#designer').css({
+        "font-family": "Ed-medium"
+      });
+      $('#engineer').css({
+        "font-family": "Ed-regular"
+      });
+      designer = true;
+      engineer = false;
+    } else{
+      $('#designer').css({
+        "font-family": "Ed-regular"
+      });
+      $('#engineer').css({
+        "font-family": "Ed-regular"
+      });
+      designer = false;
+    }
   });
 }
 

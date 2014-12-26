@@ -153,12 +153,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   text-decoration: underline;
 }
 .search-bar{
-  height:50px;
-  width: 230px;
+  width: calc(58.2px * 6);
   border-bottom: 3px solid white;
+  pointer-events:none;
 }
 .close{
-  margin-top: calc(57px * 2 + 8px);
+  margin-top: calc(57px * 1 + 8px);
 }
 .underline{
   text-decoration:underline;
@@ -170,6 +170,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  pointer-events:visible;
 }
 .key, .key-2{
   float: left;
@@ -181,9 +182,11 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  pointer-events: visible;
 }
 .search{
-  max-width: calc(58.2px * 4);
+  max-width: calc(58.2px * 7);
+  overflow-x:auto;
 }
 /* INDEX / MENU----------------------*/
 #initial-message{
@@ -210,6 +213,8 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 #professors-filter{
   max-width: calc(58px * 6);
+  pointer-events: none;
+  z-index: 1000;
 }
 #professors-list{
   width: calc(58px * 10);
@@ -224,6 +229,17 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-left: calc(58px * 12 + 10px);
   margin-top: calc(58px * 15 + 20px);
 }
+#clean{
+  float: left;
+  text-decoration: underline;
+  cursor:pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: visible;
+}
 /* ROOMS-PAGE--------------*/
 #rooms-list{
   max-width: 477px;
@@ -232,19 +248,6 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   height:50px;
 }
 #rooms-filter{
-  max-width: 318px;
-}
-/* ROOMS-PAGE--------------*/
-#rooms-list{
-  margin-top: 200px;
-  max-width: 477px;
-}
-#search-rooms{
-  height:50px;
-  margin-top: 200px;
-}
-#rooms-filter{
-  margin-top: 200px;
   max-width: 318px;
 }
 

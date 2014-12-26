@@ -132,11 +132,19 @@ require('core/functions.php');
             <div class="key" id="z">Z</div>
             <div class="key-2" id="space">" "</div>
             <div class="key-2" id="back"><—</div>
+            <div id="clean">clean</div>
           </p>
-          <p class="button underline" id="clean">clean</p>
+        </div>
+        <div id="professors-filter-2" class="text grid-14 grid-h-3 absolute">
           <br>
-          <p class="button underline">engineering</p>
-          <p class="button underline">design</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p class="button underline" id="engineer">engineering</p>
+          <p class="button underline" id="designer">design</p>
         </div>
 
         <div id="up-arrow" class="close text absolute button">
