@@ -80,6 +80,18 @@ var anchor = 0;
     }
     $("#professors-list").animate({scrollTop: anchor});
   });
+
+  $("#down-arrow-2").click(function() {
+    anchor += 600;
+    $("#rooms-list").animate({scrollTop: anchor});
+  });
+  $("#up-arrow-2").click(function() {
+    anchor -= 600;
+    if(anchor < 600){
+      anchor = 0;
+    }
+    $("#rooms-list").animate({scrollTop: anchor});
+  });
 }
 
 app.keyboard = function() {
@@ -96,6 +108,38 @@ app.keyboard = function() {
   });
   $("#clean").click(function() {
     input.value = "";
+  });
+/*KEYBOARD-ROOMS-----------------*/
+var tower = false;
+var floor = false;
+  $(".key-t").click(function() {
+    if (tower == false){
+      input.value += this.id;
+      $('#' + this.id).css({
+        "font-family": "Ed-bold"
+      });
+      tower = true;
+    }
+  });
+  $(".key-f").click(function() {
+    if (floor == false){
+      input.value += this.id;
+      $('#' + this.id).css({
+        "font-family": "Ed-bold"
+      });
+      floor = true;
+    }
+  });
+  $("#clean").click(function() {
+    input.value = "";
+    $('.key-t').css({
+      "font-family": "Ed-regular"
+    });
+    $('.key-f').css({
+      "font-family": "Ed-regular"
+    });
+    tower = false;
+    floor = false;
   });
 /*FILTER-----------------*/
   var engineer = false;

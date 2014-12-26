@@ -131,7 +131,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   font-family: Ed-regular;
   font-size: 42px;
   color:white;
-  line-height:130%;
+  line-height:150%;
 }
 .medium{
   font-family: Ed-medium !important;
@@ -172,7 +172,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   user-select: none;
   pointer-events:visible;
 }
-.key, .key-2{
+.key, .key-2, .key-t, .key-f{
   float: left;
   margin-right: 40px;
   text-decoration: underline;
@@ -242,13 +242,31 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 /* ROOMS-PAGE--------------*/
 #rooms-list{
-  max-width: 477px;
+  width: calc(58px * 8);
+  max-height: calc(58px * 13);
+  overflow-y: scroll;
 }
 #search-rooms{
   height:50px;
 }
 #rooms-filter{
-  max-width: 318px;
+  max-width: calc(58px * 6);
+  pointer-events: none;
+  z-index: 1000;
+}
+#tower, #room{
+  float: left;
+  margin-right: 40px;
+  pointer-events: none !important;
+  text-decoration: none !important;
+}
+#up-arrow-2{
+  margin-left: calc(58px * 10 + 10px);
+  margin-top: calc(58px * 14);
+}
+#down-arrow-2{
+  margin-left: calc(58px * 10 + 10px);
+  margin-top: calc(58px * 15 + 20px);
 }
 
 
