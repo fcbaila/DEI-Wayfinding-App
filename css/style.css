@@ -63,7 +63,6 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   position: absolute;
   top:0;
   left: 0;
-  display:none;
 }
 
 #container {
@@ -81,6 +80,10 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-top: -512px;
   margin-left: -640px;
 	background-color: rgb(31, 31, 31);
+}
+
+#page_container {
+  display:none;
 }
 
 #construct_mapa {
@@ -182,7 +185,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .search{
   max-width: calc(58.2px * 4);
 }
-/* INDEX----------------------*/
+/* INDEX / MENU----------------------*/
 #initial-message{
   height:50px;
 }

@@ -31,23 +31,8 @@ require('core/functions.php');
         <p>Department of Informatics Engineering<br>- University of Coimbra</p>
       </div>
 
-      <div id="find-message" class="text bold absolute grid-h-2 grid-2">
-        <p>What would you like to find?</p>
-      </div>
-
-      <div id="find-options" class="text absolute grid-h-5 grid-2">
-        <p id="opt-1" class="opts">A Professor</p>
-        <p id="opt-2" class="opts">A Room</p>
-        <p id="opt-3" class="opts">A Service</p>
-      </div>
-
-      <div id="search" class="text absolute grid-h-15 grid-2 button">
-        <p><b2>› Free Search</b2></p>
-      </div>
-
     </div>
   </div>
 </div>
-
 </body>
 </html>
