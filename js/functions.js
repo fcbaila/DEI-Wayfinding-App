@@ -20,13 +20,13 @@ app.init = function() {
   }, 600);
   setTimeout(function() {
     $("#opt-2").fadeIn(300);
-  }, 900);
+  }, 800);
   setTimeout(function() {
     $("#opt-3").fadeIn(300);
-  }, 1200);
+  }, 1000);
   setTimeout(function() {
     $("#search").fadeIn(300);
-  }, 1900);
+  }, 1700);
 
   app.events();
   app.keyboard();
@@ -61,6 +61,11 @@ app.events = function() {
   $("#opt-2").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "rooms.php";
+  });
+
+  $("#opt-3").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "services.php";
   });
 
   $("#close-page").click(function() {
