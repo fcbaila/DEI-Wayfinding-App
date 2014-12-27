@@ -1,6 +1,6 @@
 /* Main app*/
 var app = {
-  page: 0,
+  page: " ",
   currentTime: 0,
   currentHours: 0,
   currentMinutes: 0,
@@ -14,13 +14,14 @@ $(document).ready(function() {
 
 app.init = function() {
   var self = this;
-/*UPDATE CLOCK-----------------*/
-  app.updateClock();
-  setInterval(function() {
-    app.updateClock();
-  }, 1000);
-
   self.page = location.pathname.substring(1);
+/*UPDATE CLOCK-----------------*/
+  if (self.page != "index.php"){
+    app.updateClock();
+    setInterval(function() {
+      app.updateClock();
+    }, 1000);
+  }
 /*TRANSITIONS-----------------*/
   $("#page_container").fadeIn(800);
   setTimeout(function() {
@@ -53,6 +54,7 @@ app.events = function() {
     if (self.page == "index.php"){
       $("#initial-message").addClass('move-top');
       $("#initial-message").fadeOut(600);
+      $("#initial-instruction").fadeOut(600);
       setTimeout(function() {
         window.location.href = "menu.php";
       }, 700);
@@ -82,6 +84,10 @@ app.events = function() {
   $("#close-page").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "menu.php";
+  });
+  $("#close-page-2").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "index.php";
   });
 /*SCROLL--------------------------*/
 var anchor = 0;

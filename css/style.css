@@ -276,23 +276,23 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top: calc(58px * 8) }
+  from { margin-top: calc(58px * 7) }
   to { margin-top: 100px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top: calc(58px * 8) }
+  from { margin-top: calc(58px * 7) }
   to { margin-top: 100px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top: calc(58px * 8) }
+  from { margin-top: calc(58px * 7) }
   to { margin-top: 100px; }
 }
 @-o-keyframes move-top {
-  from { margin-top: calc(58px * 8) }
+  from { margin-top: calc(58px * 7) }
   to { margin-top: 100px; }
 }
 @keyframes move-top {
-  from { margin-top: calc(58px * 8) }
+  from { margin-top: calc(58px * 7) }
   to { margin-top: 100px; }
 }
 .move-top{
@@ -302,32 +302,3 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -o-animation: move-top 2s infinite;
   animation: move-top 2s infinite;
 }
-/*
-@-webkit-keyframes move-top-search {
-  from { margin-top: 900px; }
-  to { margin-top: 200px; }
-}
-@-moz-keyframes move-top-search {
-  from { margin-top: 900px; }
-  to { margin-top: 200px; }
-}
-@-ms-keyframes move-top-search {
-  from { margin-top: 900px; }
-  to { margin-top: 200px; }
-}
-@-o-keyframes move-top-search {
-  from { margin-top: 900px; }
-  to { margin-top: 200px; }
-}
-@keyframes move-top-search {
-  from { margin-top: 900px; }
-  to { margin-top: 200px; }
-}
-.move-top-search{
-  -webkit-animation: move-top-search 2s ease forwards;
-  -moz-animation: move-top-search 2s ease forwards;
-  -ms-animation: move-top-search 2s ease forwards;
-  -o-animation: move-top-search 2s ease forwards;
-  animation: move-top-search 2s ease forwards;
-}
-*/

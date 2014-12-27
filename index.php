@@ -26,9 +26,20 @@ require('core/functions.php');
         ?>
       </div>
 
-      <div id="initial-message" class="text absolute grid-2 grid-h-8">
-        <p>Hi, <b>welcome to DEI.</b></p>
-        <p>Department of Informatics Engineering<br>- University of Coimbra</p>
+      <div id="page_container">
+
+
+
+        <div id="initial-message" class="text absolute grid-2 grid-h-7">
+          <p>Hi, <b>welcome to DEI.</b></p>
+          <p>Department of Informatics Engineering<br>- University of Coimbra</p>
+        </div>
+
+        <div id="initial-instruction" class="text absolute grid-2 grid-h-12">
+          <p>touch to start</p>
+          <img class="img-touch" src="../css/images/touch.png" />
+        </div>
+
       </div>
 
     </div>
