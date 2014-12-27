@@ -94,6 +94,9 @@ require('core/functions.php');
           <p class="button underline" id="designer">design</p>
         </div>
 
+        <div id="clock" class="close text absolute grid-16 grid-h-1 button">
+        </div>
+
         <div id="close-page" class="close text absolute grid-20 button">
           <img class="img-close" src="../css/images/close.png" />
         </div>

@@ -1,6 +1,11 @@
 /* Main app*/
 var app = {
-  page: 0
+  page: 0,
+  currentTime: 0,
+  currentHours: 0,
+  currentMinutes: 0,
+  timeOfDay: " ",
+  currentTimeString: " "
 }
 
 $(document).ready(function() {
@@ -9,6 +14,12 @@ $(document).ready(function() {
 
 app.init = function() {
   var self = this;
+/*UPDATE CLOCK-----------------*/
+  app.updateClock();
+  setInterval(function() {
+    app.updateClock();
+  }, 1000);
+
   self.page = location.pathname.substring(1);
 /*TRANSITIONS-----------------*/
   $("#page_container").fadeIn(800);
@@ -191,6 +202,16 @@ var floor = false;
   });
 }
 
+app.updateClock = function() {
+  /*CLOCK-----------------*/
+  self.currentTime = new Date ( );
+  self.currentHours = self.currentTime.getHours ( );
+  self.currentMinutes = self.currentTime.getMinutes ( );
+  self.currentMinutes = ( self.currentMinutes < 10 ? "0" : "" ) + self.currentMinutes;
+  self.timeOfDay = ( self.currentHours < 12 ) ? "AM" : "PM";
+  self.currentTimeString = self.currentHours + ":" + self.currentMinutes + " " + self.timeOfDay;
+  document.getElementById("clock").firstChild.nodeValue = self.currentTimeString;
+}
 
 	function updateMap() {
 		setTimeout(function() {

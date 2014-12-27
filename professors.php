@@ -154,6 +154,9 @@ require('core/functions.php');
           <img class="img-arrow" src="../css/images/down.png" />
         </div>
 
+        <div id="clock" class="close text absolute grid-16 grid-h-1 button">
+        </div>
+
         <div id="close-page" class="close text absolute grid-20 button">
           <img class="img-close" src="../css/images/close.png" />
         </div>

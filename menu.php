@@ -42,6 +42,12 @@ require('core/functions.php');
           <p><b2>› Free Search</b2></p>
         </div>
 
+        <div id="clock" class="close text absolute grid-16 grid-h-1 button">
+        </div>
+
+        <div id="close-page" class="close text absolute grid-20 button">
+          <img class="img-close" src="../css/images/close.png" />
+        </div>
       </div>
 
     </div>
