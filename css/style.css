@@ -268,6 +268,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-left: calc(58px * 10 + 10px);
   margin-top: calc(58px * 15 + 20px);
 }
+/* SERVICES-PAGE--------------*/
+#services-list{
+  width: calc(58px * 20);
+  max-height: calc(58px * 13);
+}
+
 
 
 
