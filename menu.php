@@ -33,7 +33,7 @@ require('core/functions.php');
         </div>
 
         <div id="find-options" class="text absolute grid-h-5 grid-2">
-          <p id="opt-1" class="opts">A Professor</p>
+          <p id="opt-1" class="opts">A Teacher</p>
           <p id="opt-2" class="opts">A Room</p>
           <p id="opt-3" class="opts">A Service</p>
         </div>
@@ -41,7 +41,7 @@ require('core/functions.php');
         <div id="search" class="text absolute grid-h-15 grid-2 button">
           <p><b2>› Free Search</b2></p>
         </div>
-        
+
       </div>
 
     </div>

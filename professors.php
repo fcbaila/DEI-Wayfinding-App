@@ -29,7 +29,7 @@ require('core/functions.php');
       <div id="page_container">
 
         <div id="page-title" class="text absolute grid-h-2 grid-2">
-          <p>Professors:</p>
+          <p>Teachers:</p>
         </div>
 
         <div id="professors-list" class="text bold absolute grid-h-3 grid-2">
