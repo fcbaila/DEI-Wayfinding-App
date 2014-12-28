@@ -131,6 +131,11 @@ app.keyboard = function() {
   $("#clean").click(function() {
     input.value = "";
   });
+/*KEYBOARD-MAP-----------------*/
+  $(".key-m").click(function() {
+    input.value += this.id;
+    updateMap();
+  });
 /*KEYBOARD-ROOMS-----------------*/
 var tower = false;
 var floor = false;
