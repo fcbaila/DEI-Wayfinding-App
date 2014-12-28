@@ -28,11 +28,11 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div id="page-title" class="text absolute grid-h-2 grid-2">
+        <div id="page-title" class="text absolute grid-h-3 grid-2">
           <p>Services:</p>
         </div>
 
-        <div id="services-list" class="text bold absolute grid-h-3 grid-2">
+        <div id="services-list" class="text bold absolute grid-h-4 grid-2">
           <br>
           <p>GAPI — Gabinete de Apoio a Projectos / Mobilidade;</p>
           <p>Helpdesk;</p>

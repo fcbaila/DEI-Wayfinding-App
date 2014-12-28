@@ -28,11 +28,11 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div id="page-title" class="text absolute grid-h-2 grid-2">
+        <div id="page-title" class="text absolute grid-h-3 grid-2">
           <p>Rooms:</p>
         </div>
 
-        <div id="rooms-list" class="text bold absolute grid-h-3 grid-2">
+        <div id="rooms-list" class="text bold absolute grid-h-4 grid-2">
           <br>
           <p>E 4.1;</p>
           <p>E 4.2;</p>
@@ -64,13 +64,14 @@ require('core/functions.php');
           <p>E 4.7;</p>
         </div>
 
-        <div id="search-rooms" class="search-bar grid-14 grid-h-2 absolute">
+        <div id="search-rooms" class="search-bar grid-14 grid-h-3 absolute">
           <form action="demo_form.asp">
             <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
           </form>
         </div>
 
         <div id="rooms-filter" class="text grid-14 grid-h-3 absolute">
+          <br>
           <p>
             <div class="key-t" id="tower"><b2>Tower:</b2></div>
             <div class="key-t" id="A">A</div>
@@ -92,6 +93,7 @@ require('core/functions.php');
           </p>
         </div>
         <div id="rooms-filter-2" class="text grid-14 grid-h-3 absolute">
+          <br>
           <br>
           <br>
           <br>
