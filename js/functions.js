@@ -256,7 +256,6 @@ app.updateClock = function() {
           $('.slot_'+i).animate({opacity: '0.2'}, 300);
         }
       }
-      console.log('room '+string);
     }, 0);
   }
 
@@ -267,6 +266,15 @@ app.updateClock = function() {
 
       for (var i = 1; i <= teacher_count; i++) {
         var teacher_string = $(".teacher_"+i).attr("teacher_name");
+
+        if ( teacher_string.indexOf('ó') > -1 ) { teacher_string = teacher_string.replace(/ó/g, "o"); }
+        if ( teacher_string.indexOf('á') > -1 ) { teacher_string = teacher_string.replace(/á/g, "a"); }
+        if ( teacher_string.indexOf('â') > -1 ) { teacher_string = teacher_string.replace(/â/g, "a"); }
+        if ( teacher_string.indexOf('ã') > -1 ) { teacher_string = teacher_string.replace(/ã/g, "a"); }
+        if ( teacher_string.indexOf('é') > -1 ) { teacher_string = teacher_string.replace(/é/g, "e"); }
+        if ( teacher_string.indexOf('í') > -1 ) { teacher_string = teacher_string.replace(/í/g, "i"); }
+        if ( teacher_string.indexOf('Á') > -1 ) { teacher_string = teacher_string.replace(/Á/g, "A"); }
+
         var uppercase_string = toTitleCase(string);
         var teacher_search = teacher_string.search(uppercase_string);
         if(teacher_search < 0) {
@@ -284,7 +292,9 @@ app.updateClock = function() {
       var teacher_count = $('#professors-list > .teacher_id').length;
 
       $('.search').val("");
-      $(".teacher").fadeIn(100);
+      for (var i = 1; i <= teacher_count; i++) {
+        $(".teacher_"+i).fadeIn(100);
+      }
 
     }, 0);
   }
