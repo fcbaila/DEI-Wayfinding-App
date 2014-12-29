@@ -60,6 +60,10 @@ $(".key-2").click(function() {
   updateTeachers();
 });
 
+$("#clean").click(function() {
+  clearTeachers();
+});
+
 /*TRANSITIONS-----------------*/
   $(".full-page").click(function() {
       $("#initial-message").addClass('move-top');
@@ -258,8 +262,8 @@ app.updateClock = function() {
 
   function updateTeachers() {
     setTimeout(function() {
-      var teacher_count = $('#professors-list > .teacher_id').length;
       var string = $('.search').val();
+      var teacher_count = $('#professors-list > .teacher_id').length;
 
       for (var i = 1; i <= teacher_count; i++) {
         var teacher_string = $(".teacher_"+i).attr("teacher_name");
@@ -271,6 +275,16 @@ app.updateClock = function() {
           $(".teacher_"+i).fadeIn(100);
         }
       }
+
+    }, 0);
+  }
+
+  function clearTeachers() {
+    setTimeout(function() {
+      var teacher_count = $('#professors-list > .teacher_id').length;
+
+      $('.search').val("");
+      $(".teacher").fadeIn(100);
 
     }, 0);
   }
