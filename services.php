@@ -47,7 +47,7 @@ require('core/functions.php');
         </div>
 
         <div id="close-page" class="close text absolute grid-20 button">
-          <img class="img-close" src="../css/images/close.png" />
+          <img class="img-close" src="./css/images/close.png" />
         </div>
 
       </div>

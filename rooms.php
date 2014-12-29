@@ -102,17 +102,17 @@ require('core/functions.php');
         </div>
 
         <div id="up-arrow-2" class="close text absolute button">
-          <img class="img-arrow" src="../css/images/up.png" />
+          <img class="img-arrow" src="./css/images/up.png" />
         </div>
         <div id="down-arrow-2" class="close text absolute grid-12 grid-h-15 button">
-          <img class="img-arrow" src="../css/images/down.png" />
+          <img class="img-arrow" src="./css/images/down.png" />
         </div>
 
         <div id="clock" class="close text absolute grid-16 grid-h-1 button">
         </div>
 
         <div id="close-page" class="close text absolute grid-20 button">
-          <img class="img-close" src="../css/images/close.png" />
+          <img class="img-close" src="./css/images/close.png" />
         </div>
 
       </div>

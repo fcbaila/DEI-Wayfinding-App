@@ -62,16 +62,18 @@ $(".key-2").click(function() {
 
 /*TRANSITIONS-----------------*/
   $("body").click(function() {
-    if (self.page == "index.php"){
+    var page = location.href.split('/').pop();
+    if (page == "index.php"){
       $("#initial-message").addClass('move-top');
       $("#initial-message").fadeOut(600);
       $("#initial-instruction").fadeOut(600);
       setTimeout(function() {
         window.location.href = "menu.php";
       }, 700);
-    }
+    } else { console.log('Redirect is not working! :('); }
   });
 /*REDIRECTIONS-----------------*/
+
   $("#search").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "mapa.php";
@@ -235,6 +237,11 @@ app.updateClock = function() {
   document.getElementById("clock").firstChild.nodeValue = self.currentTimeString;
 }
 
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  }
+
+
   function updateMap() {
     setTimeout(function() {
       var map_count = $('#construct_mapa > .mapa_slot').length;
@@ -259,7 +266,8 @@ app.updateClock = function() {
 
       for (var i = 1; i <= teacher_count; i++) {
         var teacher_string = $(".teacher_"+i).attr("teacher_name");
-        var teacher_search = teacher_string.search(string);
+        var uppercase_string = toTitleCase(string);
+        var teacher_search = teacher_string.search(uppercase_string);
         if(teacher_search < 0) {
           $(".teacher_"+i).fadeOut(100);
         } else {
