@@ -53,7 +53,11 @@ app.events = function() {
 /*FILTERS---------------------*/
 
 $(".key").click(function() {
-    updateTeachers();
+  updateTeachers();
+});
+
+$(".key-2").click(function() {
+  updateTeachers();
 });
 
 /*TRANSITIONS-----------------*/
@@ -257,9 +261,9 @@ app.updateClock = function() {
         var teacher_string = $(".teacher_"+i).attr("teacher_name");
         var teacher_search = teacher_string.search(string);
         if(teacher_search < 0) {
-          $(".teacher_"+i).animate({opacity: '0.2'}, 300);
+          $(".teacher_"+i).fadeOut(100);
         } else {
-          console.log(teacher_string);
+          $(".teacher_"+i).fadeIn(100);
         }
       }
 
