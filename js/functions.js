@@ -49,6 +49,13 @@ var slots = Array();
 
 app.events = function() {
   var self = this;
+
+/*FILTERS---------------------*/
+
+$(".key").click(function() {
+    updateTeachers();
+});
+
 /*TRANSITIONS-----------------*/
   $("body").click(function() {
     if (self.page == "index.php"){
@@ -224,19 +231,37 @@ app.updateClock = function() {
   document.getElementById("clock").firstChild.nodeValue = self.currentTimeString;
 }
 
-	function updateMap() {
-		setTimeout(function() {
-			var map_count = $('#construct_mapa > .mapa_slot').length;
-			var string = $('.search_area').val();
+  function updateMap() {
+    setTimeout(function() {
+      var map_count = $('#construct_mapa > .mapa_slot').length;
+      var string = $('.search_area').val();
 
-			for (var i = 1; i <= map_count; i++) {
-					var slot = $(".slot_"+i).attr("slot");
-					if(slot.substring(0, string.length) == string) {
-						$('.slot_'+i).animate({opacity: '1.0'}, 300);
-					} else {
-						$('.slot_'+i).animate({opacity: '0.2'}, 300);
-					}
-			}
-			console.log('room '+string);
-		}, 0);
-	}
+      for (var i = 1; i <= map_count; i++) {
+        var slot = $(".slot_"+i).attr("slot");
+        if(slot.substring(0, string.length) == string) {
+          $('.slot_'+i).animate({opacity: '1.0'}, 300);
+        } else {
+          $('.slot_'+i).animate({opacity: '0.2'}, 300);
+        }
+      }
+      console.log('room '+string);
+    }, 0);
+  }
+
+  function updateTeachers() {
+    setTimeout(function() {
+      var teacher_count = $('#professors-list > .teacher_name').length;
+      var string = $('.search').val();
+
+      for (var i = 1; i <= 10; i++) {
+        var teacher_string = $(".teacher_"+i).attr("teacher_name");
+        var teacher_search = teacher_string.search(string);
+        if(teacher_search < 0) {
+          console.log('yes');
+        } else {
+          console.log('no');
+        }
+      }
+
+    }, 0);
+  }

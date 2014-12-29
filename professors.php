@@ -34,66 +34,7 @@ require('core/functions.php');
 
         <div id="professors-list" class="text bold absolute grid-h-4 grid-2">
           <br>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
-          <p>Nila Gemmell;</p>
-          <p>Earleen Severa;</p>
-          <p>Delphia Walston;</p>
-          <p>Ezekiel Luter;</p>
-          <p>Danae Arcuri;</p>
+          <?php getTeachers(); ?>
         </div>
 
         <div id="search-professors" class="search-bar grid-14 grid-h-3 absolute">
