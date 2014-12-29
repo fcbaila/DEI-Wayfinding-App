@@ -74,22 +74,22 @@ require('core/functions.php');
           <br>
           <p>
             <div class="key-t" id="tower"><b2>Tower:</b2></div>
-            <div class="key-t" id="A">A</div>
-            <div class="key-t" id="B">B</div>
-            <div class="key-t" id="C">C</div>
-            <div class="key-t" id="D">D</div>
-            <div class="key-t" id="E">E</div>
-            <div class="key-t" id="F">F</div>
-            <div class="key-t" id="G">G</div>
+            <div class="key-t" id="tower-A">A</div>
+            <div class="key-t" id="tower-B">B</div>
+            <div class="key-t" id="tower-C">C</div>
+            <div class="key-t" id="tower-D">D</div>
+            <div class="key-t" id="tower-E">E</div>
+            <div class="key-t" id="tower-F">F</div>
+            <div class="key-t" id="tower-G">G</div>
           </p>
           <p>
-            <div class="key-f" id="room"><b2>Floor:</b2></div>
-            <div class="key-f" id="1">1</div>
-            <div class="key-f" id="2">2</div>
-            <div class="key-f" id="3">3</div>
-            <div class="key-f" id="4">4</div>
-            <div class="key-f" id="5">5</div>
-            <div class="key-f" id="6">6</div>
+            <div class="key-f" id="floor"><b2>Floor:</b2></div>
+            <div class="key-f" id="floor-1">1</div>
+            <div class="key-f" id="floor-2">2</div>
+            <div class="key-f" id="floor-3">3</div>
+            <div class="key-f" id="floor-4">4</div>
+            <div class="key-f" id="floor-5">5</div>
+            <div class="key-f" id="floor-6">6</div>
           </p>
         </div>
         <div id="rooms-filter-2" class="text grid-14 grid-h-3 absolute">

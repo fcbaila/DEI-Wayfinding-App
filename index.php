@@ -26,7 +26,7 @@ require('core/functions.php');
         ?>
       </div>
 
-      <div id="page_container">
+      <div id="page_container" class="full-page">
 
 
 
@@ -38,9 +38,6 @@ require('core/functions.php');
         <div id="initial-instruction" class="text absolute grid-2 grid-h-12">
           <p>touch to start</p>
           <img class="img-touch" src="./css/images/touch.png" />
-        </div>
-
-        <div id="clock" class="close text absolute grid-16 grid-h-1 button">
         </div>
 
       </div>

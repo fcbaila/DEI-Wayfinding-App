@@ -61,16 +61,13 @@ $(".key-2").click(function() {
 });
 
 /*TRANSITIONS-----------------*/
-  $("body").click(function() {
-    var page = location.href.split('/').pop();
-    if (page == "index.php"){
+  $(".full-page").click(function() {
       $("#initial-message").addClass('move-top');
       $("#initial-message").fadeOut(600);
       $("#initial-instruction").fadeOut(600);
       setTimeout(function() {
         window.location.href = "menu.php";
       }, 700);
-    } else { console.log('Redirect is not working! :('); }
   });
 /*REDIRECTIONS-----------------*/
 
@@ -154,7 +151,7 @@ var tower = false;
 var floor = false;
   $(".key-t").click(function() {
     if (tower == false){
-      input.value += this.id;
+      input.value += this.id + "; ";
       $('#' + this.id).css({
         "font-family": "Ed-bold"
       });

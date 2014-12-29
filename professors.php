@@ -28,22 +28,22 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div id="page-title" class="text absolute grid-h-3 grid-2">
+        <div id="page-title" class="text absolute grid-h-3 grid-1">
           <p>Teachers:</p>
         </div>
 
-        <div id="professors-list" class="text bold absolute grid-h-4 grid-2">
+        <div id="professors-list" class="text bold absolute grid-h-4 grid-1">
           <br>
           <?php getTeachers(); ?>
         </div>
 
-        <div id="search-professors" class="search-bar grid-14 grid-h-3 absolute">
+        <div id="search-professors" class="search-bar grid-15 grid-h-3 absolute">
           <form action="demo_form.asp">
             <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
           </form>
         </div>
 
-        <div id="professors-filter" class="text grid-14 grid-h-4 absolute">
+        <div id="professors-filter" class="text grid-15 grid-h-4 absolute">
           <p id="inside-p-filter">
             <div class="key" id="a">A</div>
             <div class="key" id="b">B</div>
@@ -76,7 +76,7 @@ require('core/functions.php');
             <div id="clean">clean</div>
           </p>
         </div>
-        <div id="professors-filter-2" class="text grid-14 grid-h-4 absolute">
+        <div id="professors-filter-2" class="text grid-15 grid-h-4 absolute">
           <br>
           <br>
           <br>
@@ -91,7 +91,7 @@ require('core/functions.php');
         <div id="up-arrow" class="close text absolute button">
           <img class="img-arrow" src="./css/images/up.png" />
         </div>
-        <div id="down-arrow" class="close text absolute grid-12 grid-h-15 button">
+        <div id="down-arrow" class="close text absolute button">
           <img class="img-arrow" src="./css/images/down.png" />
         </div>
 

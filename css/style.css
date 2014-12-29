@@ -117,6 +117,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   width: calc(58.2px * 6);
   border-bottom: 3px solid white;
   pointer-events:none;
+  font-family: Ed-medium;
 }
 .close{
   margin-top: calc(57px * 1 + 8px);
@@ -135,7 +136,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 .key, .key-2, .key-t, .key-f, .key-m{
   float: left;
-  margin-right: 40px;
+  margin-right: 45px;
   text-decoration: underline;
   cursor:pointer;
   -webkit-user-select: none;
@@ -161,7 +162,10 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 #find-options{
   height:50px;
 }
-
+.full-page{
+  height:100%;
+  width:100%;
+}
 #search{
   height:50px;
   display:none;
@@ -174,21 +178,21 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   height:50px;
 }
 #professors-filter{
-  max-width: calc(58px * 6);
+  max-width: calc(58px * 7);
   pointer-events: none;
   z-index: 1000;
 }
 #professors-list{
-  width: calc(58px * 10);
+  width: calc(58px * 12);
   max-height: calc(58px * 12);
   overflow-y: scroll;
 }
 #up-arrow{
-  margin-left: calc(58px * 12 + 10px);
+  margin-left: calc(58px * 13 + 10px);
   margin-top: calc(58px * 14);
 }
 #down-arrow{
-  margin-left: calc(58px * 12 + 10px);
+  margin-left: calc(58px * 13 + 10px);
   margin-top: calc(58px * 15 + 20px);
 }
 #clean{
@@ -212,7 +216,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   height:50px;
 }
 #rooms-filter{
-  max-width: calc(58px * 6);
+  max-width: calc(58px * 6.5);
   pointer-events: none;
   z-index: 1000;
 }
@@ -223,11 +227,11 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   text-decoration: none !important;
 }
 #up-arrow-2{
-  margin-left: calc(58px * 10 + 10px);
+  margin-left: calc(58px * 9 + 10px);
   margin-top: calc(58px * 14);
 }
 #down-arrow-2{
-  margin-left: calc(58px * 10 + 10px);
+  margin-left: calc(58px * 9 + 10px);
   margin-top: calc(58px * 15 + 20px);
 }
 /* SERVICES-PAGE--------------*/
