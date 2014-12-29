@@ -250,16 +250,16 @@ app.updateClock = function() {
 
   function updateTeachers() {
     setTimeout(function() {
-      var teacher_count = $('#professors-list > .teacher_name').length;
+      var teacher_count = $('#professors-list > .teacher_id').length;
       var string = $('.search').val();
 
-      for (var i = 1; i <= 10; i++) {
+      for (var i = 1; i <= teacher_count; i++) {
         var teacher_string = $(".teacher_"+i).attr("teacher_name");
         var teacher_search = teacher_string.search(string);
         if(teacher_search < 0) {
-          console.log('yes');
+          $(".teacher_"+i).animate({opacity: '0.2'}, 300);
         } else {
-          console.log('no');
+          console.log(teacher_string);
         }
       }
 
