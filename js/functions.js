@@ -276,12 +276,28 @@ app.updateClock = function() {
         if ( teacher_string.indexOf('Á') > -1 ) { teacher_string = teacher_string.replace(/Á/g, "A"); }
 
         var uppercase_string = toTitleCase(string);
-        var teacher_search = teacher_string.search(uppercase_string);
-        if(teacher_search < 0) {
-          $(".teacher_"+i).fadeOut(100);
-        } else {
-          $(".teacher_"+i).fadeIn(100);
+        var split_string = uppercase_string.split(" ");
+
+        for (var j = 0; j < split_string.length; j++) {
+          var current_string = split_string[j];
+          var teacher_search = teacher_string.search(current_string);
+          if(teacher_search < 0) {
+            $(".teacher_"+i).fadeOut(100);
+            break;
+          } else {
+            $(".teacher_"+i).fadeIn(100);
+          }
         }
+        /*for (var j = 0; i <= split_string.length; j++) {
+
+          if(teacher_search < 0) {
+            $(".teacher_"+i).fadeOut(100);
+          } else {
+            $(".teacher_"+i).fadeIn(100);
+          }
+        }
+        */
+
       }
 
     }, 0);
