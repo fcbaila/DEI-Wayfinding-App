@@ -40,6 +40,9 @@ require('core/functions.php');
           <img class="img-touch" src="./css/images/touch.png" />
         </div>
 
+        <div id="clock" class="close text absolute grid-16 grid-h-1 button" style="display:none;">
+        </div>
+
       </div>
 
     </div>
