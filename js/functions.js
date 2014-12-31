@@ -64,6 +64,14 @@ $("#clean").click(function() {
   clearTeachers();
 });
 
+$("#filter_designer").click(function() {
+  filterTeachers(2);
+});
+
+$("#filter_engineer").click(function() {
+  filterTeachers(1);
+});
+
 /*TRANSITIONS-----------------*/
   $(".full-page").click(function() {
       $("#initial-message").addClass('move-top');
@@ -288,16 +296,21 @@ app.updateClock = function() {
             $(".teacher_"+i).fadeIn(100);
           }
         }
-        /*for (var j = 0; i <= split_string.length; j++) {
+      }
 
-          if(teacher_search < 0) {
-            $(".teacher_"+i).fadeOut(100);
-          } else {
-            $(".teacher_"+i).fadeIn(100);
-          }
+    }, 0);
+  }
+
+  function filterTeachers(filter) {
+    clearTeachers();
+    setTimeout(function() {
+      var teacher_count = $('#professors-list > .teacher_id').length;
+
+      for (var i = 1; i <= teacher_count; i++) {
+        var teacher_filter = $(".teacher_"+i).attr("teacher_filter");
+        if(teacher_filter != filter && teacher_filter != 3) {
+          $(".teacher_"+i).fadeOut(100);
         }
-        */
-
       }
 
     }, 0);

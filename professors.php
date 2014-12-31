@@ -84,8 +84,8 @@ require('core/functions.php');
           <br>
           <br>
           <br>
-          <p class="button underline" id="engineer">engineering</p>
-          <p class="button underline" id="designer">design</p>
+          <p class="button underline" id="filter_engineer">engineering</p>
+          <p class="button underline" id="filter_designer">design</p>
         </div>
 
         <div id="up-arrow" class="close text absolute button">
