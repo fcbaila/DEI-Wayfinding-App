@@ -34,7 +34,7 @@ require('core/functions.php');
       <div id="page_container" class="full-page">
         <div id="initial-message" class="text absolute grid-4 grid-h-10 type-48">
           <p>Hi, <b>welcome to DEI.</b></p>
-          <p>Department of Informatics Engineering<br>- University of Coimbra</p>
+          <p>Department of Informatics Engineering<br>— University of Coimbra</p>
         </div>
 
         <div id="initial-instruction" class="text absolute grid-8 grid-h-20 type-32">

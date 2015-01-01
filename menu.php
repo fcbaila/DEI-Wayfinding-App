@@ -33,18 +33,23 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div id="find-message" class="text bold absolute grid-h-2 grid-2">
-          <p>What would you like to find?</p>
+        <div id="title-message" class="text absolute grid-h-2 grid-2 type-24">
+          <p class="bold">Department of Informatics Engineering</p>
+          <p>University of Coimbra</p>
         </div>
 
-        <div id="find-options" class="text absolute grid-h-5 grid-2">
-          <p id="opt-1" class="opts">A Teacher</p>
-          <p id="opt-2" class="opts">A Room</p>
-          <p id="opt-3" class="opts">A Service</p>
+        <div id="find-message" class="text bold absolute grid-h-8 grid-2 type-96">
+          <p>What would you <br>like to find?</p>
         </div>
 
-        <div id="search" class="text absolute grid-h-15 grid-2 button">
-          <p><b2>› Free Search</b2></p>
+        <div id="find-options" class="text medium absolute grid-h-18 grid-2 type-48">
+          <div id="opt-1" class="opts">A Teacher</div>
+          <div id="opt-2" class="opts">A Room</div>
+          <div id="opt-3" class="opts">A Service</div>
+        </div>
+
+        <div id="search" class="text absolute grid-h-25 grid-2 button type-48">
+          <p><b2>Free Search</b2></p>
         </div>
 
         <div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
