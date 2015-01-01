@@ -31,7 +31,7 @@ line-height: 18px;
 html, body {
 margin: 0;
 padding: 0;
-background-color: black;
+background-color: rgb(200,200,200);
 }
 
 
@@ -100,6 +100,22 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .bold{
   font-family: Ed-bold !important;
 }
+.type-24 {
+  font-size: 24px !important;
+  color: white;
+}
+.type-32 {
+  font-size: 32px !important;
+  color: white;
+}
+.type-48 {
+  font-size: 48px !important;
+  color: white;
+}
+.type-96 {
+  font-size: 96px !important;
+  color: white;
+}
 .absolute{
   position: absolute;
 }
@@ -120,6 +136,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   font-family: Ed-medium;
 }
 .close{
+  width: calc(32px * 2);
   margin-top: calc(57px * 1 + 8px);
 }
 .underline{
@@ -150,6 +167,40 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   max-width: calc(58.2px * 7);
   overflow-x:auto;
   text-transform:capitalize;
+}
+/* FRAME----------------------*/
+#frame{
+  margin-top:0px;
+  margin-left:0px;
+  width: 1280px;
+  height: 1024px;
+  pointer-events: none;
+}
+#frame-top{
+  margin-top:0px;
+  width: 1280px;
+  height: 16px;
+  background:white;
+}
+#frame-right{
+  margin-top:0px;
+  margin-left:1264px;
+  width: 16px;
+  height: 1008px;
+  background:white;
+}
+#frame-bottom{
+  margin-top:1008px;
+  width: 1280px;
+  height: 16px;
+  background:white;
+}
+#frame-left{
+  margin-top:0px;
+  margin-left:0px;
+  width: 16px;
+  height: 1008px;
+  background:white;
 }
 /* INDEX / MENU----------------------*/
 #initial-message{
@@ -266,27 +317,25 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 
 
-
-
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-o-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 .move-top{
