@@ -1,6 +1,7 @@
 /* Main app*/
 var app = {
   page: " ",
+  previousPage: " ",
   currentTime: 0,
   currentHours: 0,
   currentMinutes: 0,
@@ -15,7 +16,9 @@ $(document).ready(function() {
 app.init = function() {
   var self = this;
   var url = window.location.pathname;
+  var previousUrl = document.referrer;
   self.page = url.substring(url.lastIndexOf('/')+1);
+  self.previousPage = previousUrl.substring(previousUrl.lastIndexOf('/')+1);
   /*UPDATE CLOCK-----------------*/
   if (self.page != "index.php"){
     app.updateClock();
@@ -25,21 +28,29 @@ app.init = function() {
   }
   /*TRANSITIONS-----------------*/
   $("#page_container").fadeIn(800);
-  setTimeout(function() {
-    $("#find-message").fadeIn(600);
-  }, 300);
-  setTimeout(function() {
-    $("#opt-1").fadeIn(400);
-  }, 600);
-  setTimeout(function() {
-    $("#opt-2").fadeIn(400);
-  }, 900);
-  setTimeout(function() {
-    $("#opt-3").fadeIn(400);
-  }, 1200);
-  setTimeout(function() {
-    $("#search").fadeIn(400);
-  }, 1600);
+  if (self.previousPage == "index.php"){
+    setTimeout(function() {
+      $("#find-message").fadeIn(600);
+    }, 300);
+    setTimeout(function() {
+      $("#opt-1").fadeIn(400);
+    }, 600);
+    setTimeout(function() {
+      $("#opt-2").fadeIn(400);
+    }, 900);
+    setTimeout(function() {
+      $("#opt-3").fadeIn(400);
+    }, 1200);
+    setTimeout(function() {
+      $("#search").fadeIn(400);
+    }, 1600);
+  } else{
+    $("#find-message").fadeIn(300);
+    $("#opt-1").fadeIn(300);
+    $("#opt-2").fadeIn(300);
+    $("#opt-3").fadeIn(300);
+    $("#search").fadeIn(300);
+  }
 
   app.events();
   app.keyboard();
