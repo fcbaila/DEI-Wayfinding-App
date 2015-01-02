@@ -73,28 +73,6 @@ var slots = Array();
 app.events = function() {
   var self = this;
 
-  /*FILTERS---------------------*/
-
-  $(".key").click(function() {
-    updateTeachers();
-  });
-
-  $(".key-2").click(function() {
-    updateTeachers();
-  });
-
-  $("#clean").click(function() {
-    clearTeachers();
-  });
-
-  $("#filter_designer").click(function() {
-    filterTeachers(2);
-  });
-
-  $("#filter_engineer").click(function() {
-    filterTeachers(1);
-  });
-
   /*TRANSITIONS-----------------*/
   $(".full-page").click(function() {
     $("#initial-message").addClass('move-top');
@@ -223,44 +201,58 @@ app.keyboard = function() {
   /*FILTER-----------------*/
   var engineer = false;
   var designer = false;
-  $("#engineer").click(function() {
-    if(engineer == false){
-      $('#engineer').css({
-        "font-family": "Ed-medium"
-      });
-      $('#designer').css({
-        "font-family": "Ed-regular"
-      });
-      engineer = true;
-      designer = false;
-    } else{
-      $('#engineer').css({
-        "font-family": "Ed-regular"
-      });
-      $('#designer').css({
-        "font-family": "Ed-regular"
-      });
-      engineer = false;
-    }
+  $(".key").click(function() {
+    updateTeachers();
   });
-  $("#designer").click(function() {
+  $(".key-2").click(function() {
+    updateTeachers();
+  });
+  $("#clean").click(function() {
+    clearTeachers();
+  });
+
+  $("#filter_designer").click(function() {
     if(designer == false){
-      $('#designer').css({
-        "font-family": "Ed-medium"
+      filterTeachers(2);
+      $('#filter_designer').css({
+        "font-family": "Ed-bold"
       });
-      $('#engineer').css({
+      $('#filter_engineer').css({
         "font-family": "Ed-regular"
       });
       designer = true;
       engineer = false;
     } else{
-      $('#designer').css({
+      filterTeachers(3);
+      $('#filter_designer').css({
         "font-family": "Ed-regular"
       });
-      $('#engineer').css({
+      $('#filter_engineer').css({
         "font-family": "Ed-regular"
       });
       designer = false;
+    }
+  });
+  $("#filter_engineer").click(function() {
+    if(engineer == false){
+      filterTeachers(1);
+      $('#filter_engineer').css({
+        "font-family": "Ed-bold"
+      });
+      $('#filter_designer').css({
+        "font-family": "Ed-regular"
+      });
+      engineer = true;
+      designer = false;
+    } else{
+      filterTeachers(3);
+      $('#filter_engineer').css({
+        "font-family": "Ed-regular"
+      });
+      $('#filter_designer').css({
+        "font-family": "Ed-regular"
+      });
+      engineer = false;
     }
   });
 }
@@ -360,14 +352,13 @@ function filterTeachers(filter) {
 
   }, 0);
 }
-
 function clearTeachers() {
   setTimeout(function() {
     var teacher_count = $('#professors-list > .teacher_id').length;
 
     $('.search').val("");
     for (var i = 1; i <= teacher_count; i++) {
-      $(".teacher_"+i).fadeIn(100);
+      $(".teacher_"+i).fadeIn(600);
     }
 
   }, 0);
