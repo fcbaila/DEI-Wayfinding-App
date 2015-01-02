@@ -285,11 +285,6 @@ function createClick(event) {
   div.style.position = 'absolute';
   div.style.left = posX +'px';
   div.style.top = posY +'px';
-  div.style.width = "50px";
-  div.style.height = "50px";
-  div.style.backgroundImage = "url('./css/images/down.png')";
-  div.style.color = "white";
-  div.style.color = "white";
   div.className = "click";
   document.body.appendChild(div);
   setTimeout(function() {
