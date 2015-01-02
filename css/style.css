@@ -345,24 +345,24 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top: calc(32px * 10) }
-  to { margin-top: 100px; }
+  from { margin-top: calc(32px * 7) }
+  to { margin-top: 20px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top: calc(32px * 10) }
-  to { margin-top: 100px; }
+  from { margin-top: calc(32px * 7) }
+  to { margin-top: 20px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top: calc(32px * 10) }
-  to { margin-top: 100px; }
+  from { margin-top: calc(32px * 7) }
+  to { margin-top: 20px; }
 }
 @-o-keyframes move-top {
-  from { margin-top: calc(32px * 10) }
-  to { margin-top: 100px; }
+  from { margin-top: calc(32px * 7) }
+  to { margin-top: 20px; }
 }
 @keyframes move-top {
-  from { margin-top: calc(32px * 10) }
-  to { margin-top: 100px; }
+  from { margin-top: calc(32px * 7) }
+  to { margin-top: 20px; }
 }
 .move-top{
   -webkit-animation: move-top 2s infinite;
