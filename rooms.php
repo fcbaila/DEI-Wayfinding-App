@@ -34,7 +34,7 @@
 
           <div id="rooms-list" class="text bold absolute grid-h-4 grid-2">
             <?php
-            
+              getRooms();
             ?>
           </div>
 
