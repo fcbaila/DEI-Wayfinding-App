@@ -38,11 +38,7 @@ require('core/functions.php');
         </div>
 
         <div id="professors-list" class="text bold absolute grid-h-7 grid-2 type-32">
-<<<<<<< HEAD
-
-=======
-          <?php getTeachers(); ?>
->>>>>>> FETCH_HEAD
+          <?php getTeachers($db); ?>
         </div>
 
         <div id="search-professors" class="search-bar grid-29 grid-h-5 absolute type-38">
