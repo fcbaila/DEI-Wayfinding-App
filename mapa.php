@@ -15,26 +15,19 @@ require('core/functions.php');
 
 	<div id="grid_container">
 		<?php
-		for($i = 1; $i <= 40; $i++) {
+		for($i = 1; $i <= 22; $i++) {
 			echo '<div class="grid"></div>';
 		}
 		?>
 		<?php
-		for($i = 1; $i <= 32; $i++) {
+		for($i = 1; $i <= 18; $i++) {
 			echo '<div class="grid-h"></div>';
 		}
 		?>
 	</div>
-	<div id="frame" class="absolute">
-		<div id="frame-top" class="absolute"></div>
-		<div id="frame-right" class="absolute"></div>
-		<div id="frame-bottom" class="absolute"></div>
-		<div id="frame-left" class="absolute"></div>
-	</div>
-
 	<div id="page_container">
 
-		<div id="construct_mapa" class="grid-2 grid-h-5">
+		<div id="construct_mapa" class="grid-2 grid-h-3">
 			<?php
 			$count = 0;
 			for ($i = 1; $i <= 8; $i++) {
@@ -56,11 +49,11 @@ require('core/functions.php');
 			?>
 		</div>
 
-		<div id="search-professors" class="grid-2 grid-h-25 search-bar absolute">
+		<div id="search-professors" class="grid-2 grid-h-12 search-bar absolute">
 			<input type="text" id="text-search" class="text search input" placeholder="search for a room">
 		</div>
 
-		<div id="map-filter" class="text grid-9 grid-h-25 absolute">
+		<div id="map-filter" class="text grid-9 grid-h-12 absolute">
 			<p id="inside-p-filter">
 				<div class="key-m" id="a">A</div>
 				<div class="key-m" id="b">B</div>
@@ -103,11 +96,11 @@ require('core/functions.php');
 			</p>
 		</div>
 
-		<div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
+		<div id="clock" class="close text absolute grid-16 grid-h-1 button">
 		</div>
 
-		<div id="close-page" class="close text absolute grid-35 grid-h-2 button">
-			<img class="img-close" src="./css/images/close.png" />
+		<div id="close-page" class="close text absolute grid-20 button">
+			<img class="img-close" src="../css/images/close.png" />
 		</div>
 	</div>
 </div>
