@@ -14,15 +14,14 @@ require('core/functions.php');
 <div id="construct_container">
 
 	<div id="grid_container">
-		<?php
+		<?php /*
 		for($i = 1; $i <= 40; $i++) {
 			echo '<div class="grid"></div>';
 		}
-		?>
-		<?php
+
 		for($i = 1; $i <= 32; $i++) {
 			echo '<div class="grid-h"></div>';
-		}
+		} */
 		?>
 	</div>
 	<div id="frame" class="absolute">
@@ -35,25 +34,7 @@ require('core/functions.php');
 	<div id="page_container">
 
 		<div id="construct_mapa" class="grid-2 grid-h-5">
-			<?php
-			$count = 0;
-			for ($i = 1; $i <= 8; $i++) {
-				for($j = 1; $j <= 16; $j++) {
-					$rand2 = rand(1, 6);
-					$rand3 = rand(1, 6);
-					$string = 'E'.$rand2.'_'.$rand3;
-					$count = $count+1;
-					$query = mysql_query("SELECT * FROM mapa_slots WHERE mapa_x = '$j' AND mapa_y = '$i'");
-					if (!$query || mysql_num_rows($query) == 0) {
-						echo '<div class="mapa_slot slot_'.$count.'" slot="'.$string.'">Error</div>';
-					} else {
-						$fetch_query = mysql_fetch_object($query);
-						$image_link = 'css/images/icons/icon_'.$fetch_query->slot_tipo.'.png';
-						echo '<div class="mapa_slot slot_'.$count.'" slot="'.$string.'"> <img src="'.$image_link.'" style="width: 100%;"></div>';
-					}
-				}
-			}
-			?>
+			<?php showMap(0); ?>
 		</div>
 
 		<div id="search-professors" class="grid-2 grid-h-25 search-bar absolute">
