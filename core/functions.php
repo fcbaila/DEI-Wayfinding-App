@@ -44,7 +44,7 @@ function showMap($floor) {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
         } elseif($room_id == 129 || $room_id == 130 || $room_id == 134 || $room_id == 135 || $room_id == 136 || $room_id == 137 || $room_id == 138 || $room_id == 139) {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
-        } elseif($room_id == 131 || $room_id == 132 || $room_id == 143 || $room_id == 144 || $room_id == 145) {
+        } elseif($room_id == 131 || $room_id == 132 || $room_id == 143 || $room_id == 144 || $room_id == 145 || $room_id == 149 || $room_id == 150) {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
         } else {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';
