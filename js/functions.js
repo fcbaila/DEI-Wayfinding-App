@@ -16,7 +16,6 @@ app.init = function() {
   var self = this;
   var url = window.location.pathname;
   self.page = url.substring(url.lastIndexOf('/')+1);
-  
   /*UPDATE CLOCK-----------------*/
   if (self.page != "index.php"){
     app.updateClock();

@@ -46,10 +46,6 @@ b{
   font-weight:normal;
   font-family:Ed-bold !important;
 }
-b2{
-  font-weight:normal;
-  font-family:Ed-medium !important;
-}
 
 a, a:link, a:active, a:visited { text-decoration: none; color: rgb(133, 107, 80); }
 a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
@@ -230,14 +226,13 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 #search{
   height:50px;
   display:none;
-  text-decoration: underline;
 }
 /* PROFESSORS-PAGE--------------*/
 #page-title{
   height:50px;
 }
 #search-professors{
-  height:50px;
+  height:45px;
 }
 #professors-filter{
   max-width: calc(32px * 10);
@@ -275,10 +270,10 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   overflow-y: scroll;
 }
 #search-rooms{
-  height:50px;
+  height:45px;
 }
 #rooms-filter{
-  max-width: calc(58px * 6.5);
+  max-width: calc(32px * 11);
   pointer-events: none;
   z-index: 1000;
 }
@@ -289,12 +284,12 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   text-decoration: none !important;
 }
 #up-arrow-2{
-  margin-left: calc(58px * 9 + 10px);
-  margin-top: calc(58px * 14);
+  margin-left: calc(32px * 15);
+  margin-top: calc(32px * 23);
 }
 #down-arrow-2{
-  margin-left: calc(58px * 9 + 10px);
-  margin-top: calc(58px * 15 + 20px);
+  margin-left: calc(32px * 15);
+  margin-top: calc(32px * 26);
 }
 /* SERVICES-PAGE--------------*/
 #services-list{
@@ -310,16 +305,19 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .mapa_slot {
   width: 60px;
   height: 60px;
-  margin-top:2px;
-  margin-bottom:2px;
-  margin-left:2px;
-  margin-right:2px;
+  margin-top:2px !important;
+  margin-bottom:2px !important;
+  margin-left:2px !important;
+  margin-right:2px !important;
   float: left;
 }
 #map-filter{
-  width: calc(58px * 12);
+  width: calc(32px * 23);
   pointer-events: none;
   z-index: 1000;
+}
+#search-free{
+  height:45px;
 }
 
 

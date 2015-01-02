@@ -18,7 +18,7 @@ function getRooms() {
     echo 'There are no rooms available at the moment.';
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
-      echo '<p class="room_id room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> — '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.';</p>';
+      echo '<p class="room_id room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.';</p>';
     }
   }
 }
