@@ -41,13 +41,13 @@ require('core/functions.php');
           <?php getTeachers(); ?>
         </div>
 
-        <div id="search-professors" class="search-bar grid-29 grid-h-5 absolute type-38">
+        <div id="search-professors" class="search-bar grid-28 grid-h-5 absolute type-38">
           <form action="demo_form.asp">
             <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
           </form>
         </div>
 
-        <div id="professors-filter" class="text grid-29 grid-h-7 absolute type-32">
+        <div id="professors-filter" class="text grid-28 grid-h-7 absolute type-32">
           <p id="inside-p-filter">
             <div class="key" id="a">A</div>
             <div class="key" id="b">B</div>
@@ -80,7 +80,7 @@ require('core/functions.php');
             <div id="clean">clean</div>
           </p>
         </div>
-        <div id="professors-filter-2" class="text grid-29 grid-h-7 absolute type-32">
+        <div id="professors-filter-2" class="text grid-28 grid-h-7 absolute type-32">
           <br>
           <br>
           <br>

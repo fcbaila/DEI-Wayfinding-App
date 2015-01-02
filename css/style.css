@@ -137,7 +137,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-right:60px;
 }
 .search-bar{
-  width: calc(32px * 9);
+  width: calc(32px * 10);
   border-bottom: 3px solid white;
   pointer-events:none;
   font-family: Ed-medium;
@@ -243,20 +243,18 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   max-width: calc(32px * 10);
   pointer-events: none;
   z-index: 1000;
-  background:red;
 }
 #professors-list{
-  width: calc(32px * 26);
+  width: calc(32px * 25);
   max-height: calc(32px * 22);
   overflow-y: scroll;
-  background:red;
 }
 #up-arrow{
-  margin-left: calc(32px * 29);
+  margin-left: calc(32px * 28);
   margin-top: calc(32px * 23);
 }
 #down-arrow{
-  margin-left: calc(32px * 29);
+  margin-left: calc(32px * 28);
   margin-top: calc(32px * 26);
 }
 #clean{
