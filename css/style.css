@@ -178,11 +178,11 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   width:50px;
   height:50px;
   background-image: url("sprite2.png");
-  -webkit-animation: touch2 0.8s steps(14) infinite;
-  -moz-animation: touch2 0.8s steps(14) infinite;
-  -ms-animation: touch2 0.8s steps(14) infinite;
-  -o-animation: touch2 0.8s steps(14) infinite;
-  animation: touch2 0.8s steps(14) infinite;
+  -webkit-animation: touch2 0.5s steps(14) infinite;
+  -moz-animation: touch2 0.5s steps(14) infinite;
+  -ms-animation: touch2 0.5s steps(14) infinite;
+  -o-animation: touch2 0.5s steps(14) infinite;
+  animation: touch2 0.5s steps(14) infinite;
 }
 /* FRAME----------------------*/
 #frame{

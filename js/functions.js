@@ -275,7 +275,7 @@ app.updateClock = function() {
   self.currentTimeString = self.currentHours + ":" + self.currentMinutes + " " + self.timeOfDay;
   document.getElementById("clock").firstChild.nodeValue = self.currentTimeString;
 }
-
+/*CLICK ANIMATION-----------------*/
 function createClick(event) {
   var x = event.clientX;
   var y = event.clientY;
@@ -289,7 +289,7 @@ function createClick(event) {
   document.body.appendChild(div);
   setTimeout(function() {
     document.body.removeChild(div);
-  }, 600);
+  }, 400);
 }
 
 function toTitleCase(str) {
