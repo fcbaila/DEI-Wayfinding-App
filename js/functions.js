@@ -26,20 +26,20 @@ app.init = function() {
   /*TRANSITIONS-----------------*/
   $("#page_container").fadeIn(800);
   setTimeout(function() {
-    $("#find-message").fadeIn(300);
+    $("#find-message").fadeIn(600);
   }, 300);
   setTimeout(function() {
-    $("#opt-1").fadeIn(300);
+    $("#opt-1").fadeIn(400);
   }, 600);
   setTimeout(function() {
-    $("#opt-2").fadeIn(300);
-  }, 800);
+    $("#opt-2").fadeIn(400);
+  }, 900);
   setTimeout(function() {
-    $("#opt-3").fadeIn(300);
-  }, 1000);
+    $("#opt-3").fadeIn(400);
+  }, 1200);
   setTimeout(function() {
-    $("#search").fadeIn(300);
-  }, 1700);
+    $("#search").fadeIn(400);
+  }, 1600);
 
   app.events();
   app.keyboard();
