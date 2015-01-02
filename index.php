@@ -31,14 +31,14 @@ require('core/functions.php');
       </div>
 
       <div id="page_container" class="full-page">
-        <div id="initial-message" class="text absolute grid-4 grid-h-10 type-48">
-          <p>Hi, <b>welcome to DEI.</b></p>
-          <p>Department of Informatics Engineering<br>— University of Coimbra</p>
+        <div id="initial-message" class="text absolute grid-4 grid-h-7">
+          <p class="type-48">Hi, <b>welcome to DEI.</b></p>
+          <p class="type-38">Department of Informatics Engineering<br>— University of Coimbra</p>
         </div>
 
-        <div id="initial-instruction" class="text absolute grid-8 grid-h-20 type-32">
-          <p>touch to start</p>
-          <img class="img-touch" src="./css/images/touch.png" />
+        <div id="initial-instruction" class="text absolute grid-h-16 type-32">
+          <p>touch the screen to start</p>
+          <div id="img-touch"></div>
         </div>
       </div>
 

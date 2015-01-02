@@ -15,14 +15,14 @@
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
-  border-right: 1px solid rgba(207, 207, 207, 0.1);
+  border-right: 1px solid rgba(207, 207, 207, 0.2);
 }
 .grid-h{
   width: 100%;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.1);
+  border-bottom: 1px solid rgba(207, 207, 207, 0.2);
   height: 32px;
 }
 
