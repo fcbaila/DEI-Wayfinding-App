@@ -31,7 +31,7 @@ line-height: 18px;
 html, body {
 margin: 0;
 padding: 0;
-background-color: black;
+background-color: rgb(200,200,200);
 }
 
 
@@ -100,6 +100,27 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .bold{
   font-family: Ed-bold !important;
 }
+.type-24 {
+  font-size: 24px !important;
+  color: white;
+}
+.type-32 {
+  font-size: 32px !important;
+  color: white;
+  line-height:180%;
+}
+.type-38 {
+  font-size: 38px !important;
+  color: white;
+}
+.type-48 {
+  font-size: 48px !important;
+  color: white;
+}
+.type-96 {
+  font-size: 96px !important;
+  color: white;
+}
 .absolute{
   position: absolute;
 }
@@ -112,14 +133,17 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   user-select: none;
   cursor:pointer;
   text-decoration: underline;
+  float:left;
+  margin-right:60px;
 }
 .search-bar{
-  width: calc(58.2px * 6);
+  width: calc(32px * 9);
   border-bottom: 3px solid white;
   pointer-events:none;
   font-family: Ed-medium;
 }
 .close{
+  width: calc(32px * 2);
   margin-top: calc(57px * 1 + 8px);
 }
 .underline{
@@ -136,7 +160,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 .key, .key-2, .key-t, .key-f, .key-m{
   float: left;
-  margin-right: 45px;
+  margin-right: 50px;
   text-decoration: underline;
   cursor:pointer;
   -webkit-user-select: none;
@@ -146,10 +170,47 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   user-select: none;
   pointer-events: visible;
 }
+.key-break{
+  margin-right:0px !important;
+}
 .search{
   max-width: calc(58.2px * 7);
   overflow-x:auto;
   text-transform:capitalize;
+}
+/* FRAME----------------------*/
+#frame{
+  margin-top:0px;
+  margin-left:0px;
+  width: 1280px;
+  height: 1024px;
+  pointer-events: none;
+}
+#frame-top{
+  margin-top:0px;
+  width: 1280px;
+  height: 16px;
+  background:white;
+}
+#frame-right{
+  margin-top:0px;
+  margin-left:1264px;
+  width: 16px;
+  height: 1008px;
+  background:white;
+}
+#frame-bottom{
+  margin-top:1008px;
+  width: 1280px;
+  height: 16px;
+  background:white;
+}
+#frame-left{
+  margin-top:0px;
+  margin-left:0px;
+  width: 16px;
+  height: 1008px;
+  background:white;
 }
 /* INDEX / MENU----------------------*/
 #initial-message{
@@ -169,6 +230,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 #search{
   height:50px;
   display:none;
+  text-decoration: underline;
 }
 /* PROFESSORS-PAGE--------------*/
 #page-title{
@@ -178,22 +240,24 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   height:50px;
 }
 #professors-filter{
-  max-width: calc(58px * 7);
+  max-width: calc(32px * 10);
   pointer-events: none;
   z-index: 1000;
+  background:red;
 }
 #professors-list{
-  width: calc(58px * 12);
-  max-height: calc(58px * 12);
+  width: calc(32px * 26);
+  max-height: calc(32px * 22);
   overflow-y: scroll;
+  background:red;
 }
 #up-arrow{
-  margin-left: calc(58px * 13 + 10px);
-  margin-top: calc(58px * 14);
+  margin-left: calc(32px * 29);
+  margin-top: calc(32px * 23);
 }
 #down-arrow{
-  margin-left: calc(58px * 13 + 10px);
-  margin-top: calc(58px * 15 + 20px);
+  margin-left: calc(32px * 29);
+  margin-top: calc(32px * 26);
 }
 #clean{
   float: left;
@@ -242,16 +306,16 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 /* MAP-PAGE--------------*/
 #construct_mapa {
   position: absolute;
-  width: calc(58.2px * 18);
-  height: calc(58px * 8);
+  width: calc(32px * 36);
+  height: calc(32px * 16);
 }
 .mapa_slot {
-  width: 50px;
-  height: 50px;
-  margin-top:4px;
-  margin-bottom:4px;
-  margin-left:4px;
-  margin-right:4px;
+  width: 60px;
+  height: 60px;
+  margin-top:2px;
+  margin-bottom:2px;
+  margin-left:2px;
+  margin-right:2px;
   float: left;
 }
 #map-filter{
@@ -266,27 +330,25 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 
 
 
-
-
 /*-----ANIMATIONS----------------------------------------------------------------------*/
 @-webkit-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-moz-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-ms-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @-o-keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 @keyframes move-top {
-  from { margin-top: calc(58px * 7) }
+  from { margin-top: calc(32px * 10) }
   to { margin-top: 100px; }
 }
 .move-top{

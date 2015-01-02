@@ -139,7 +139,11 @@ var anchor = 0;
 }
 
 app.keyboard = function() {
+
   var input = document.getElementById("text-search");
+  var input_tower = document.getElementById("search_tower");
+  var input_floor = document.getElementById("search_floor");
+
 /*KEYBOARD-----------------*/
   $(".key").click(function() {
     input.value += this.id;
@@ -158,12 +162,13 @@ app.keyboard = function() {
     input.value += this.id;
     updateMap();
   });
-/*KEYBOARD-ROOMS-----------------*/
+/*KEYBOARD-ROOMS---------------*/
 var tower = false;
 var floor = false;
   $(".key-t").click(function() {
+    filterTower();
     if (tower == false){
-      input.value += this.id + "; ";
+      input_tower.value += this.id;
       $('#' + this.id).css({
         "font-family": "Ed-bold"
       });
@@ -171,16 +176,18 @@ var floor = false;
     }
   });
   $(".key-f").click(function() {
+    filterFloor();
     if (floor == false){
-      input.value += this.id;
+      input_floor.value += this.id;
       $('#' + this.id).css({
         "font-family": "Ed-bold"
       });
       floor = true;
     }
   });
-  $("#clean").click(function() {
-    input.value = "";
+  $("#room_clean").click(function() {
+    input_tower.value = "";
+    input_floor.value = "";
     $('.key-t').css({
       "font-family": "Ed-regular"
     });
@@ -323,6 +330,35 @@ app.updateClock = function() {
       $('.search').val("");
       for (var i = 1; i <= teacher_count; i++) {
         $(".teacher_"+i).fadeIn(100);
+      }
+
+    }, 0);
+  }
+
+
+  function filterTower() {
+    setTimeout(function() {
+      var room_count = $('#rooms-list > .room_id').length;
+      var string = $('#search_tower').val();
+      for (var i = 1; i <= room_count; i++) {
+        var room_filter = $(".room_"+i).attr("room_block");
+        if(room_filter != string) {
+          $(".room_"+i).fadeOut(100);
+        }
+      }
+
+    }, 0);
+  }
+
+  function filterFloor() {
+    setTimeout(function() {
+      var room_count = $('#rooms-list > .room_id').length;
+      var string = $('#search_floor').val();
+      for (var i = 1; i <= room_count; i++) {
+        var room_filter = $(".room_"+i).attr("room_floor");
+        if(room_filter != string) {
+          $(".room_"+i).fadeOut(100);
+        }
       }
 
     }, 0);
