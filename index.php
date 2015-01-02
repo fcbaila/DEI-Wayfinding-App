@@ -5,7 +5,6 @@
 require('core/ref.php');
 require('core/init.php');
 require('core/functions.php');
-
 ?>
 
 <div id="wrapper">
@@ -46,5 +45,7 @@ require('core/functions.php');
     </div>
   </div>
 </div>
-</body>
-</html>
+
+<?php
+require('core/footer.php');
+?>

@@ -110,5 +110,6 @@
     </div>
   </div>
 
-</body>
-</html>
+  <?php
+  require('core/footer.php');
+  ?>

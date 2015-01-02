@@ -60,5 +60,6 @@ require('core/functions.php');
   </div>
 </div>
 
-</body>
-</html>
+<?php
+require('core/footer.php');
+?>
