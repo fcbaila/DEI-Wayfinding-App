@@ -75,11 +75,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   left: 50%;
   margin-top: -512px;
   margin-left: -640px;
-<<<<<<< HEAD
-	background-color: rgb(16, 16, 16);
-=======
 	background-color: black;
->>>>>>> FETCH_HEAD
 }
 
 #page_container {
