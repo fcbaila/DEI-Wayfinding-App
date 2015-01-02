@@ -14,30 +14,26 @@ require('core/functions.php');
 
       <div id="grid_container">
         <?php
-        for($i = 1; $i <= 40; $i++) {
+        for($i = 1; $i <= 22; $i++) {
           echo '<div class="grid"></div>';
         }
         ?>
+
         <?php
-        for($i = 1; $i <= 32; $i++) {
+        for($i = 1; $i <= 17; $i++) {
           echo '<div class="grid-h"></div>';
         }
         ?>
       </div>
-      <div id="frame" class="absolute">
-        <div id="frame-top" class="absolute"></div>
-        <div id="frame-right" class="absolute"></div>
-        <div id="frame-bottom" class="absolute"></div>
-        <div id="frame-left" class="absolute"></div>
-      </div>
 
       <div id="page_container">
 
-        <div id="page-title" class="text absolute grid-h-5 grid-2 type-38">
+        <div id="page-title" class="text absolute grid-h-3 grid-2">
           <p>Services:</p>
         </div>
 
-        <div id="services-list" class="text bold absolute grid-h-7 grid-2 type-32">
+        <div id="services-list" class="text bold absolute grid-h-4 grid-2">
+          <br>
           <p>GAPI — Gabinete de Apoio a Projectos / Mobilidade;</p>
           <p>Helpdesk;</p>
           <p>Secretary;</p>
@@ -47,10 +43,10 @@ require('core/functions.php');
           <p>WC.</p>
         </div>
 
-        <div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
+        <div id="clock" class="close text absolute grid-16 grid-h-1 button">
         </div>
 
-        <div id="close-page" class="close text absolute grid-35 grid-h-2 button">
+        <div id="close-page" class="close text absolute grid-20 button">
           <img class="img-close" src="./css/images/close.png" />
         </div>
 
