@@ -1,10 +1,9 @@
 <?php
 
-  $db = new PDO('mysql:host=localhost; dbname=dei_wayfinding; charset=utf8', 'dei-od1', 'od1pass');
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+  mysql_connect("localhost", "dei-od1", "od1pass") or die(mysql_error());
+  mysql_select_db("dei_wayfinding") or die(mysql_error());
+  mysql_query('SET character_set_client=utf8');
+  mysql_query('SET character_set_results=utf8');
   date_default_timezone_set('Europe/Lisbon');
-
-  if(!$db){ die('An error occured while connecting to the database.'); }
 
 ?>
