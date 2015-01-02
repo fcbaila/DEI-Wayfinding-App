@@ -51,6 +51,17 @@ app.init = function() {
     $("#opt-3").fadeIn(300);
     $("#search").fadeIn(300);
   }
+  /*PAGE LOG-OUT-----------------*/
+  if( self.page == "menu.php" && self.page != "index.php"){
+    setTimeout(function() {
+      window.location.href = "index.php";
+    }, 60000);
+  }
+  else if (self.page != "menu.php" && self.page != "index.php") {
+    setTimeout(function() {
+      window.location.href = "index.php";
+    }, 300000);
+  }
 
   app.events();
   app.keyboard();
