@@ -248,11 +248,11 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-left: calc(200px - 80.5px);
   height:161px;
   background-image: url("sprite.png");
-  -webkit-animation: touch 1s steps(15) infinite;
-  -moz-animation: touch 1s steps(15) infinite;
-  -ms-animation: touch 1s steps(15) infinite;
-  -o-animation: touch 1s steps(15) infinite;
-  animation: touch 1s steps(15) infinite;
+  -webkit-animation: touch 0.9s steps(15) infinite;
+  -moz-animation: touch 0.9s steps(15) infinite;
+  -ms-animation: touch 0.9s steps(15) infinite;
+  -o-animation: touch 0.9s steps(15) infinite;
+  animation: touch 0.9s steps(15) infinite;
 }
 /* PROFESSORS-PAGE--------------*/
 #page-title{
