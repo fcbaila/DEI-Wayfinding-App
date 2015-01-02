@@ -37,8 +37,7 @@ require('core/functions.php');
           <p>Services:</p>
         </div>
 
-        <div id="services-list" class="text bold absolute grid-h-6 grid-2 type-38">
-          <br>
+        <div id="services-list" class="text bold absolute grid-h-7 grid-2 type-32">
           <p>GAPI — Gabinete de Apoio a Projectos / Mobilidade;</p>
           <p>Helpdesk;</p>
           <p>Secretary;</p>
