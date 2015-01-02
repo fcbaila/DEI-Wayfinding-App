@@ -276,10 +276,30 @@ app.updateClock = function() {
   document.getElementById("clock").firstChild.nodeValue = self.currentTimeString;
 }
 
+function createClick(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var posX = x - 25;
+  var posY = y - 25;
+  var div = document.createElement("div");
+  div.style.position = 'absolute';
+  div.style.left = posX +'px';
+  div.style.top = posY +'px';
+  div.style.width = "50px";
+  div.style.height = "50px";
+  div.style.backgroundImage = "url('./css/images/down.png')";
+  div.style.color = "white";
+  div.style.color = "white";
+  div.className = "click";
+  document.body.appendChild(div);
+  setTimeout(function() {
+    document.body.removeChild(div);
+  }, 600);
+}
+
 function toTitleCase(str) {
   return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
-
 
 function updateMap() {
   setTimeout(function() {
