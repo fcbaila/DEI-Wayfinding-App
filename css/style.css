@@ -108,6 +108,10 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   font-size: 32px !important;
   color: white;
 }
+.type-38 {
+  font-size: 38px !important;
+  color: white;
+}
 .type-48 {
   font-size: 48px !important;
   color: white;
