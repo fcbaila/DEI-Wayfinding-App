@@ -107,6 +107,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 .type-32 {
   font-size: 32px !important;
   color: white;
+  line-height:180%;
 }
 .type-38 {
   font-size: 38px !important;
@@ -136,7 +137,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-right:60px;
 }
 .search-bar{
-  width: calc(58.2px * 6);
+  width: calc(32px * 9);
   border-bottom: 3px solid white;
   pointer-events:none;
   font-family: Ed-medium;
@@ -159,7 +160,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 .key, .key-2, .key-t, .key-f, .key-m{
   float: left;
-  margin-right: 45px;
+  margin-right: 50px;
   text-decoration: underline;
   cursor:pointer;
   -webkit-user-select: none;
@@ -168,6 +169,9 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   -o-user-select: none;
   user-select: none;
   pointer-events: visible;
+}
+.key-break{
+  margin-right:0px !important;
 }
 .search{
   max-width: calc(58.2px * 7);
@@ -236,22 +240,22 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   height:50px;
 }
 #professors-filter{
-  max-width: calc(58px * 7);
+  max-width: calc(32px * 10);
   pointer-events: none;
   z-index: 1000;
 }
 #professors-list{
-  width: calc(58px * 12);
-  max-height: calc(58px * 12);
+  width: calc(32px * 26);
+  max-height: calc(32px * 22);
   overflow-y: scroll;
 }
 #up-arrow{
-  margin-left: calc(58px * 13 + 10px);
-  margin-top: calc(58px * 14);
+  margin-left: calc(32px * 29);
+  margin-top: calc(32px * 24);
 }
 #down-arrow{
-  margin-left: calc(58px * 13 + 10px);
-  margin-top: calc(58px * 15 + 20px);
+  margin-left: calc(32px * 29);
+  margin-top: calc(32px * 27);
 }
 #clean{
   float: left;

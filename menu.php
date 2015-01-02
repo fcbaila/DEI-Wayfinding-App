@@ -43,7 +43,7 @@ require('core/functions.php');
         </div>
 
         <div id="find-options" class="text medium absolute grid-h-18 grid-2 type-48">
-          <div id="opt-1" class="opts">A Teacher</div>
+          <div id="opt-1" class="opts">A Professor</div>
           <div id="opt-2" class="opts">A Room</div>
           <div id="opt-3" class="opts">A Service</div>
         </div>
