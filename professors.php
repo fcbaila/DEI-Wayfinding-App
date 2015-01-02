@@ -87,7 +87,6 @@ require('core/functions.php');
           <br>
           <br>
           <br>
-
           <p class="button underline" id="filter_engineer">engineering</p>
           <p class="button underline" id="filter_designer">design</p>
         </div>
@@ -99,10 +98,10 @@ require('core/functions.php');
           <img class="img-arrow" src="./css/images/down.png" />
         </div>
 
-        <div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
+        <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
 
-        <div id="close-page" class="close text absolute grid-35 grid-h-2 button">
+        <div id="close-page" class="close text absolute grid-36 grid-h-2 button">
           <img class="img-close" src="./css/images/close.png" />
         </div>
 
@@ -112,5 +111,6 @@ require('core/functions.php');
   </div>
 </div>
 
-</body>
-</html>
+<?php
+require('core/footer.php');
+?>

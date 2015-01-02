@@ -37,11 +37,11 @@ require('core/functions.php');
 			<?php showMap(0); ?>
 		</div>
 
-		<div id="search-professors" class="grid-2 grid-h-25 search-bar absolute">
-			<input type="text" id="text-search" class="text search input" placeholder="search for a room">
+		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
+			<input type="text" id="text-search" class="text search input" placeholder="search">
 		</div>
 
-		<div id="map-filter" class="text grid-9 grid-h-25 absolute">
+		<div id="map-filter" class="text grid-16 grid-h-22 absolute type-38">
 			<p id="inside-p-filter">
 				<div class="key-m" id="a">A</div>
 				<div class="key-m" id="b">B</div>
@@ -62,7 +62,7 @@ require('core/functions.php');
 				<div class="key-m" id="q">Q</div>
 				<div class="key-m" id="r">R</div>
 				<div class="key-m" id="s">S</div>
-				<div class="key-m" id="t">T</div>
+				<div class="key-m key-break" id="t">T</div>
 				<div class="key-m" id="u">U</div>
 				<div class="key-m" id="v">V</div>
 				<div class="key-m" id="x">X</div>
@@ -96,5 +96,6 @@ require('core/functions.php');
 </div>
 </div>
 
-</body>
-</html>
+<?php
+require('core/footer.php');
+?>

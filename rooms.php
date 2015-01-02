@@ -14,39 +14,48 @@
 
         <div id="grid_container">
           <?php
-          for($i = 1; $i <= 22; $i++) {
+          for($i = 1; $i <= 40; $i++) {
             echo '<div class="grid"></div>';
           }
           ?>
-
           <?php
-          for($i = 1; $i <= 17; $i++) {
+          for($i = 1; $i <= 32; $i++) {
             echo '<div class="grid-h"></div>';
           }
           ?>
         </div>
+        <div id="frame" class="absolute">
+          <div id="frame-top" class="absolute"></div>
+          <div id="frame-right" class="absolute"></div>
+          <div id="frame-bottom" class="absolute"></div>
+          <div id="frame-left" class="absolute"></div>
+        </div>
 
         <div id="page_container">
 
-          <div id="page-title" class="text absolute grid-h-3 grid-2">
+          <div id="page-title" class="text absolute grid-h-5 grid-18 type-38">
             <p>Rooms:</p>
           </div>
 
-          <div id="rooms-list" class="text bold absolute grid-h-4 grid-2">
+          <div id="rooms-list" class="text bold absolute grid-h-7 grid-18 type-32">
             <?php
               getRooms();
             ?>
           </div>
 
-          <div id="search-rooms" class="search-bar grid-14 grid-h-3 absolute">
+          <div id="search-rooms" class="search-bar grid-2 grid-h-3 absolute type-38">
             <form action="demo_form.asp">
-              <input class="text search input" id="search_tower" type="text" placeholder="search" name="fname">
-              <input class="text search input" id="search_floor" type="text" placeholder="search" name="fname">
+              <input class="text search input" id="search_tower" type="text" placeholder="search tower" name="fname">
             </form>
           </div>
 
-          <div id="rooms-filter" class="text grid-14 grid-h-5 absolute">
-            <br>
+          <div id="search-rooms" class="search-bar grid-2 grid-h-5 absolute type-38">
+            <form action="demo_form.asp">
+              <input class="text search input" id="search_floor" type="text" placeholder="search room" name="fname">
+            </form>
+          </div>
+
+          <div id="rooms-filter" class="text grid-2 grid-h-7 absolute type-32">
             <p>
               <div class="key-t" id="tower"><b2>Tower:</b2></div>
               <div class="key-t" id="A">A</div>
@@ -67,13 +76,18 @@
               <div class="key-f" id="6">6</div>
             </p>
           </div>
-          <div id="rooms-filter-2" class="text grid-14 grid-h-6 absolute">
+          <div id="rooms-filter-2" class="text grid-2 grid-h-7 absolute type-32">
             <br>
             <br>
             <br>
             <br>
-            <br>
-            <p id="room_clean">clean</p>
+            <p id="room_clean" class="button underline room-type">clean</p>
+            <p id="study-room" class="button underline room-type">study room</p>
+            <p id="classroom" class="button underline room-type">classroom</p>
+            <p id="meeting" class="button underline room-type">meeting</p>
+            <p id="laboratory" class="button underline room-type">laboratory</p>
+            <p id="office" class="button underline room-type">office</p>
+            <p id="staff" class="button underline room-type">staff</p>
           </div>
 
           <div id="up-arrow-2" class="close text absolute button">
@@ -83,10 +97,10 @@
             <img class="img-arrow" src="./css/images/down.png" />
           </div>
 
-          <div id="clock" class="close text absolute grid-16 grid-h-1 button">
+          <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
           </div>
 
-          <div id="close-page" class="close text absolute grid-20 button">
+          <div id="close-page" class="close text absolute grid-36 grid-h-2 button">
             <img class="img-close" src="./css/images/close.png" />
           </div>
 
@@ -96,5 +110,6 @@
     </div>
   </div>
 
-</body>
-</html>
+  <?php
+  require('core/footer.php');
+  ?>

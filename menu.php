@@ -48,14 +48,14 @@ require('core/functions.php');
           <div id="opt-3" class="opts">A Service</div>
         </div>
 
-        <div id="search" class="text absolute grid-h-25 grid-2 button type-48">
+        <div id="search" class="text absolute grid-h-25 grid-2 button type-48 underline medium">
           <p><b2>Free Search</b2></p>
         </div>
 
-        <div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
+        <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
 
-        <div id="close-page-2" class="close text absolute grid-35 grid-h-2 button">
+        <div id="close-page-2" class="close text absolute grid-36 grid-h-2 button">
           <img class="img-close" src="./css/images/close.png" />
         </div>
       </div>
@@ -64,5 +64,6 @@ require('core/functions.php');
   </div>
 </div>
 
-</body>
-</html>
+<?php
+require('core/footer.php');
+?>

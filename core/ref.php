@@ -8,8 +8,4 @@
 <link href="./css/grid.css" rel="stylesheet" type="text/css">
 <link href="./css/style-2.css" rel="stylesheet" type="text/css">
 <link href="./css/css-reset.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="js/lib/jquery.js"></script>
-<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
 </head>
