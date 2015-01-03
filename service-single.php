@@ -33,24 +33,18 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div id="page-title" class="text absolute grid-h-5 grid-2 type-38">
-          <p>Services:</p>
+        <div class="text absolute grid-h-5 grid-2 type-38 bold">
+          <p>NEI - Computer Student Center</p>
         </div>
 
-        <div id="services-list" class="text bold absolute grid-h-7 grid-2 type-32">
-          <p class="service">GAPI — Gabinete de Apoio a Projectos / Mobilidade;</p>
-          <p class="service">Helpdesk;</p>
-          <p class="service">Secretary;</p>
-          <p class="service">NEI — Computer Student Center;</p>
-          <p class="service">Bar CISUC;</p>
-          <p class="service">Bar;</p>
-          <p class="service">WC.</p>
+        <div id="construct_mapa" class="grid-2 grid-h-7">
+          <?php showMap(1); ?>
         </div>
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
 
-        <div id="close-page" class="close text absolute grid-36 grid-h-2 button">
+        <div id="close-page-service" class="close text absolute grid-36 grid-h-2 button">
           <img class="img-close" src="./css/images/close.png" />
         </div>
 

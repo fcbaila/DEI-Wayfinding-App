@@ -136,6 +136,11 @@ app.events = function() {
     window.location.href = "room-single.php";
   });
 
+  $(".service").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "service-single.php";
+  });
+
   $("#close-page").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "menu.php";
@@ -151,6 +156,10 @@ app.events = function() {
   $("#close-page-room").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "rooms.php";
+  });
+  $("#close-page-service").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "services.php";
   });
   /*SCROLL--------------------------*/
   var anchor = 0;
