@@ -131,6 +131,11 @@ app.events = function() {
     window.location.href = "professor-single.php";
   });
 
+  $(".room_id").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "room-single.php";
+  });
+
   $("#close-page").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "menu.php";
@@ -142,6 +147,10 @@ app.events = function() {
   $("#close-page-professor").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "professors.php";
+  });
+  $("#close-page-room").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "rooms.php";
   });
   /*SCROLL--------------------------*/
   var anchor = 0;

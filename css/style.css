@@ -321,6 +321,9 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   margin-left: calc(32px * 15);
   margin-top: calc(32px * 26);
 }
+.room_id{
+  cursor:pointer;
+}
 /* SERVICES-PAGE--------------*/
 #services-list{
   width: calc(58px * 20);

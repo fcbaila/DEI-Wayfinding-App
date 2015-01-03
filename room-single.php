@@ -33,25 +33,18 @@ require('core/functions.php');
 
       <div id="page_container">
 
-        <div class="text absolute grid-h-3 grid-2 type-38 bold">
-          <p>Ana Madalena de Sousa Vasconcelos Matos Boavida</p>
+        <div class="text absolute grid-h-5 grid-2 type-38 bold">
+          <p>E4.1</p>
         </div>
 
-        <div id="construct_mapa" class="grid-2 grid-h-5">
+        <div id="construct_mapa" class="grid-2 grid-h-7">
           <?php showMap(1); ?>
-        </div>
-
-        <div class="text absolute grid-h-22 grid-2 type-38">
-          <p class="medium">Next office hours:</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
         </div>
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
 
-        <div id="close-page-professor" class="close text absolute grid-36 grid-h-2 button">
+        <div id="close-page-room" class="close text absolute grid-36 grid-h-2 button">
           <img class="img-close" src="./css/images/close.png" />
         </div>
 
