@@ -11,14 +11,13 @@ function getTeachers() {
   }
 }
 
-
 function getRooms() {
   $room = mysql_query("SELECT * from rooms ORDER BY room_block ASC, room_floor ASC, room_number ASC");
   if (!$room || mysql_num_rows($room) == 0) {
     echo 'There are no rooms available at the moment.';
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
-      echo '<p class="room_id room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.';</p>';
+      echo '<p class="room_id '.$fetch_rooms->room_type.' room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</p>';
     }
   }
 }
