@@ -86,8 +86,10 @@
             <p id="classroom" class="button underline room-type">classroom</p>
             <p id="meeting" class="button underline room-type">meeting</p>
             <p id="laboratory" class="button underline room-type">laboratory</p>
+            <p id="service" class="button underline room-type">service</p>
             <p id="office" class="button underline room-type">office</p>
             <p id="staff" class="button underline room-type">staff</p>
+            <p id="bathroom" class="button underline room-type">W.C.</p>
           </div>
 
           <div id="up-arrow-2" class="close text absolute button">

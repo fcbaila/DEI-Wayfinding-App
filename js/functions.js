@@ -248,8 +248,6 @@ app.keyboard = function() {
     floor = false;
   });
   /*FILTER-----------------*/
-  var engineer = false;
-  var designer = false;
   $(".key").click(function() {
     updateTeachers();
   });
@@ -260,6 +258,8 @@ app.keyboard = function() {
     clearTeachers();
   });
 
+  var engineer = false;
+  var designer = false;
   $("#filter_designer").click(function() {
     if(designer == false){
       filterTeachers(2);
@@ -302,6 +302,245 @@ app.keyboard = function() {
         "font-family": "Ed-regular"
       });
       engineer = false;
+    }
+  });
+  var study = false;
+  var service = false;
+  var classroom = false;
+  var office = false;
+  var laboratory = false;
+  var staff = false;
+  var wc = false;
+  var service = false;
+  $("#room_clean").click(function() {
+    $('.room-type').css({
+      "font-family": "Ed-regular"
+    });
+    $(".room_id").fadeOut(100);
+    study = false;
+    classroom = false;
+    meeting = false;
+    laboratory = false;
+    service = false;
+    office = false;
+    staff = false;
+    wc = false;
+    $(".room_id").fadeIn(300);
+  });
+  $("#study-room").click(function() {
+    if (study == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = true;
+      classroom = false;
+      meeting = false;
+      laboratory = false;
+      service = false;
+      office = false;
+      staff = false;
+      wc = false;
+      $('#study-room').css({
+        "font-family": "Ed-bold"
+      });
+      $(".study").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      study = false;
+      $('#study-room').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#classroom").click(function() {
+    if (classroom == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = true;
+      meeting = false;
+      laboratory = false;
+      service = false;
+      office = false;
+      staff = false;
+      wc = false;
+      $('#classroom').css({
+        "font-family": "Ed-bold"
+      });
+      $(".classroom").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      classroom = false;
+      $('#classroom').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#meeting").click(function() {
+    if (meeting == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = true;
+      laboratory = false;
+      service = false;
+      office = false;
+      staff = false;
+      wc = false;
+      $('#meeting').css({
+        "font-family": "Ed-bold"
+      });
+      $(".meeting").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      meeting = false;
+      $('#meeting').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#laboratory").click(function() {
+    if (laboratory == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = false;
+      laboratory = true;
+      service = false;
+      office = false;
+      staff = false;
+      wc = false;
+      $('#laboratory').css({
+        "font-family": "Ed-bold"
+      });
+      $(".laboratory").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      laboratory = false;
+      $('#laboratory').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#service").click(function() {
+    if (service == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = false;
+      laboratory = false;
+      service = true;
+      office = false;
+      staff = false;
+      wc = false;
+      $('#service').css({
+        "font-family": "Ed-bold"
+      });
+      $(".service").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      laboratory = false;
+      $('#service').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#office").click(function() {
+    if (office == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = false;
+      laboratory = false;
+      service = false;
+      office = true;
+      staff = false;
+      wc = false;
+      $('#office').css({
+        "font-family": "Ed-bold"
+      });
+      $(".offices").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      laboratory = false;
+      $('#office').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#staff").click(function() {
+    if (staff == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = false;
+      laboratory = false;
+      service = false;
+      office = false;
+      staff = true;
+      wc = false;
+      $('#staff').css({
+        "font-family": "Ed-bold"
+      });
+      $(".staff").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      staff = false;
+      $('#staff').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
+    }
+  });
+  $("#bathroom").click(function() {
+    if (wc == false){
+      $('.room-type').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeOut(100);
+      study = false;
+      classroom = false;
+      meeting = false;
+      laboratory = false;
+      service = false;
+      office = false;
+      staff = false;
+      wc = true;
+      $('#bathroom').css({
+        "font-family": "Ed-bold"
+      });
+      $(".bathroom").fadeIn(300);
+    } else{
+      $(".room_id").fadeOut(100);
+      wc = false;
+      $('#bathroom').css({
+        "font-family": "Ed-regular"
+      });
+      $(".room_id").fadeIn(300);
     }
   });
 }
