@@ -29,8 +29,9 @@ function showMap($floor) {
               $room_name = $fetch_multiple->room_name;
             }
             $string = $string.$room_name.', ';
+            $room_type = $fetch_multiple->room_type;
           }
-          $room_name = $string;
+          $room_name = rtrim($string, ", ");
         } else {
           $fetch_query = mysql_fetch_object($query);
           $room_query = mysql_fetch_object(mysql_query("SELECT * FROM rooms WHERE room_id = '$fetch_query->room_id'"));
@@ -39,18 +40,19 @@ function showMap($floor) {
           } else {
             $room_name = $room_query->room_name;
           }
+          $room_type = $room_query->room_type;
         }
 
 
-        if($room_query->room_type == 'hall') {
+        if($room_type == 'hall') {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_corridor.png"></div>';
-        } elseif($room_query->room_type == 'user_pos') {
+        } elseif($room_type == 'user_pos') {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
-        } elseif($room_query->room_type == 'bathroom') {
+        } elseif($room_type == 'bathroom') {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
-        } elseif($room_query->room_type == 'parking') {
+        } elseif($room_type == 'parking') {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
-        } elseif($room_query->room_type == 'stairs') {
+        } elseif($room_type == 'stairs') {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } else {
           echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';

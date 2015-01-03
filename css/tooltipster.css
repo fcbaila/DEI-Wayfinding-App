@@ -6,7 +6,7 @@
 
 /* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
 .tooltipster-default {
-	background: rgb(110,110,110);
+	background: rgb(96, 96, 96);
 	color: white;
 }
 
@@ -18,6 +18,7 @@
 	padding:5px;
 	padding-left:10px;
 	padding-right: 10px;
+	padding-top: 10px;
 	overflow: hidden;
 }
 
