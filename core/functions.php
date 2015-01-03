@@ -26,6 +26,7 @@ function getRooms() {
 
 function showMap($floor) {
   $count = 0;
+  $tooltip = 'tooltipsed';
   for ($i = 1; $i <= 8; $i++) {
     for($j = 1; $j <= 18; $j++) {
       $count = $count+1;
@@ -33,20 +34,27 @@ function showMap($floor) {
       if (!$query || mysql_num_rows($query) == 0) {
         echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
       } else {
+        if($j < 6) {
+          $tooltip = 'tooltipsed-left';
+        } elseif($j >= 6 AND $j <= 12) {
+          $tooltip = 'tooltipsed-top';
+        } else {
+          $tooltip = 'tooltipsed-right';
+        }
         $fetch_query = mysql_fetch_object($query);
         $room_query = mysql_fetch_object(mysql_query("SELECT * FROM rooms WHERE room_id = '$fetch_query->room_id'"));
         if($room_query->room_type == 'hall') {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_corridor.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_corridor.png"></div>';
         } elseif($room_query->room_type == 'user_pos') {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
         } elseif($room_query->room_type == 'bathroom') {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
         } elseif($room_query->room_type == 'parking') {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
         } elseif($room_query->room_type == 'stairs') {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } else {
-          echo '<div title="'.$room_query->room_name.'" class="mapa_slot tooltipsed slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';
+          echo '<div title="'.$room_query->room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';
         }
       }
     }
