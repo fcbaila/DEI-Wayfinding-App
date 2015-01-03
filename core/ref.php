@@ -11,4 +11,6 @@
 <link href="./css/grid.css" rel="stylesheet" type="text/css">
 <link href="./css/style-2.css" rel="stylesheet" type="text/css">
 <link href="./css/css-reset.css" rel="stylesheet" type="text/css">
+<!-- Tooltipster CSS -->
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
 </head>

@@ -19,14 +19,14 @@ app.init = function() {
   var previousUrl = document.referrer;
   self.page = url.substring(url.lastIndexOf('/')+1);
   self.previousPage = previousUrl.substring(previousUrl.lastIndexOf('/')+1);
-  /*UPDATE CLOCK-----------------*/
+/*UPDATE CLOCK-----------------*/
   if (self.page != "index.php"){
     app.updateClock();
     setInterval(function() {
       app.updateClock();
     }, 1000);
   }
-  /*TRANSITIONS-----------------*/
+/*TRANSITIONS-----------------*/
   $("#page_container").fadeIn(800);
   if (self.previousPage == "index.php"){
     setTimeout(function() {
@@ -51,7 +51,7 @@ app.init = function() {
     $("#opt-3").fadeIn(300);
     $("#search").fadeIn(300);
   }
-  /*PAGE LOG-OUT-----------------*/
+/*PAGE LOG-OUT-----------------*/
   if( self.page == "menu.php" && self.page != "index.php"){
     setTimeout(function() {
       window.location.href = "index.php";
@@ -62,6 +62,15 @@ app.init = function() {
       window.location.href = "index.php";
     }, 300000);
   }
+/*SLOTS POPUP-----------------*/
+  $('.tooltipsed').tooltipster({
+    animation: 'grow',
+    delay: 10,
+    theme: 'tooltipster-default',
+    position: 'top-right',
+    touchDevices: false,
+    trigger: 'click'
+  });
 
   app.events();
   app.keyboard();
