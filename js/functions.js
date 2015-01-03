@@ -254,15 +254,23 @@ app.keyboard = function() {
   $(".key-2").click(function() {
     updateTeachers();
   });
-  $("#clean").click(function() {
-    clearTeachers();
-  });
 
   var engineer = false;
   var designer = false;
+  $("#clean").click(function() {
+    clearTeachers();
+    $('#filter_designer').css({
+      "font-family": "Ed-regular"
+    });
+    $('#filter_engineer').css({
+      "font-family": "Ed-regular"
+    });
+    engineer = false;
+    designer = false;
+  });
   $("#filter_designer").click(function() {
     if(designer == false){
-      filterTeachers(2);
+      $(".teacher_id").fadeOut(0);
       $('#filter_designer').css({
         "font-family": "Ed-bold"
       });
@@ -271,8 +279,10 @@ app.keyboard = function() {
       });
       designer = true;
       engineer = false;
+      $(".2").fadeIn(600);
+      $(".3").fadeIn(600);
     } else{
-      filterTeachers(3);
+      $(".teacher_id").fadeOut(0);
       $('#filter_designer').css({
         "font-family": "Ed-regular"
       });
@@ -280,11 +290,12 @@ app.keyboard = function() {
         "font-family": "Ed-regular"
       });
       designer = false;
+      $(".teacher_id").fadeIn(600);
     }
   });
   $("#filter_engineer").click(function() {
     if(engineer == false){
-      filterTeachers(1);
+      $(".teacher_id").fadeOut(0);
       $('#filter_engineer').css({
         "font-family": "Ed-bold"
       });
@@ -293,8 +304,10 @@ app.keyboard = function() {
       });
       engineer = true;
       designer = false;
+      $(".1").fadeIn(600);
+      $(".3").fadeIn(600);
     } else{
-      filterTeachers(3);
+      $(".teacher_id").fadeOut(0);
       $('#filter_engineer').css({
         "font-family": "Ed-regular"
       });
@@ -302,6 +315,7 @@ app.keyboard = function() {
         "font-family": "Ed-regular"
       });
       engineer = false;
+      $(".teacher_id").fadeIn(600);
     }
   });
   var study = false;
@@ -316,7 +330,7 @@ app.keyboard = function() {
     $('.room-type').css({
       "font-family": "Ed-regular"
     });
-    $(".room_id").fadeOut(100);
+    $(".room_id").fadeOut(0);
     study = false;
     classroom = false;
     meeting = false;
@@ -325,14 +339,14 @@ app.keyboard = function() {
     office = false;
     staff = false;
     wc = false;
-    $(".room_id").fadeIn(300);
+    $(".room_id").fadeIn(600);
   });
   $("#study-room").click(function() {
     if (study == false){
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = true;
       classroom = false;
       meeting = false;
@@ -344,14 +358,14 @@ app.keyboard = function() {
       $('#study-room').css({
         "font-family": "Ed-bold"
       });
-      $(".study").fadeIn(300);
+      $(".study").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       $('#study-room').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#classroom").click(function() {
@@ -359,7 +373,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = true;
       meeting = false;
@@ -371,14 +385,14 @@ app.keyboard = function() {
       $('#classroom').css({
         "font-family": "Ed-bold"
       });
-      $(".classroom").fadeIn(300);
+      $(".classroom").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       classroom = false;
       $('#classroom').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#meeting").click(function() {
@@ -386,7 +400,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = true;
@@ -398,14 +412,14 @@ app.keyboard = function() {
       $('#meeting').css({
         "font-family": "Ed-bold"
       });
-      $(".meeting").fadeIn(300);
+      $(".meeting").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       meeting = false;
       $('#meeting').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#laboratory").click(function() {
@@ -413,7 +427,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = false;
@@ -425,14 +439,14 @@ app.keyboard = function() {
       $('#laboratory').css({
         "font-family": "Ed-bold"
       });
-      $(".laboratory").fadeIn(300);
+      $(".laboratory").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       laboratory = false;
       $('#laboratory').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#service").click(function() {
@@ -440,7 +454,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = false;
@@ -452,14 +466,14 @@ app.keyboard = function() {
       $('#service').css({
         "font-family": "Ed-bold"
       });
-      $(".service").fadeIn(300);
+      $(".service").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       laboratory = false;
       $('#service').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#office").click(function() {
@@ -467,7 +481,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = false;
@@ -479,14 +493,14 @@ app.keyboard = function() {
       $('#office').css({
         "font-family": "Ed-bold"
       });
-      $(".offices").fadeIn(300);
+      $(".offices").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       laboratory = false;
       $('#office').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#staff").click(function() {
@@ -494,7 +508,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = false;
@@ -506,14 +520,14 @@ app.keyboard = function() {
       $('#staff').css({
         "font-family": "Ed-bold"
       });
-      $(".staff").fadeIn(300);
+      $(".staff").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       staff = false;
       $('#staff').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
   $("#bathroom").click(function() {
@@ -521,7 +535,7 @@ app.keyboard = function() {
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       study = false;
       classroom = false;
       meeting = false;
@@ -533,14 +547,14 @@ app.keyboard = function() {
       $('#bathroom').css({
         "font-family": "Ed-bold"
       });
-      $(".bathroom").fadeIn(300);
+      $(".bathroom").fadeIn(600);
     } else{
-      $(".room_id").fadeOut(100);
+      $(".room_id").fadeOut(0);
       wc = false;
       $('#bathroom').css({
         "font-family": "Ed-regular"
       });
-      $(".room_id").fadeIn(300);
+      $(".room_id").fadeIn(600);
     }
   });
 }
