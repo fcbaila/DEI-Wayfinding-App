@@ -63,7 +63,23 @@ app.init = function() {
     }, 300000);
   }
 /*SLOTS POPUP-----------------*/
-  $('.tooltipsed').tooltipster({
+  $('.tooltipsed-left').tooltipster({
+    animation: 'grow',
+    delay: 10,
+    theme: 'tooltipster-default',
+    position: 'top-left',
+    touchDevices: false,
+    trigger: 'click'
+  });
+  $('.tooltipsed-top').tooltipster({
+    animation: 'grow',
+    delay: 10,
+    theme: 'tooltipster-default',
+    position: 'top',
+    touchDevices: false,
+    trigger: 'click'
+  });
+  $('.tooltipsed-right').tooltipster({
     animation: 'grow',
     delay: 10,
     theme: 'tooltipster-default',
