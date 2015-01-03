@@ -57,7 +57,7 @@
 
           <div id="rooms-filter" class="text grid-2 grid-h-7 absolute type-32">
             <p>
-              <div class="key-t" id="tower"><b2>Tower:</b2></div>
+              <div class="key-t key-t-special" id="tower"><b2>Tower:</b2></div>
               <div class="key-t" id="A">A</div>
               <div class="key-t" id="B">B</div>
               <div class="key-t" id="C">C</div>
@@ -67,7 +67,7 @@
               <div class="key-t" id="G">G</div>
             </p>
             <p>
-              <div class="key-f" id="floor"><b2>Floor:</b2></div>
+              <div class="key-f key-f-special" id="floor"><b2>Floor:</b2></div>
               <div class="key-f" id="1">1</div>
               <div class="key-f" id="2">2</div>
               <div class="key-f" id="3">3</div>

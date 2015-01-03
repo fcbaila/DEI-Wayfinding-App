@@ -166,6 +166,10 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   user-select: none;
   pointer-events: visible;
 }
+.key-f-special, .key-t-special{
+  text-decoration: none !important;
+  pointer-events: none !important;
+}
 .key-break{
   margin-right:0px !important;
 }
