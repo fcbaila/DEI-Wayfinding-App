@@ -34,18 +34,17 @@ function showMap($floor) {
         echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
       } else {
         $fetch_query = mysql_fetch_object($query);
-        $room_id = $fetch_query->room_id;
         $room_query = mysql_fetch_object(mysql_query("SELECT * FROM rooms WHERE room_id = '$fetch_query->room_id'"));
-        if($room_id == 127) {
+        if($room_query->room_type == 'hall') {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_corridor.png"></div>';
-        } elseif($room_id == 128) {
-          echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
-        } elseif($room_id == 133) {
+        } elseif($room_query->room_type == 'user_pos') {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
-        } elseif($room_id == 129 || $room_id == 130 || $room_id == 134 || $room_id == 135 || $room_id == 136 || $room_id == 137 || $room_id == 138 || $room_id == 139) {
-          echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
-        } elseif($room_id == 131 || $room_id == 132 || $room_id == 143 || $room_id == 144 || $room_id == 145 || $room_id == 149 || $room_id == 150) {
+        } elseif($room_query->room_type == 'bathroom') {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
+        } elseif($room_query->room_type == 'parking') {
+          echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
+        } elseif($room_query->room_type == 'stairs') {
+          echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } else {
           echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';
         }
