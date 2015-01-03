@@ -295,7 +295,7 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
 }
 /* ROOMS-PAGE--------------*/
 #rooms-list{
-  width: calc(58px * 8);
+  width: calc(58px * 10);
   max-height: calc(58px * 12);
   overflow-y: scroll;
 }
