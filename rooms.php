@@ -86,6 +86,13 @@
             <p id="classroom" class="button underline room-type">classroom</p>
             <p id="meeting" class="button underline room-type">meeting</p>
             <p id="laboratory" class="button underline room-type">laboratory</p>
+          </div>
+          <div id="rooms-filter-2" class="text grid-10 grid-h-7 absolute type-32">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <p id="service" class="button underline room-type">service</p>
             <p id="office" class="button underline room-type">office</p>
             <p id="staff" class="button underline room-type">staff</p>
