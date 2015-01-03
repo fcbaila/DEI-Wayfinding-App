@@ -137,6 +137,10 @@ app.events = function() {
     $("#page_container").fadeOut(300);
     window.location.href = "index.php";
   });
+  $("#close-page-professor").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "professors.php";
+  });
   /*SCROLL--------------------------*/
   var anchor = 0;
   $("#down-arrow").click(function() {

@@ -1,5 +1,5 @@
 <html>
-<body onclick="createClick(event)">
+<body>
 
 <?php
 require('core/ref.php');
