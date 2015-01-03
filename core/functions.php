@@ -1,3 +1,4 @@
+<?php
 function showMap($floor) {
   $count = 0;
   $tooltip = 'tooltipsed';
