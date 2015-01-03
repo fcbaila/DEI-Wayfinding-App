@@ -18,11 +18,26 @@ function getRooms() {
     echo 'There are no rooms available at the moment.';
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
-      echo '<p class="room_id room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.';</p>';
+      echo '<p class="room_id '.$fetch_rooms->room_type.' room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.';</p>';
     }
   }
 }
 
+function showFrontMap() {
+  $count = 0;
+  for ($i = 1; $i <= 8; $i++) {
+    for($j = 1; $j <= 18; $j++) {
+      $count = $count+1;
+      $query = mysql_query("SELECT * FROM map_slots_front WHERE map_x = '$j' AND map_y = '$i'");
+      if (!$query || mysql_num_rows($query) == 0) {
+        echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
+      } else {
+        $fetch_query = mysql_fetch_object($query);
+        echo '<div class="mapa_slot slot_'.$count.'"><img src="'.$fetch_query->slot_image.'"></div>';
+      }
+    }
+  }
+}
 
 function showMap($floor) {
   $count = 0;

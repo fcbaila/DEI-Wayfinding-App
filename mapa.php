@@ -34,7 +34,7 @@ require('core/functions.php');
 	<div id="page_container">
 
 		<div id="construct_mapa" class="grid-2 grid-h-5">
-			<?php showMap(1); ?>
+			<?php showFrontMap(); ?>
 		</div>
 
 		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
