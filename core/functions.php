@@ -22,6 +22,21 @@ function getRooms() {
   }
 }
 
+function showFrontMap() {
+  $count = 0;
+  for ($i = 1; $i <= 8; $i++) {
+    for($j = 1; $j <= 18; $j++) {
+      $count = $count+1;
+      $query = mysql_query("SELECT * FROM map_slots_front WHERE map_x = '$j' AND map_y = '$i'");
+      if (!$query || mysql_num_rows($query) == 0) {
+        echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
+      } else {
+        $fetch_query = mysql_fetch_object($query);
+        echo '<div class="mapa_slot slot_'.$count.'"><img src="'.$fetch_query->slot_image.'"></div>';
+      }
+    }
+  }
+}
 
 function showMap($floor) {
   $count = 0;
