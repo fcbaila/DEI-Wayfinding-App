@@ -108,7 +108,6 @@ app.events = function() {
     }, 700);
   });
   /*REDIRECTIONS-----------------*/
-
   $("#search").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "mapa.php";
@@ -118,15 +117,18 @@ app.events = function() {
     $("#page_container").fadeOut(300);
     window.location.href = "professors.php";
   });
-
   $("#opt-2").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "rooms.php";
   });
-
   $("#opt-3").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "services.php";
+  });
+
+  $(".teacher_id").click(function() {
+    $("#page_container").fadeOut(300);
+    window.location.href = "professor-single.php";
   });
 
   $("#close-page").click(function() {

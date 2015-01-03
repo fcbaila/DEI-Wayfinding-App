@@ -290,6 +290,9 @@ a:hover { text-decoration:underline; color: rgb(133, 107, 80); }
   user-select: none;
   pointer-events: visible;
 }
+.teacher_id{
+  cursor:pointer;
+}
 /* ROOMS-PAGE--------------*/
 #rooms-list{
   width: calc(58px * 8);
