@@ -611,9 +611,11 @@ function changeView(block, floor) {
         }
       }
     }
+    document.getElementById('map-feedback').innerHTML = '<p>You have selected tower <b>'+ block +'</b>. Touch a point or line to select a floor.</p>';
 
     if(blockclick == block) {
       if(floorclick == floor) {
+        document.getElementById('map-feedback').innerHTML = '<p>Now you are at floor <b>'+ floor +'</b>. Touch a slot to get there.</p>';
         transitionLoop('front', floor, block);
       }
     }
@@ -627,7 +629,6 @@ var loop_2 = 0;
 var other_view = "";
 
 function transitionLoop (view, floor, block) {
-
   if(view == 'front') {
     other_view = 'side';
   } else {

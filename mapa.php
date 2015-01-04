@@ -51,8 +51,8 @@ require('core/functions.php');
 			<div id="step-f" class="step">step forward</div>
 		</div>
 
-		<div class="text medium absolute grid-h-26 grid-2 type-38">
-			<p>You have selected tower A. Touch a point to select a floor.</p>
+		<div id="map-feedback" class="text medium absolute grid-h-26 grid-2 type-32">
+			<p>Touch the map to select an area.</p>
 		</div>
 <!--
 		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
