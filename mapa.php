@@ -45,7 +45,13 @@ require('core/functions.php');
 		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_5"><?php showMap(5); ?></div>
 		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_6"><?php showMap(6); ?></div>
 
-		<div class="text medium absolute grid-h-22 grid-2 type-38">
+		<div class="text regular underline button absolute grid-h-23 grid-4 type-32">
+			<div id="step-i" class="step">back to begining</div>
+			<div id="step-b" class="step">step back</div>
+			<div id="step-f" class="step">step forward</div>
+		</div>
+
+		<div class="text medium absolute grid-h-26 grid-2 type-38">
 			<p>You have selected tower A. Touch a point to select a floor.</p>
 		</div>
 <!--
@@ -96,10 +102,10 @@ require('core/functions.php');
 			</p>
 		</div>
 -->
-		<div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
+		<div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
 		</div>
 
-		<div id="close-page" class="close text absolute grid-35 grid-h-2 button">
+		<div id="close-page" class="close text absolute grid-36 grid-h-2 button">
 			<img class="img-close" src="./css/images/close.png" />
 		</div>
 	</div>

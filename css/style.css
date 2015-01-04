@@ -361,8 +361,9 @@ a{
 #search-free{
   height:45px;
 }
-#map-message{
-  width: calc(32px * 23);
+.step{
+  float:left;
+  margin-right: 40px;
 }
 
 
