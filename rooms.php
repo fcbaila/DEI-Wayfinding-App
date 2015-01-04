@@ -32,6 +32,7 @@
         </div>
 
         <div id="page_container">
+          <?php getRoomData(); ?>
 
           <div id="page-title" class="text absolute grid-h-5 grid-18 type-38">
             <p>Rooms:</p>

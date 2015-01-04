@@ -33,14 +33,7 @@ require('core/functions.php');
 
       <div id="page_container">
         <?php getTeacherData(); ?>
-<!--
-        <div class="text absolute grid-h-5 grid-18 type-32">
-          <p class="medium">Next office hours:</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
-          <p class="button underline">Quarta-feira, das 9:00 às 10:00 na F1.1</p>
-        </div>
--->
+
         <div id="construct_mapa" class="grid-2 grid-h-13">
           <?php showMap(1); ?>
         </div>

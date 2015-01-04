@@ -32,12 +32,9 @@ require('core/functions.php');
       </div>
 
       <div id="page_container">
+        <?php getRoomData(); ?>
 
-        <div class="text absolute grid-h-5 grid-2 type-38 bold">
-          <p>E4.1</p>
-        </div>
-
-        <div id="construct_mapa" class="grid-2 grid-h-7">
+        <div id="construct_mapa" class="grid-2 grid-h-10">
           <?php showMap(1); ?>
         </div>
 
