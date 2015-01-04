@@ -124,12 +124,7 @@ app.events = function() {
     $("#page_container").fadeOut(300);
     window.location.href = "services.php";
   });
-
-  $(".teacher_id").click(function() {
-    $("#page_container").fadeOut(300);
-    window.location.href = "professor-single.php";
-  });
-
+  
   $(".room_id").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "room-single.php";

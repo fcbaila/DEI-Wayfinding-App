@@ -1,12 +1,32 @@
 <?php
 
 function getTeachers() {
+  $teacher_number = 0;
   $teacher = mysql_query("SELECT * from teachers ORDER BY teacher_name ASC");
   if (!$teacher || mysql_num_rows($teacher) == 0) {
     echo 'There are no teachers available at the moment.';
   } else {
     while($fetch_teachers = mysql_fetch_object($teacher)){
-      echo '<p id="'.$fetch_teachers->teacher_id.'" class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'">· '.$fetch_teachers->teacher_name.'</p>';
+      $teacher_number = $fetch_teachers->teacher_id;
+      echo '<a href="professor-single.php?s='.$teacher_number.'"><p id="'.$fetch_teachers->teacher_id.'" class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'">· '.$fetch_teachers->teacher_name.'</p></a>';
+    }
+  }
+}
+
+function getTeacherData() {
+  $teacher_id = $_GET['s'];
+  $teacher = mysql_query("SELECT * from teachers WHERE teacher_id = '$teacher_id'");
+  if (!$teacher || mysql_num_rows($teacher) == 0) {
+    echo 'There are no rooms available at the moment.';
+  } else {
+    while($fetch_teachers = mysql_fetch_object($teacher)){
+      echo '<div class="text absolute grid-h-3 grid-2 type-32 bold">';
+      echo '<p>'.$fetch_teachers->teacher_name.'</p>';
+      echo '</div>';
+
+      echo '<div class="text absolute grid-h-5 grid-2 type-32 regualr">';
+      echo '<p>'.$fetch_teachers->teacher_email.'</p>';
+      echo '</div>';
     }
   }
 }
