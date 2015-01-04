@@ -92,7 +92,6 @@ app.init = function() {
   app.keyboard();
 }
 
-updateMap();
 var slots = Array();
 
 app.events = function() {
@@ -195,6 +194,13 @@ app.keyboard = function() {
   var input_floor = document.getElementById("search_floor");
 
   /*KEYBOARD-----------------*/
+  $(".slot_front").click(function() {
+    var block = $(this).attr("block");
+    var floor = $(this).attr("floor");
+    block = block.charAt(0);
+    changeView(block, floor);
+  });
+
   $(".key").click(function() {
     input.value += this.id;
   });
@@ -210,7 +216,7 @@ app.keyboard = function() {
   /*KEYBOARD-MAP-----------------*/
   $(".key-m").click(function() {
     input.value += this.id;
-    updateMap();
+    //updateMap();
   });
   /*KEYBOARD-ROOMS---------------*/
   var tower = false;
@@ -590,6 +596,25 @@ function toTitleCase(str) {
   return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
+function changeView(block, floor) {
+  setTimeout(function() {
+    var map_count = $('#construct_mapa > .mapa_slot').length;
+    for (var i = 1; i <= map_count; i++) {
+
+      var block_compare = $(".slot_front_"+i).attr("block");
+      if(!block_compare) {
+        $('.slot_front_'+i).animate({opacity: '0.3'}, 600);
+      } else {
+        if(block_compare.indexOf(block) > -1) {
+          $('.slot_front_'+i).animate({opacity: '1.0'}, 600);
+        } else {
+          $('.slot_front_'+i).animate({opacity: '0.3'}, 600);
+        }
+      }
+    }
+  }, 0);
+}
+/*
 function updateMap() {
   setTimeout(function() {
     var map_count = $('#construct_mapa > .mapa_slot').length;
@@ -605,6 +630,7 @@ function updateMap() {
     }
   }, 0);
 }
+*/
 
 function updateTeachers() {
   setTimeout(function() {
@@ -654,6 +680,7 @@ function filterTeachers(filter) {
 
   }, 0);
 }
+
 function clearTeachers() {
   setTimeout(function() {
     var teacher_count = $('#professors-list > .teacher_id').length;

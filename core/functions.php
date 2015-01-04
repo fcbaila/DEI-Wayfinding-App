@@ -6,7 +6,7 @@ function getTeachers() {
     echo 'There are no teachers available at the moment.';
   } else {
     while($fetch_teachers = mysql_fetch_object($teacher)){
-      echo '<p class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'">· '.$fetch_teachers->teacher_name.'</p>';
+      echo '<p id="'.$fetch_teachers->teacher_id.'" class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'">· '.$fetch_teachers->teacher_name.'</p>';
     }
   }
 }
@@ -29,10 +29,10 @@ function showFrontMap() {
       $count = $count+1;
       $query = mysql_query("SELECT * FROM map_slots_front WHERE map_x = '$j' AND map_y = '$i'");
       if (!$query || mysql_num_rows($query) == 0) {
-        echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
+        echo '<div class="mapa_slot slot_front_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
       } else {
         $fetch_query = mysql_fetch_object($query);
-        echo '<div class="mapa_slot slot_'.$count.'"><img src="'.$fetch_query->slot_image.'"></div>';
+        echo '<div class="mapa_slot slot_front slot_front_'.$count.'" block="'.$fetch_query->block_number.'" floor="'.$fetch_query->floor_number.'"><img src="'.$fetch_query->slot_image.'"></div>';
       }
     }
   }
