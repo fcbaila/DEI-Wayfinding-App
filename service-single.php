@@ -32,10 +32,7 @@ require('core/functions.php');
       </div>
 
       <div id="page_container">
-
-        <div class="text absolute grid-h-5 grid-2 type-38 bold">
-          <p>NEI - Computer Student Center</p>
-        </div>
+        <?php getServiceData(); ?>
 
         <div id="construct_mapa" class="grid-2 grid-h-7">
           <?php showMap(1); ?>

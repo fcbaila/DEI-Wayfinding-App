@@ -32,16 +32,13 @@
         </div>
 
         <div id="page_container">
-          <?php getRoomData(); ?>
 
           <div id="page-title" class="text absolute grid-h-5 grid-18 type-38">
             <p>Rooms:</p>
           </div>
 
           <div id="rooms-list" class="text bold absolute grid-h-7 grid-18 type-32">
-            <?php
-              getRooms();
-            ?>
+            <?php getRooms(); ?>
           </div>
 
           <div id="search-rooms" class="search-bar grid-2 grid-h-3 absolute type-38">

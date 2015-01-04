@@ -38,13 +38,7 @@ require('core/functions.php');
         </div>
 
         <div id="services-list" class="text bold absolute grid-h-7 grid-2 type-32">
-          <p class="service">GAPI — Gabinete de Apoio a Projectos / Mobilidade;</p>
-          <p class="service">Helpdesk;</p>
-          <p class="service">Secretary;</p>
-          <p class="service">NEI — Computer Student Center;</p>
-          <p class="service">Bar CISUC;</p>
-          <p class="service">Bar;</p>
-          <p class="service">WC.</p>
+          <?php getServices(); ?>
         </div>
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
