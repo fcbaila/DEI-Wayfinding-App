@@ -2,7 +2,7 @@ DEI-Wayfinding-App
 ==================
 
 
-TO-DO:
-· Rooms page - alterar os nomes incompletos
-· Map page - feedback e código
-· Single pages - map
+TO-DO:<br>
+· Rooms page - alterar os nomes incompletos<br>
+· Map page - feedback e código<br>
+· Single pages - map<br>
