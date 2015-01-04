@@ -124,7 +124,7 @@ app.events = function() {
     $("#page_container").fadeOut(300);
     window.location.href = "services.php";
   });
-  
+
   $(".room_id").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "room-single.php";
@@ -591,12 +591,16 @@ function toTitleCase(str) {
   return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
+var floorclick = "";
+var blockclick = "";
+var map_count = 8*18;
+
 function changeView(block, floor) {
-  setTimeout(function() {
-    var map_count = $('#construct_mapa > .mapa_slot').length;
     for (var i = 1; i <= map_count; i++) {
 
       var block_compare = $(".slot_front_"+i).attr("block");
+      var floor_compare = $(".slot_front_"+i).attr("floor");
+
       if(!block_compare) {
         $('.slot_front_'+i).animate({opacity: '0.3'}, 600);
       } else {
@@ -607,8 +611,76 @@ function changeView(block, floor) {
         }
       }
     }
-  }, 0);
+
+    if(blockclick == block) {
+      if(floorclick == floor) {
+        transitionLoop('front', floor, block);
+      }
+    }
+
+    floorclick = floor;
+    blockclick = block;
 }
+
+var loop = 0;
+var loop_2 = 0;
+var other_view = "";
+
+function transitionLoop (view, floor, block) {
+
+  if(view == 'front') {
+    other_view = 'side';
+  } else {
+    other_view = 'front';
+  }
+
+  setTimeout(function () {
+    $('.slot_'+view+'_'+loop).toggleClass('rotated');
+    $('.slot_'+view+'_'+loop).animate({opacity: '0'}, 600);
+    loop++;
+    if (loop < map_count+1) {
+      transitionLoop(view, floor, block);
+      if(loop == map_count/4) {
+        $('.slot_'+other_view).animate({opacity: '0'}, 0);
+        $('.'+other_view+'_'+floor).fadeIn(300);
+        transitionLoop_2(other_view, floor, block);
+      }
+    } else {
+      return;
+    }
+  }, 20);
+}
+
+
+function transitionLoop_2 (view, floor, block) {
+
+  if(view == 'front') {
+    other_view = 'side';
+  } else {
+    other_view = 'front';
+  }
+
+  setTimeout(function () {
+    var current_block = $('.slot_'+loop_2).attr("block");
+    $('.slot_'+view+'_'+loop_2).toggleClass('rotated');
+    if(current_block == block) {
+      $('.slot_'+view+'_'+loop_2).animate({opacity: '100'}, 600);
+      console.log('.slot_'+view+'_'+loop_2+': '+current_block);
+    } else {
+      $('.slot_'+view+'_'+loop_2).animate({opacity: '60'}, 600);
+      console.log('.slot_'+view+'_'+loop_2+': '+current_block);
+    }
+
+    loop_2++;
+    if (loop_2 < map_count+1) {
+      transitionLoop_2(view, floor, block);
+    } else {
+      return;
+    }
+  }, 20);
+}
+
+
 /*
 function updateMap() {
   setTimeout(function() {

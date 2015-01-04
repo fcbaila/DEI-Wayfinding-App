@@ -136,7 +136,7 @@ function showMap($floor) {
       $count = $count+1;
       $query = mysql_query("SELECT * FROM map_slots WHERE map_x = '$j' AND map_y = '$i' AND floor_id = '$floor'");
       if (!$query || mysql_num_rows($query) == 0) {
-        echo '<div class="mapa_slot slot_'.$count.'"><img src="css/images/icons/icon_empty.png"></div>';
+        echo '<div class="mapa_slot slot_side slot_side_'.$count.' slot_'.$count.'" block="Empty"><img src="css/images/icons/icon_empty.png"></div>';
       } else {
         if($j < 6) {
           $tooltip = 'tooltipsed-left';
@@ -159,6 +159,7 @@ function showMap($floor) {
             }
             $string = $string.$room_name.', ';
             $room_type = $fetch_multiple->room_type;
+            $room_block = $fetch_multiple->room_block;
           }
           $room_name = rtrim($string, ", ");
         } else {
@@ -170,21 +171,21 @@ function showMap($floor) {
             $room_name = $room_query->room_name;
           }
           $room_type = $room_query->room_type;
+          $room_block = $room_query->room_block;
         }
 
-
         if($room_type == 'hall') {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_corridor.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_corridor.png"></div>';
         } elseif($room_type == 'user_pos') {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_position.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_position.png"></div>';
         } elseif($room_type == 'bathroom') {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_wc.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_wc.png"></div>';
         } elseif($room_type == 'parking') {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_parking.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_parking.png"></div>';
         } elseif($room_type == 'stairs') {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_stairs.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } else {
-          echo '<div title="'.$room_name.'" class="mapa_slot '.$tooltip.' slot_'.$count.'"><img src="css/images/icons/icon_classroom.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" block="'.$room_block.'"><img src="css/images/icons/icon_classroom.png"></div>';
         }
       }
     }

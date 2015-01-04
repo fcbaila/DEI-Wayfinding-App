@@ -33,9 +33,17 @@ require('core/functions.php');
 
 	<div id="page_container">
 
-		<div id="construct_mapa" class="grid-2 grid-h-5">
+		<div id="construct_mapa" class="grid-2 grid-h-5 front_view">
 			<?php showFrontMap(1); ?>
 		</div>
+
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_0"><?php showMap(0); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_1"><?php showMap(1); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_2"><?php showMap(2); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_3"><?php showMap(3); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_4"><?php showMap(4); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_5"><?php showMap(5); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_6"><?php showMap(6); ?></div>
 
 		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
 			<input type="text" id="text-search" class="text search input" placeholder="search">
