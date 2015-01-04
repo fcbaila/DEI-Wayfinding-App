@@ -8,7 +8,7 @@ function getTeachers() {
   } else {
     while($fetch_teachers = mysql_fetch_object($teacher)){
       $teacher_number = $fetch_teachers->teacher_id;
-      echo '<a href="professor-single.php?s='.$teacher_number.'"><p id="'.$fetch_teachers->teacher_id.'" class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'">· '.$fetch_teachers->teacher_name.'</p></a>';
+      echo '<p id="'.$fetch_teachers->teacher_id.'" class="teacher_id '.$fetch_teachers->teacher_course.' teacher_'.$fetch_teachers->teacher_id.'" teacher_filter="'.$fetch_teachers->teacher_course.'" teacher_name="'.$fetch_teachers->teacher_name.'"><a href="professor-single.php?s='.$teacher_number.'">· '.$fetch_teachers->teacher_name.'</a></p>';
     }
   }
 }
@@ -58,7 +58,7 @@ function getRooms() {
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
       $room_number = $fetch_rooms->room_id;
-      echo '<a href="room-single.php?s='.$room_number.'"><p class="room_id '.$fetch_rooms->room_type.' room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"> · '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</p></a>';
+      echo '<p class="room_id '.$fetch_rooms->room_type.' room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</a></p>';
     }
   }
 }
