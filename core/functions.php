@@ -17,17 +17,37 @@ function getTeacherData() {
   $teacher_id = $_GET['s'];
   $teacher = mysql_query("SELECT * from teachers WHERE teacher_id = '$teacher_id'");
   if (!$teacher || mysql_num_rows($teacher) == 0) {
-    echo 'There are no rooms available at the moment.';
+    echo 'There are no teachers available at the moment.';
   } else {
     while($fetch_teachers = mysql_fetch_object($teacher)){
       echo '<div class="text absolute grid-h-3 grid-2 type-32 bold">';
       echo '<p>'.$fetch_teachers->teacher_name.'</p>';
       echo '</div>';
-
       echo '<div class="text absolute grid-h-5 grid-2 type-32 regualr">';
       echo '<p>'.$fetch_teachers->teacher_email.'</p>';
       echo '</div>';
     }
+  }
+  $room_id = 0;
+  $office = mysql_query("SELECT * from office_hours WHERE teacher_id = '$teacher_id' LIMIT 3");
+  if (!$office || mysql_num_rows($office) == 0) {
+    echo 'There are no office hours available at the moment.';
+  } else {
+    echo '<div class="text absolute grid-h-5 grid-18 type-32">';
+    echo '<p class="medium">Next office hours:</p>';
+    while($fetch_office_hours = mysql_fetch_object($office)){
+      $room_id = $fetch_office_hours->room_id;
+      $room = mysql_query("SELECT * from rooms WHERE room_id = '$room_id'");
+      if (!$room || mysql_num_rows($room) == 0) {
+        echo 'There are no rooms available at the moment.';
+      } else {
+        while($fetch_rooms = mysql_fetch_object($room)){
+          echo '<p class="button underline office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 to '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+          }
+      }
+
+    }
+    echo '</div>';
   }
 }
 
