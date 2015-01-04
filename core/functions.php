@@ -52,7 +52,7 @@ function getTeacherData() {
 
 function getRooms() {
   $room_number = 0;
-  $room = mysql_query("SELECT * from rooms ORDER BY room_block ASC, room_floor ASC, room_number ASC");
+  $room = mysql_query("SELECT * from rooms WHERE room_type <> 'stairs' AND room_type <> 'hall' AND room_type <> 'user_pos' AND room_type <> 'parking' ORDER BY room_block ASC, room_floor ASC, room_number ASC");
   if (!$room || mysql_num_rows($room) == 0) {
     echo 'There are no rooms available at the moment.';
   } else {
@@ -82,7 +82,7 @@ function getRoomData() {
 
 function getServices() {
   $service_number = 0;
-  $service = mysql_query("SELECT * from rooms WHERE room_type = 'service'");
+  $service = mysql_query("SELECT * from rooms WHERE room_type = 'service' OR room_type = 'parking' ORDER BY room_name ASC" );
   if (!$service || mysql_num_rows($service) == 0) {
     echo 'There are no services available at the moment.';
   } else {
