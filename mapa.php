@@ -14,14 +14,14 @@ require('core/functions.php');
 <div id="construct_container">
 
 	<div id="grid_container">
-		<?php /*
+		<?php
 		for($i = 1; $i <= 40; $i++) {
 			echo '<div class="grid"></div>';
 		}
 
 		for($i = 1; $i <= 32; $i++) {
 			echo '<div class="grid-h"></div>';
-		} */
+		}
 		?>
 	</div>
 	<div id="frame" class="absolute">
@@ -45,6 +45,10 @@ require('core/functions.php');
 		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_5"><?php showMap(5); ?></div>
 		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_6"><?php showMap(6); ?></div>
 
+		<div class="text medium absolute grid-h-22 grid-2 type-38">
+			<p>You have selected tower A. Touch a point to select a floor.</p>
+		</div>
+<!--
 		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
 			<input type="text" id="text-search" class="text search input" placeholder="search">
 		</div>
@@ -91,7 +95,7 @@ require('core/functions.php');
 				<div id="clean">clean</div>
 			</p>
 		</div>
-
+-->
 		<div id="clock" class="text absolute grid-31 grid-h-2 button type-24">
 		</div>
 
