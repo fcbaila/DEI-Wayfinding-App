@@ -36,16 +36,37 @@ function getTeacherData() {
   } else {
     echo '<div class="text absolute grid-h-5 grid-18 type-32">';
     echo '<p class="medium">Next office hours:</p>';
+    $h = date('H');
+    $d = date('l');
+    if ($d == "Monday"){
+      $d = "Segunda-Feira";
+    } else if ($d == "Tuesday"){
+      $d = "Terça-Feira";
+    } else if ($d == "Wednesday"){
+      $d = "Quarta-Feira";
+    } else if ($d == "Thursday"){
+      $d = "Quinta-Feira";
+    } else if ($d == "Friday"){
+      $d = "Sexta-Feira";
+    }
     while($fetch_office_hours = mysql_fetch_object($office)){
+      $office_day = $fetch_office_hours->weekday;
+      $office_hour = $fetch_office_hours->hour_begin;
+      $office_end = $fetch_office_hours->hour_end;
       $room_id = $fetch_office_hours->room_id;
       $room = mysql_query("SELECT * from rooms WHERE room_id = '$room_id'");
       if (!$room || mysql_num_rows($room) == 0) {
-        echo 'There are no rooms available at the moment.';
+        echo 'There are no office hours available at the moment.';
       } else {
         while($fetch_rooms = mysql_fetch_object($room)){
-          echo '<p class="button underline office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 to '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
-          $room_floor = $fetch_rooms->room_floor;
+          if ($d == $office_day && $h >= $office_hour && $h < $office_end){
+            echo '<p class="office">Currently availabe at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+            $room_floor = $fetch_rooms->room_floor;
+          }else{
+            echo '<p class="office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 to '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+            $room_floor = $fetch_rooms->room_floor;
           }
+        }
       }
     }
 
