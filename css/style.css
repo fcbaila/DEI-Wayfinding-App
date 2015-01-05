@@ -371,7 +371,18 @@ a{
 
 
 
-
+::-webkit-input-placeholder { /* WebKit browsers */
+  line-height:40px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+}
 
 
 /*-----ANIMATIONS----------------------------------------------------------------------*/

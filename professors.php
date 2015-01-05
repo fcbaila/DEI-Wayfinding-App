@@ -43,7 +43,7 @@ require('core/functions.php');
 
         <div id="search-professors" class="search-bar grid-28 grid-h-5 absolute type-38">
           <form action="demo_form.asp">
-            <input class="text search input" id="text-search" type="text" placeholder="search" name="fname">
+            <p class="type-38 regular"><input class="text search input" id="text-search" type="text" placeholder="search" name="fname"></p>
           </form>
         </div>
 
