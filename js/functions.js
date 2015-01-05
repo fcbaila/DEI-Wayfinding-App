@@ -734,7 +734,6 @@ function transitionLoop_2 (view, floor, block) {
     $('.slot_'+view+'_'+loop_2).toggleClass('rotated');
     if(current_block == block) {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '100'}, 600);
-      console.log(current_block+' - '+block);
     } else {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '60'}, 600);
     }
@@ -856,7 +855,6 @@ function filterRoom(room) {
       for(var i = 0; i < res.length; i++) {
         var res_2 = res[i].split(", ");
         if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
-          $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
           click_slot = ".slot_side_"+k+"_"+j;
         }
       }
@@ -878,7 +876,6 @@ function checkRoom(room) {
         var res_2 = res[i].split(", ");
         if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
           $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
-          click_slot = ".slot_side_"+k+"_"+j;
         }
       }
     }
