@@ -30,12 +30,12 @@ function getTeacherData() {
   }
   $room_id = 0;
   $room_floor = 0;
-  $office = mysql_query("SELECT * from office_hours WHERE teacher_id = '$teacher_id' LIMIT 3");
+  $office = mysql_query("SELECT * from office_hours WHERE teacher_id = '$teacher_id' LIMIT 2");
   if (!$office || mysql_num_rows($office) == 0) {
     echo 'There are no office hours available at the moment.';
   } else {
     echo '<div class="text absolute grid-h-5 grid-18 type-32">';
-    echo '<p class="medium">Next office hours:</p>';
+    echo '<p class="medium">Next office hour:</p>';
     $h = date('H');
     $d = date('l');
     if ($d == "Monday"){
@@ -63,7 +63,7 @@ function getTeacherData() {
             echo '<p class="office">Currently availabe at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
             $room_floor = $fetch_rooms->room_floor;
           }else{
-            echo '<p class="office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 to '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+            echo '<p class="office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 until '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
             $room_floor = $fetch_rooms->room_floor;
           }
         }
@@ -83,13 +83,16 @@ function getTeacherData() {
     echo showMap(1);
     echo '</div>';
 
-    echo '<div id="construct_mapa" class="grid-2 grid-h-13 side_'.$room_floor.'">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-14 side_'.$room_floor.'">';
     echo showMap($room_floor);
     echo '</div>';
     echo '<script type="text/javascript">'
     , 'filterRoom("'.$room_number.'");'
     , '</script>'
     ;
+  }
+  if ($room_floor != 1){
+    echo '<div class="text button underline absolute grid-25 grid-h-12 button type-32 regular"><div id="first-floor" class="step">First Floor</div><div id="current-floor" class="step">Current Floor</div></div>';
   }
 }
 
