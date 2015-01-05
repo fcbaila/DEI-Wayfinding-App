@@ -197,7 +197,7 @@ function showMap($floor) {
         } elseif($room_type == 'stairs') {
           echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } else {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><span style="color: red; position: absolute;">'.$room_id.'</span><img src="css/images/icons/icon_classroom.png"></div>';
+          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_classroom.png"></div>';
         }
       }
     }

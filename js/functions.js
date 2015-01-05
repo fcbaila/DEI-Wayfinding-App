@@ -744,27 +744,9 @@ function transitionLoop_2 (view, floor, block) {
     } else {
       return;
     }
-  }, 20);
+  }, 5);
 }
 
-
-/*
-function updateMap() {
-  setTimeout(function() {
-    var map_count = $('#construct_mapa > .mapa_slot').length;
-    var string = $('.search_area').val();
-
-    for (var i = 1; i <= map_count; i++) {
-      var slot = $(".slot_"+i).attr("slot");
-      if(slot.substring(0, string.length) == string) {
-        $('.slot_'+i).animate({opacity: '1.0'}, 300);
-      } else {
-        $('.slot_'+i).animate({opacity: '0.2'}, 300);
-      }
-    }
-  }, 0);
-}
-*/
 
 function updateTeachers() {
   setTimeout(function() {
