@@ -5,6 +5,7 @@
 require('core/ref.php');
 require('core/init.php');
 require('core/functions.php');
+require('core/footer.php');
 
 ?>
 
@@ -21,10 +22,6 @@ require('core/functions.php');
       <div id="page_container">
         <?php getRoomData(); ?>
 
-        <div id="construct_mapa" class="grid-2 grid-h-10">
-          <?php showMap(1); ?>
-        </div>
-
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
 
@@ -37,7 +34,3 @@ require('core/functions.php');
     </div>
   </div>
 </div>
-
-<?php
-require('core/footer.php');
-?>

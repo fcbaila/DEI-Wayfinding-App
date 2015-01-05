@@ -103,7 +103,28 @@ function getRoomData() {
       echo '<div class="text absolute grid-h-5 grid-2 type-32 regualr">';
       echo '<p>'.$fetch_rooms->room_name.'</p>';
       echo '</div>';
+      $room_floor = $fetch_rooms->room_floor;
     }
+
+    $room_loc = mysql_query("SELECT * FROM map_slots WHERE room_id = $room_id LIMIT 1");
+
+    if($room_loc) {
+      while ($row = mysql_fetch_object($room_loc)) {
+        $room_number = $row->floor_id.', '.$row->map_x.', '.$row->map_y;
+      }
+    }
+
+    echo '<div id="construct_mapa" class="grid-2 grid-h-10 side_1" style="display:none;">';
+    echo showMap(1);
+    echo '</div>';
+
+    echo '<div id="construct_mapa" class="grid-2 grid-h-10 side_'.$room_floor.'">';
+    echo showMap($room_floor);
+    echo '</div>';
+    echo '<script type="text/javascript">'
+    , 'filterRoom("'.$room_number.'");'
+    , '</script>'
+    ;
   }
 }
 
@@ -138,9 +159,29 @@ function getServiceData() {
       } else{
         echo '<p>'.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.''.$second_part.'</p>';
       }
+      $room_floor = $fetch_rooms->room_floor;
       echo '</div>';
     }
   }
+  $room_loc = mysql_query("SELECT * FROM map_slots WHERE room_id = $room_id LIMIT 1");
+
+  if($room_loc) {
+    while ($row = mysql_fetch_object($room_loc)) {
+      $room_number = $row->floor_id.', '.$row->map_x.', '.$row->map_y;
+    }
+  }
+
+  echo '<div id="construct_mapa" class="grid-2 grid-h-10 side_1" style="display:none;">';
+  echo showMap(1);
+  echo '</div>';
+
+  echo '<div id="construct_mapa" class="grid-2 grid-h-10 side_'.$room_floor.'">';
+  echo showMap($room_floor);
+  echo '</div>';
+  echo '<script type="text/javascript">'
+  , 'filterRoom("'.$room_number.'");'
+  , '</script>'
+  ;
 }
 
 function showFrontMap() {
