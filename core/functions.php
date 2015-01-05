@@ -263,6 +263,7 @@ function showMap($floor) {
             $room_id = $fetch_multiple->room_id;
             $room_type = $fetch_multiple->room_type;
             $room_block = $fetch_multiple->room_block;
+            $room_number = $fetch_multiple->room_number;
           }
           $room_name = rtrim($string, ", ");
         } else {
@@ -276,6 +277,7 @@ function showMap($floor) {
           $room_id = $room_query->room_id;
           $room_type = $room_query->room_type;
           $room_block = $room_query->room_block;
+          $room_number = $room_query->room_number;
         }
 
         $wayfind_array = "";
