@@ -79,7 +79,7 @@ function getTeacherData() {
     }
 
     echo '</div>';
-    echo '<div id="construct_mapa" class="grid-2 grid-h-13 side_1" style="display:none;">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-14 side_1" style="display:none;">';
     echo showMap(1);
     echo '</div>';
 
