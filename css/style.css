@@ -358,6 +358,10 @@ a{
   float: left;
 }
 
+.slot_empty {
+  opacity: 0.3;
+}
+
 #map-filter{
   width: calc(32px * 23);
   pointer-events: none;

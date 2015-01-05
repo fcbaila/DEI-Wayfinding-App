@@ -717,7 +717,7 @@ function transitionLoop (view, floor, block) {
     } else {
       return;
     }
-  }, 20);
+  }, 10);
 }
 
 
@@ -734,6 +734,7 @@ function transitionLoop_2 (view, floor, block) {
     $('.slot_'+view+'_'+loop_2).toggleClass('rotated');
     if(current_block == block) {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '100'}, 600);
+      console.log(current_block+' - '+block);
     } else {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '60'}, 600);
     }
@@ -742,9 +743,11 @@ function transitionLoop_2 (view, floor, block) {
     if (loop_2 < map_count+1) {
       transitionLoop_2(view, floor, block);
     } else {
+      $('#step-up').fadeIn(100);
+      $('#step-down').fadeIn(100);
       return;
     }
-  }, 5);
+  }, 10);
 }
 
 
@@ -851,29 +854,16 @@ function filterRoom(room) {
         var res_2 = res[i].split(", ");
         if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
           $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
+          click_slot = ".slot_side_"+k+"_"+j;
         }
       }
     }
   }
+  clickRoom(click_slot);
 }
 
-/*
-function filterRoom(room) {
-  var res = room.split("-");
-  for(var i = 0; i < res.length; i++) {
-    var res_2 = res[i].split(", ");
-    alert(res_2[0]+' '+res_2[1]+' '+res_2[2]);
-    for (var j = 1; j <= map_count; j++) {
-      var r_floor = $(".slot_side_"+j).attr("floor");
-      var r_x = $(".slot_side_"+j).attr("x");
-      var r_y = $(".slot_side_"+j).attr("y");
-      if(r_floor == res_2[0]){
-        alert(r_floor+' = '+res_2[0]);
-      } else {
-        console.log('Floor '+r_floor+' -   X '+r_x);
-      }
-    }
-
-  }
+function clickRoom(room) {
+  var r_z = $(room).attr("room");
+  filterRoom(r_z);
+  return false;
 }
-*/

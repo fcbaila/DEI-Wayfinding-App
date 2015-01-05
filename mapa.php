@@ -5,7 +5,7 @@
 require('core/ref.php');
 require('core/init.php');
 require('core/functions.php');
-
+require('core/footer.php');
 ?>
 
 <div id="wrapper">
@@ -38,8 +38,8 @@ require('core/functions.php');
 			<div id="step-i" class="step">back to begining</div>
 			<div id="step-b" class="step">step back</div>
 			<div id="step-f" class="step">step forward</div>
-			<div id="step-up" class="step">Go UP</div>
-			<div id="step-down" class="step">Go DOWN</div>
+			<div id="step-up" class="step" style="display:none;">Go UP</div>
+			<div id="step-down" class="step" style="display:none">Go DOWN</div>
 			<div id="c-floor" style="display:none;">0</div>
 		</div>
 
@@ -107,5 +107,5 @@ require('core/functions.php');
 </div>
 
 <?php
-require('core/footer.php');
+
 ?>
