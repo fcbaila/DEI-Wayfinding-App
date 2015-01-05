@@ -7,4 +7,5 @@ TO-DO:<br>
 · Single pages - map<br>
 · Office hours running<br>
 · Grid out<br>
-· Service icons
+· Service icons<br>
+· GAPI bd D1.4
