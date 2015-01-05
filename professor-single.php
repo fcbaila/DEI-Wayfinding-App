@@ -12,18 +12,6 @@ require('core/functions.php');
   <div id="container">
     <div id="construct_container">
 
-      <div id="grid_container">
-        <?php
-        for($i = 1; $i <= 40; $i++) {
-          echo '<div class="grid"></div>';
-        }
-        ?>
-        <?php
-        for($i = 1; $i <= 32; $i++) {
-          echo '<div class="grid-h"></div>';
-        }
-        ?>
-      </div>
       <div id="frame" class="absolute">
         <div id="frame-top" class="absolute"></div>
         <div id="frame-right" class="absolute"></div>
@@ -34,9 +22,6 @@ require('core/functions.php');
       <div id="page_container">
         <?php getTeacherData(); ?>
 
-        <div id="construct_mapa" class="grid-2 grid-h-13">
-          <?php showMap(1); ?>
-        </div>
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>

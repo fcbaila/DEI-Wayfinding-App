@@ -47,6 +47,7 @@ function getTeacherData() {
       }
     }
     echo '</div>';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-13" style="background-color: red;">'.showMap(1).'</div>';
   }
 }
 
