@@ -23,8 +23,7 @@ require('core/footer.php');
       <div id="page_container">
         <?php getTeacherData(); ?>
 
-        <div id="professor-code" class="text absolute grid-2 grid-h-12 button type-32 bold">
-          trololol
+        <div id="map-feedback" class="text medium absolute grid-2 grid-h-11 type-32">
         </div>
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
