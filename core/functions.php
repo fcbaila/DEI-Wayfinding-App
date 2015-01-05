@@ -62,9 +62,11 @@ function getTeacherData() {
           if ($d == $office_day && $h >= $office_hour && $h < $office_end){
             echo '<p class="office">Currently availabe at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
             $room_floor = $fetch_rooms->room_floor;
+            $office_parse = $fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number;
           }else{
             echo '<p class="office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 until '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
             $room_floor = $fetch_rooms->room_floor;
+            $office_parse = $fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number;
           }
         }
       }
@@ -92,7 +94,7 @@ function getTeacherData() {
     ;
   }
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-12 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
+    echo '<div class="text button absolute grid-2 grid-h-12 button type-32 regular"><div id="floor-desc">Office at <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-12 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-12 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 }
 
@@ -128,6 +130,7 @@ function getRoomData() {
       echo '<p>'.$fetch_rooms->room_name.'</p>';
       echo '</div>';
       $room_floor = $fetch_rooms->room_floor;
+      $office_parse = $fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number;
     }
 
     $room_loc = mysql_query("SELECT * FROM map_slots WHERE room_id = $room_id LIMIT 1");
@@ -150,9 +153,11 @@ function getRoomData() {
     , '</script>'
     ;
   }
+
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
+    echo '<div class="text button absolute grid-2 grid-h-8 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-8 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-8 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
+
 }
 
 function getServices() {
@@ -187,6 +192,7 @@ function getServiceData() {
         echo '<p>'.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.''.$second_part.'</p>';
       }
       $room_floor = $fetch_rooms->room_floor;
+      $office_parse = $fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number;
       echo '</div>';
     }
   }
@@ -209,8 +215,9 @@ function getServiceData() {
   , 'filterRoom("'.$room_number.'");'
   , '</script>'
   ;
+
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
+    echo '<div class="text button absolute grid-2 grid-h-8 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-8 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-8 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 }
 

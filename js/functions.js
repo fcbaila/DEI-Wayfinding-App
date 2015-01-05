@@ -150,6 +150,24 @@ app.events = function() {
     }
   });
 
+  var toFirst2 = 0;
+  $("#current-floor-2").click(function() {
+    var floor = $(this).attr("floor");
+    if(toFirst2 == 0) {
+      $("#current-floor-2").html("Switch to floor "+floor);
+      $("#showing-floor-2").html("Showing Floor <b>1</b>");
+      $(".side_"+floor).fadeOut(300);
+      $(".side_1").fadeIn(300);
+      toFirst2 = 1;
+    } else {
+      $("#current-floor-2").html("Switch to floor 1");
+      $("#showing-floor-2").html("Showing Floor <b>"+floor+"</b>");
+      $(".side_1").fadeOut(300);
+      $(".side_"+floor).fadeIn(300);
+      toFirst2 = 0;
+    }
+  });
+
 
   $(".room_id").click(function() {
     $("#page_container").fadeOut(300);
