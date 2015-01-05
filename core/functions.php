@@ -292,36 +292,36 @@ function showMap($floor) {
 
         if($room_type == 'hall') {
           if($room_id == '169') {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_1.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_1.png"></div>';
           } elseif($room_id == '170') {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_2.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_2.png"></div>';
           } elseif($room_id == '171') {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_3.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_3.png"></div>';
           } elseif($room_id == '172') {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_4.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_outdoor_4.png"></div>';
           } else {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_corridor.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.' mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_corridor.png"></div>';
           }
         } elseif($room_type == 'user_pos') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_position.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_position.png"></div>';
         } elseif($room_type == 'bathroom') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_wc.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_wc.png"></div>';
         } elseif($room_type == 'parking') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_parking.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_parking.png"></div>';
         } elseif($room_type == 'stairs') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_stairs.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" block="'.$room_block.'"><img src="css/images/icons/icon_stairs.png"></div>';
         } elseif($room_type == 'service') {
           if($room_id == '154' || $room_id == '148') {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_bar.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_bar.png"></div>';
           } else {
-            echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_services.png"></div>';
+            echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_services.png"></div>';
           }
         } elseif($room_type == 'staff') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_staff.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_staff.png"></div>';
         } elseif($room_type == 'study room') {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_study.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_study.png"></div>';
         } else {
-          echo '<div title="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_classroom.png"></div>';
+          echo '<div all_name="'.$room_name.'" class="slot_side slot_side_'.$count.' slot_side_'.$floor.'_'.$count.'  mapa_slot '.$tooltip.' slot_'.$count.'" floor="'.$floor.'" r_x="'.$j.'" r_y="'.$i.'" room="'.$wayfind_array.'" block="'.$room_block.'"><img src="css/images/icons/icon_classroom.png"></div>';
         }
       }
     }

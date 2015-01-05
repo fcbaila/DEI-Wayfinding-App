@@ -130,6 +130,8 @@ app.events = function() {
 
   $(".slot_side").click(function() {
     var room = $(this).attr("room");
+    var title = $(this).attr("all_name");
+    getName(title);
     filterRoom(room);
   });
 
@@ -865,7 +867,6 @@ function filterRoom(room) {
   for(var k = 0; k <= 6; k++) {
     for (var j = 1; j <= map_count; j++) {
       var title = $(".slot_side_"+k+"_"+j).attr("title");
-      document.getElementById('map-feedback').innerHTML = '<p>You destination is room <b>'+ title +'</p>';
       var r_z = $(".slot_side_"+k+"_"+j).attr("floor");
       var r_x = $(".slot_side_"+k+"_"+j).attr("r_x");
       var r_y = $(".slot_side_"+k+"_"+j).attr("r_y");
@@ -900,4 +901,8 @@ function checkRoom(room) {
       }
     }
   }
+}
+
+function getName(name) {
+  document.getElementById('map-feedback').innerHTML = '<p>You destination is room <b>'+ name +'</p>';
 }
