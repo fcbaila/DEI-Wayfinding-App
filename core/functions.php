@@ -58,7 +58,12 @@ function getRooms() {
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
       $room_number = $fetch_rooms->room_id;
-      echo '<p class="room_id room_'.$fetch_rooms->room_id.' '.$fetch_rooms->room_type.' '.$fetch_rooms->room_block.' '.$fetch_rooms->room_floor.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</a></p>';
+      $second_part = ".".$fetch_rooms->room_number;
+      if($fetch_rooms->room_number == NULL){
+        echo '<p class="room_id room_'.$fetch_rooms->room_id.' '.$fetch_rooms->room_type.' '.$fetch_rooms->room_block.' '.$fetch_rooms->room_floor.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.' '.$fetch_rooms->room_name.'</a></p>';
+      } else{
+        echo '<p class="room_id room_'.$fetch_rooms->room_id.' '.$fetch_rooms->room_type.' '.$fetch_rooms->room_block.' '.$fetch_rooms->room_floor.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.''.$second_part.'  '.$fetch_rooms->room_name.'</a></p>';
+      }
     }
   }
 }
@@ -104,9 +109,13 @@ function getServiceData() {
       echo '<div class="text absolute grid-h-3 grid-2 type-32 bold">';
       echo '<p>'.$fetch_rooms->room_name.'</p>';
       echo '</div>';
-
       echo '<div class="text absolute grid-h-5 grid-2 type-32 regualr">';
-      echo '<p>'.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+      $second_part = ".".$fetch_rooms->room_number;
+      if($fetch_rooms->room_number == NULL){
+        echo '<p>'.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'</p>';
+      } else{
+        echo '<p>'.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.''.$second_part.'</p>';
+      }
       echo '</div>';
     }
   }
