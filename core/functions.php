@@ -81,11 +81,11 @@ function getTeacherData() {
     }
 
     echo '</div>';
-    echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_1" style="display:none;">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_1" style="display:none;">';
     echo showMap(1);
     echo '</div>';
 
-    echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_'.$room_floor.'">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_'.$room_floor.'">';
     echo showMap($room_floor);
     echo '</div>';
     echo '<script type="text/javascript">'
@@ -94,11 +94,7 @@ function getTeacherData() {
     ;
   }
   if ($room_floor != 1){
-<<<<<<< HEAD
-    echo '<div class="text button absolute grid-2 grid-h-12 button type-32 regular"><div id="floor-desc">Office at <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-12 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-12 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
-=======
-    echo '<div class="text button underline absolute grid-28 grid-h-13 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
->>>>>>> FETCH_HEAD
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Office at <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 }
 
@@ -145,11 +141,11 @@ function getRoomData() {
       }
     }
 
-    echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_1" style="display:none;">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_1" style="display:none;">';
     echo showMap(1);
     echo '</div>';
 
-    echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_'.$room_floor.'">';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_'.$room_floor.'">';
     echo showMap($room_floor);
     echo '</div>';
     echo '<script type="text/javascript">'
@@ -159,11 +155,7 @@ function getRoomData() {
   }
 
   if ($room_floor != 1){
-<<<<<<< HEAD
-    echo '<div class="text button absolute grid-2 grid-h-8 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-8 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-8 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
-=======
-    echo '<div class="text button underline absolute grid-25 grid-h-13 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
->>>>>>> FETCH_HEAD
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 
 }
@@ -212,11 +204,11 @@ function getServiceData() {
     }
   }
 
-  echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_1" style="display:none;">';
+  echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_1" style="display:none;">';
   echo showMap(1);
   echo '</div>';
 
-  echo '<div id="construct_mapa" class="grid-2 grid-h-15 side_'.$room_floor.'">';
+  echo '<div id="construct_mapa" class="grid-2 grid-h-12 side_'.$room_floor.'">';
   echo showMap($room_floor);
   echo '</div>';
   echo '<script type="text/javascript">'
@@ -225,11 +217,7 @@ function getServiceData() {
   ;
 
   if ($room_floor != 1){
-<<<<<<< HEAD
-    echo '<div class="text button absolute grid-2 grid-h-8 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-8 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-8 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
-=======
-    echo '<div class="text button underline absolute grid-25 grid-h-13 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
->>>>>>> FETCH_HEAD
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 }
 
