@@ -12,16 +12,16 @@ require('core/functions.php');
 <div id="container">
 
 <div id="construct_container">
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<div id="grid_container">
-		<?php
+		<?php /*
 		for($i = 1; $i <= 40; $i++) {
 			echo '<div class="grid"></div>';
 		}
 
 		for($i = 1; $i <= 32; $i++) {
 			echo '<div class="grid-h"></div>';
-		}
+		} */
 		?>
 	</div>
 	<div id="frame" class="absolute">
@@ -49,6 +49,9 @@ require('core/functions.php');
 			<div id="step-i" class="step">back to begining</div>
 			<div id="step-b" class="step">step back</div>
 			<div id="step-f" class="step">step forward</div>
+			<div id="step-up" class="step">Go UP</div>
+			<div id="step-down" class="step">Go DOWN</div>
+			<div id="c-floor" style="display:none;">0</div>
 		</div>
 
 		<div id="map-feedback" class="text medium absolute grid-h-26 grid-2 type-32">

@@ -125,6 +125,12 @@ app.events = function() {
     window.location.href = "services.php";
   });
 
+  $(".slot_side").click(function() {
+    var room = $(this).attr("room");
+    filterRoom(room);
+  });
+
+
   $(".room_id").click(function() {
     $("#page_container").fadeOut(300);
     window.location.href = "room-single.php";
@@ -255,6 +261,27 @@ app.keyboard = function() {
   $(".key-2").click(function() {
     updateTeachers();
   });
+
+  $("#step-down").click(function() {
+    var cfloor = document.getElementById('c-floor').innerHTML;
+    if(cfloor > 0) {
+      new_floor = parseInt(cfloor,10)-1;
+      $(".side_"+cfloor).fadeOut(300);
+      $(".side_"+new_floor).fadeIn(600);
+      $('#c-floor').html(new_floor);
+    }
+  });
+
+  $("#step-up").click(function() {
+    var cfloor = document.getElementById('c-floor').innerHTML;
+    if(cfloor < 6) {
+      new_floor = parseInt(cfloor,10)+1;
+      $(".side_"+cfloor).fadeOut(300);
+      $(".side_"+new_floor).fadeIn(600);
+      $('#c-floor').html(new_floor);
+    }
+  });
+
 
   var engineer = false;
   var designer = false;
@@ -617,6 +644,7 @@ function changeView(block, floor) {
       if(floorclick == floor) {
         document.getElementById('map-feedback').innerHTML = '<p>Now you are at floor <b>'+ floor +'</b>. Touch a slot to get there.</p>';
         transitionLoop('front', floor, block);
+        $('#c-floor').html(floor);
       }
     }
 
@@ -666,10 +694,8 @@ function transitionLoop_2 (view, floor, block) {
     $('.slot_'+view+'_'+loop_2).toggleClass('rotated');
     if(current_block == block) {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '100'}, 600);
-      console.log('.slot_'+view+'_'+loop_2+': '+current_block);
     } else {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '60'}, 600);
-      console.log('.slot_'+view+'_'+loop_2+': '+current_block);
     }
 
     loop_2++;
@@ -789,3 +815,43 @@ function filterFloor() {
 
   }, 0);
 }
+
+function filterRoom(room) {
+  var res = room.split("-");
+  for(var k = 0; k <= 6; k++) {
+    for (var j = 1; j <= map_count; j++) {
+      var r_z = $(".slot_side_"+k+"_"+j).attr("floor");
+      var r_x = $(".slot_side_"+k+"_"+j).attr("r_x");
+      var r_y = $(".slot_side_"+k+"_"+j).attr("r_y");
+      $(".slot_side_"+k+"_"+j).animate({opacity: '0.3'}, 100);
+      for(var i = 0; i < res.length; i++) {
+        var res_2 = res[i].split(", ");
+        if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
+          $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
+          console.log('MATCH: '+r_z+' '+r_x+' '+r_y);
+        }
+      }
+    }
+  }
+}
+
+/*
+function filterRoom(room) {
+  var res = room.split("-");
+  for(var i = 0; i < res.length; i++) {
+    var res_2 = res[i].split(", ");
+    alert(res_2[0]+' '+res_2[1]+' '+res_2[2]);
+    for (var j = 1; j <= map_count; j++) {
+      var r_floor = $(".slot_side_"+j).attr("floor");
+      var r_x = $(".slot_side_"+j).attr("x");
+      var r_y = $(".slot_side_"+j).attr("y");
+      if(r_floor == res_2[0]){
+        alert(r_floor+' = '+res_2[0]);
+      } else {
+        console.log('Floor '+r_floor+' -   X '+r_x);
+      }
+    }
+
+  }
+}
+*/
