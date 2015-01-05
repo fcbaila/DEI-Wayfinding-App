@@ -33,7 +33,7 @@ require('core/functions.php');
 		<div id="construct_mapa" class="grid-2 grid-h-6 side_view side_5"><?php showMap(5); ?></div>
 		<div id="construct_mapa" class="grid-2 grid-h-6 side_view side_6"><?php showMap(6); ?></div>
 
-		<div class="text regular underline button absolute grid-h-26 grid-3 type-32">
+		<div class="text regular underline button absolute grid-h-23 grid-3 type-32">
 			<div id="step-current" class="step" style="display:none;">Currently in floor</div>
 			<div id="step-i" class="step" style="display:none;">Back to Floor 1</div>
 			<div id="step-up" class="step" style="display:none;">Go Up</div>
@@ -41,8 +41,8 @@ require('core/functions.php');
 			<div id="c-floor" style="display:none;">0</div>
 		</div>
 
-		<div id="map-feedback" class="text medium absolute grid-h-24 grid-3 type-32">
-			<p>This is <b>DEI's</b> map. Touch it to select a tower. You can then select a floor<br> by clicking on a line or a point.</p>
+		<div id="map-feedback" class="text medium absolute grid-h-25 grid-3 type-32">
+			<p>This is <b>DEI's</b> map. Touch it to select a tower.<br> You can then select a floor by clicking on a line or a point.</p>
 			<p>You are currently located in floor <b>1</b>.</p>
 		</div>
 

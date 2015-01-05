@@ -940,6 +940,6 @@ function checkRoom(room) {
 function getName(name) {
   if(!name || name == "Corredor" || name == "Outdoor Passage") {
   } else {
-    document.getElementById('map-feedback').innerHTML = '<p>You destination is <b>'+ name +'</b>. Follow the path on the map.</p>';
+    document.getElementById('map-feedback').innerHTML = '<p>You destination is <b>'+ name +'</b>.<br> Follow the path on the map.</p>';
   }
 }
