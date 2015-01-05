@@ -251,15 +251,15 @@ a{
   text-align:center;
 }
 #img-touch{
-  width:161px;
-  margin-left: calc(200px - 80.5px);
-  height:161px;
+  width:160px;
+  margin-left: calc(200px - 80px);
+  height:160px;
   background-image: url("sprite.png");
-  -webkit-animation: touch 0.9s steps(15) infinite;
-  -moz-animation: touch 0.9s steps(15) infinite;
-  -ms-animation: touch 0.9s steps(15) infinite;
-  -o-animation: touch 0.9s steps(15) infinite;
-  animation: touch 0.9s steps(15) infinite;
+  -webkit-animation: touch 1.3s steps(23) infinite;
+  -moz-animation: touch 1.3s steps(23) infinite;
+  -ms-animation: touch 1.3s steps(23) infinite;
+  -o-animation: touch 1.3s steps(23) infinite;
+  animation: touch 1.3s steps(23) infinite;
 }
 /* PROFESSORS-PAGE--------------*/
 #page-title{
@@ -422,23 +422,23 @@ a{
 
 @-webkit-keyframes touch {
   from { background-position:    0px; }
-  to { background-position: -2401px; }
+  to { background-position: -3680px; }
 }
 @-moz-keyframes touch {
   from { background-position:    0px; }
-  to { background-position: -2401px; }
+  to { background-position: -3680px; }
 }
 @-ms-keyframes touch {
   from { background-position:    0px; }
-  to { background-position: -2401px; }
+  to { background-position: -3680px; }
 }
 @-o-keyframes touch {
   from { background-position:    0px; }
-  to { background-position: -2401px; }
+  to { background-position: -3680px; }
 }
 @keyframes touch {
   from { background-position:    0px; }
-  to { background-position: -2401px; }
+  to { background-position: -3680px; }
 }
 
 @-webkit-keyframes touch2 {

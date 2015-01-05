@@ -865,5 +865,5 @@ function filterRoom(room) {
 function clickRoom(room) {
   var r_z = $(room).attr("room");
   filterRoom(r_z);
-  return false;
+  return;
 }
