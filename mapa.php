@@ -21,19 +21,19 @@ require('core/functions.php');
 
 	<div id="page_container">
 
-		<div id="construct_mapa" class="grid-2 grid-h-5 front_view">
+		<div id="construct_mapa" class="grid-2 grid-h-4 front_view">
 			<?php showFrontMap(1); ?>
 		</div>
 
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_0"><?php showMap(0); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_1"><?php showMap(1); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_2"><?php showMap(2); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_3"><?php showMap(3); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_4"><?php showMap(4); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_5"><?php showMap(5); ?></div>
-		<div id="construct_mapa" class="grid-2 grid-h-5 side_view side_6"><?php showMap(6); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_0"><?php showMap(0); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_1"><?php showMap(1); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_2"><?php showMap(2); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_3"><?php showMap(3); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_4"><?php showMap(4); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_5"><?php showMap(5); ?></div>
+		<div id="construct_mapa" class="grid-2 grid-h-4 side_view side_6"><?php showMap(6); ?></div>
 
-		<div class="text regular underline button absolute grid-h-23 grid-4 type-32">
+		<div class="text regular underline button absolute grid-h-20 grid-4 type-32">
 			<div id="step-i" class="step">back to begining</div>
 			<div id="step-b" class="step">step back</div>
 			<div id="step-f" class="step">step forward</div>
@@ -42,8 +42,9 @@ require('core/functions.php');
 			<div id="c-floor" style="display:none;">0</div>
 		</div>
 
-		<div id="map-feedback" class="text medium absolute grid-h-26 grid-2 type-32">
-			<p>This is <b>DEI's</b> map. Touch it to select a tower.</p>
+		<div id="map-feedback" class="text medium absolute grid-h-23 grid-4 type-32">
+			<p>This is <b>DEI's</b> map. Touch it to select a tower. After you can select a floor<br> by clicking on a line or a point.</p>
+			<p>Right now you are in floor <b>1</b>. Select it to locate yourself<br> or to see where to use elevators(or stairs).</p>
 		</div>
 
 		<div id="clock" class="text absolute grid-32 grid-h-2 button type-24">

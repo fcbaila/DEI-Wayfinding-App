@@ -699,7 +699,7 @@ function changeView(block, floor) {
 
     if(blockclick == block) {
       if(floorclick == floor) {
-        document.getElementById('map-feedback').innerHTML = '<p>Now you are at floor <b>'+ floor +'</b>. Touch a slot to get there.</p>';
+        document.getElementById('map-feedback').innerHTML = '<p>You have selected floor <b>'+ floor +'</b>. Touch a slot to get to your destination.</p>';
         transitionLoop('front', floor, block);
         $('#c-floor').html(floor);
       }
@@ -751,7 +751,7 @@ function transitionLoop_2 (view, floor, block) {
     $('.slot_'+view+'_'+loop_2).toggleClass('rotated');
     if(current_block == block) {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '100'}, 600);
-      console.log(current_block+' - '+block);
+      //console.log(current_block+' - '+block);
     } else {
       $('.slot_'+view+'_'+loop_2).animate({opacity: '60'}, 600);
     }
@@ -904,5 +904,5 @@ function checkRoom(room) {
 }
 
 function getName(name) {
-  document.getElementById('map-feedback').innerHTML = '<p>You destination is room <b>'+ name +'</p>';
+  document.getElementById('map-feedback').innerHTML = '<p>You destination is <b>'+ name +'</b>. <br>Follow the path on the map.</p>';
 }
