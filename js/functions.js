@@ -133,6 +133,21 @@ app.events = function() {
     filterRoom(room);
   });
 
+  var toFirst = 0;
+
+  $("#current-floor").click(function() {
+    var floor = $(this).attr("floor");
+    if(toFirst == 0) {
+      $(".side_"+floor).fadeOut(300);
+      $(".side_1").fadeIn(300);
+      toFirst = 1;
+    } else {
+      $(".side_1").fadeOut(300);
+      $(".side_"+floor).fadeIn(300);
+      toFirst = 0;
+    }
+  });
+
 
   $(".room_id").click(function() {
     $("#page_container").fadeOut(300);

@@ -92,7 +92,7 @@ function getTeacherData() {
     ;
   }
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-12 button type-32 regular"><div id="first-floor" class="step">First Floor</div><div id="current-floor" class="step">Current Floor</div></div>';
+    echo '<div class="text button underline absolute grid-25 grid-h-12 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
   }
 }
 
