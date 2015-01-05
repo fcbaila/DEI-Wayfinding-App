@@ -6,7 +6,10 @@ var app = {
   currentHours: 0,
   currentMinutes: 0,
   timeOfDay: " ",
-  currentTimeString: " "
+  currentTimeString: " ",
+  towerAttribute: " ",
+  floorAttribute: " ",
+  towerSelected: false
 }
 
 $(document).ready(function() {
@@ -189,7 +192,7 @@ app.events = function() {
 }
 
 app.keyboard = function() {
-
+  var self = this;
   var input = document.getElementById("text-search");
   var input_tower = document.getElementById("search_tower");
   var input_floor = document.getElementById("search_floor");
@@ -220,39 +223,58 @@ app.keyboard = function() {
     //updateMap();
   });
   /*KEYBOARD-ROOMS---------------*/
-  var tower = false;
-  var floor = false;
+  var towerClicked = false;
+  var floorClicked = false;
   $(".key-t").click(function() {
-    filterTower();
-    if (tower == false){
-      input_tower.value += this.id;
+    if (!towerClicked){
+      input_tower.value = this.id;
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('#' + this.id).css({
         "font-family": "Ed-bold"
       });
-      tower = true;
+      $("#" + this.id).each(function() {
+        for (var i = 1; i <= 250; i++) {
+          var string = this.id;
+          self.towerAttribute = $(".room_"+i).attr("room_block");
+          if (self.towerAttribute != string){
+            $(".room_"+i).fadeOut(0);
+          }
+        }
+        $("." + this.id).fadeIn(600);
+      });
+      self.towerSelected = true;
+      towerClicked = true;
     }
   });
   $(".key-f").click(function() {
-    filterFloor();
-    if (floor == false){
-      input_floor.value += this.id;
-      $('#' + this.id).css({
-        "font-family": "Ed-bold"
-      });
-      floor = true;
+    if (!floorClicked){
+      if (self.towerSelected){
+        input_floor.value = this.id;
+        $('.key-f').css({
+          "font-family": "Ed-regular"
+        });
+        $('#' + this.id).css({
+          "font-family": "Ed-bold"
+        });
+        $("#" + this.id).each(function() {
+          for (var i = 1; i <= 250; i++) {
+            var string = this.id;
+            var attribute = $(".room_"+i).attr("room_floor");
+            if (attribute != string){
+              $(".room_"+i).fadeOut(0);
+            }
+          }
+        });
+      } else{
+          $('#floor-message').fadeIn(300);
+          setTimeout(function() {
+            $('#floor-message').fadeOut(300);
+          }, 800);
+      }
+      floorClicked = true;
     }
-  });
-  $("#room_clean").click(function() {
-    input_tower.value = "";
-    input_floor.value = "";
-    $('.key-t').css({
-      "font-family": "Ed-regular"
-    });
-    $('.key-f').css({
-      "font-family": "Ed-regular"
-    });
-    tower = false;
-    floor = false;
   });
   /*FILTER-----------------*/
   $(".key").click(function() {
@@ -355,10 +377,21 @@ app.keyboard = function() {
   var wc = false;
   var service = false;
   $("#room_clean").click(function() {
+    self.towerSelected = false;
+    towerClicked = false;
+    floorClicked = false;
+    input_tower.value = "";
+    input_floor.value = "";
     $('.room-type').css({
       "font-family": "Ed-regular"
     });
-    $(".room_id").fadeOut(0);
+    $('.key-t').css({
+      "font-family": "Ed-regular"
+    });
+    $('.room_id').fadeOut(0);
+    $('.key-f').css({
+      "font-family": "Ed-regular"
+    });
     study = false;
     classroom = false;
     meeting = false;
@@ -367,10 +400,21 @@ app.keyboard = function() {
     office = false;
     staff = false;
     wc = false;
-    $(".room_id").fadeIn(600);
+    tower = false;
+    floor = false;
   });
   $("#study-room").click(function() {
     if (study == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -398,6 +442,16 @@ app.keyboard = function() {
   });
   $("#classroom").click(function() {
     if (classroom == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -425,6 +479,16 @@ app.keyboard = function() {
   });
   $("#meeting").click(function() {
     if (meeting == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -452,6 +516,16 @@ app.keyboard = function() {
   });
   $("#laboratory").click(function() {
     if (laboratory == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -479,6 +553,16 @@ app.keyboard = function() {
   });
   $("#service").click(function() {
     if (service == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -506,6 +590,16 @@ app.keyboard = function() {
   });
   $("#office").click(function() {
     if (office == false){
+      input_tower.value = "";
+      input_floor.value = "";
+      towerClicked = true;
+      floorClicked = true;
+      $('.key-f').css({
+        "font-family": "Ed-regular"
+      });
+      $('.key-t').css({
+        "font-family": "Ed-regular"
+      });
       $('.room-type').css({
         "font-family": "Ed-regular"
       });
@@ -526,60 +620,6 @@ app.keyboard = function() {
       $(".room_id").fadeOut(0);
       laboratory = false;
       $('#office').css({
-        "font-family": "Ed-regular"
-      });
-      $(".room_id").fadeIn(600);
-    }
-  });
-  $("#staff").click(function() {
-    if (staff == false){
-      $('.room-type').css({
-        "font-family": "Ed-regular"
-      });
-      $(".room_id").fadeOut(0);
-      study = false;
-      classroom = false;
-      meeting = false;
-      laboratory = false;
-      service = false;
-      office = false;
-      staff = true;
-      wc = false;
-      $('#staff').css({
-        "font-family": "Ed-bold"
-      });
-      $(".staff").fadeIn(600);
-    } else{
-      $(".room_id").fadeOut(0);
-      staff = false;
-      $('#staff').css({
-        "font-family": "Ed-regular"
-      });
-      $(".room_id").fadeIn(600);
-    }
-  });
-  $("#bathroom").click(function() {
-    if (wc == false){
-      $('.room-type').css({
-        "font-family": "Ed-regular"
-      });
-      $(".room_id").fadeOut(0);
-      study = false;
-      classroom = false;
-      meeting = false;
-      laboratory = false;
-      service = false;
-      office = false;
-      staff = false;
-      wc = true;
-      $('#bathroom').css({
-        "font-family": "Ed-bold"
-      });
-      $(".bathroom").fadeIn(600);
-    } else{
-      $(".room_id").fadeOut(0);
-      wc = false;
-      $('#bathroom').css({
         "font-family": "Ed-regular"
       });
       $(".room_id").fadeIn(600);
@@ -786,6 +826,7 @@ function clearTeachers() {
 
   }, 0);
 }
+
 
 
 function filterTower() {

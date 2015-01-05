@@ -306,6 +306,9 @@ a{
   max-height: calc(58px * 12);
   overflow-y: scroll;
 }
+#floor-message{
+  display:none
+}
 #search-rooms{
   height:45px;
 }

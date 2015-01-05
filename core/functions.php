@@ -52,13 +52,13 @@ function getTeacherData() {
 
 function getRooms() {
   $room_number = 0;
-  $room = mysql_query("SELECT * from rooms WHERE room_type <> 'stairs' AND room_type <> 'hall' AND room_type <> 'user_pos' AND room_type <> 'parking' ORDER BY room_block ASC, room_floor ASC, room_number ASC");
+  $room = mysql_query("SELECT * from rooms WHERE room_type <> 'stairs' AND room_type <> 'hall' AND room_type <> 'user_pos' AND room_type <> 'service' AND room_type <> 'parking' ORDER BY room_block ASC, room_floor ASC, room_number ASC");
   if (!$room || mysql_num_rows($room) == 0) {
     echo 'There are no rooms available at the moment.';
   } else {
     while($fetch_rooms = mysql_fetch_object($room)){
       $room_number = $fetch_rooms->room_id;
-      echo '<p class="room_id '.$fetch_rooms->room_type.' room_'.$fetch_rooms->room_id.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</a></p>';
+      echo '<p class="room_id room_'.$fetch_rooms->room_id.' '.$fetch_rooms->room_type.' '.$fetch_rooms->room_block.' '.$fetch_rooms->room_floor.'" room_block="'.$fetch_rooms->room_block.'" room_floor="'.$fetch_rooms->room_floor.'"><a href="room-single.php?s='.$room_number.'">· '.$fetch_rooms->room_block.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'  '.$fetch_rooms->room_name.'</a></p>';
     }
   }
 }

@@ -49,13 +49,13 @@
 
           <div id="search-rooms" class="search-bar grid-2 grid-h-5 absolute type-38">
             <form action="demo_form.asp">
-              <input class="text search input" id="search_floor" type="text" placeholder="search room" name="fname">
+              <input class="text search input" id="search_floor" type="text" placeholder="search floor" name="fname">
             </form>
           </div>
 
           <div id="rooms-filter" class="text grid-2 grid-h-7 absolute type-32">
             <p>
-              <div class="key-t key-t-special" id="tower"><b2>Tower:</b2></div>
+              <div class="key-t key-t-special medium" id="tower">Tower:</b2></div>
               <div class="key-t" id="A">A</div>
               <div class="key-t" id="B">B</div>
               <div class="key-t" id="C">C</div>
@@ -65,7 +65,8 @@
               <div class="key-t" id="G">G</div>
             </p>
             <p>
-              <div class="key-f key-f-special" id="floor"><b2>Floor:</b2></div>
+              <div class="key-f key-f-special medium" id="floor"><b2>Floor:</b2></div>
+              <div class="key-f" id="0">0</div>
               <div class="key-f" id="1">1</div>
               <div class="key-f" id="2">2</div>
               <div class="key-f" id="3">3</div>
@@ -79,22 +80,20 @@
             <br>
             <br>
             <br>
-            <p id="room_clean" class="button underline room-type">clean</p>
+            <p id="room_clean" class="button underline">clean</p>
             <p id="study-room" class="button underline room-type">study room</p>
             <p id="classroom" class="button underline room-type">classroom</p>
             <p id="meeting" class="button underline room-type">meeting</p>
             <p id="laboratory" class="button underline room-type">laboratory</p>
-          </div>
-          <div id="rooms-filter-2" class="text grid-10 grid-h-7 absolute type-32">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p id="service" class="button underline room-type">service</p>
             <p id="office" class="button underline room-type">office</p>
-            <p id="staff" class="button underline room-type">staff</p>
-            <p id="bathroom" class="button underline room-type">W.C.</p>
+          </div>
+
+          <div id="floor-message" class="text grid-8 grid-h-7 absolute type-32">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Select a tower first.</p>
           </div>
 
           <div id="up-arrow-2" class="close text absolute button">
