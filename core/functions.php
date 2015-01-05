@@ -95,6 +95,8 @@ function getTeacherData() {
   }
   if ($room_floor != 1){
     echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Office at <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
+  } else {
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Office at <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 }
 
@@ -156,6 +158,8 @@ function getRoomData() {
 
   if ($room_floor != 1){
     echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
+  } else {
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
   }
 
 }
@@ -218,6 +222,8 @@ function getServiceData() {
 
   if ($room_floor != 1){
     echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-10 grid-h-10 button type-32 regular underline"><div id="current-floor-2" floor="'.$room_floor.'" class="step">Switch to floor 1</div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';
+  } else {
+    echo '<div class="text button absolute grid-2 grid-h-10 button type-32 regular"><div id="floor-desc">Located on <b>'.$office_parse.'</b></div></div><div class="text button absolute grid-31 grid-h-10 button type-32 regular"><div id="showing-floor-2" floor="'.$room_floor.'" class="step">Showing Floor <b>'.$room_floor.'</b></div></div>';    
   }
 }
 
