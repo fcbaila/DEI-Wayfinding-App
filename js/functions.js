@@ -842,6 +842,9 @@ function filterFloor() {
   }, 0);
 }
 
+
+var count = 0;
+
 function filterRoom(room) {
   var res = room.split("-");
   for(var k = 0; k <= 6; k++) {
@@ -859,11 +862,25 @@ function filterRoom(room) {
       }
     }
   }
-  clickRoom(click_slot);
+  checkRoom(click_slot);
 }
 
-function clickRoom(room) {
-  var r_z = $(room).attr("room");
-  filterRoom(r_z);
-  return;
+function checkRoom(room) {
+  var pp = $(room).attr("room");
+  var res = pp.split("-");
+  for(var k = 0; k <= 6; k++) {
+    for (var j = 1; j <= map_count; j++) {
+      var r_z = $(".slot_side_"+k+"_"+j).attr("floor");
+      var r_x = $(".slot_side_"+k+"_"+j).attr("r_x");
+      var r_y = $(".slot_side_"+k+"_"+j).attr("r_y");
+      $(".slot_side_"+k+"_"+j).animate({opacity: '0.3'}, 100);
+      for(var i = 0; i < res.length; i++) {
+        var res_2 = res[i].split(", ");
+        if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
+          $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
+          click_slot = ".slot_side_"+k+"_"+j;
+        }
+      }
+    }
+  }
 }
