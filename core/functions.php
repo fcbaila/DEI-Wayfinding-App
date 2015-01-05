@@ -151,7 +151,7 @@ function getRoomData() {
     ;
   }
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="first-floor" class="step">First Floor</div></div>';
+    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
   }
 }
 
@@ -210,7 +210,7 @@ function getServiceData() {
   , '</script>'
   ;
   if ($room_floor != 1){
-    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="first-floor" class="step">First Floor</div></div>';
+    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="current-floor" floor="'.$room_floor.'" class="step">Current Floor ('.$room_floor.')</div></div>';
   }
 }
 
