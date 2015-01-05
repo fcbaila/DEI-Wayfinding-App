@@ -5,7 +5,6 @@
 require('core/ref.php');
 require('core/init.php');
 require('core/functions.php');
-require('core/footer.php');
 ?>
 
 <div id="wrapper">
@@ -46,54 +45,7 @@ require('core/footer.php');
 		<div id="map-feedback" class="text medium absolute grid-h-26 grid-2 type-32">
 			<p>Touch the map to select an area.</p>
 		</div>
-<!--
-		<div id="search-free" class="grid-2 grid-h-22 search-bar absolute type-38">
-			<input type="text" id="text-search" class="text search input" placeholder="search">
-		</div>
 
-		<div id="map-filter" class="text grid-16 grid-h-22 absolute type-38">
-			<p id="inside-p-filter">
-				<div class="key-m" id="a">A</div>
-				<div class="key-m" id="b">B</div>
-				<div class="key-m" id="c">C</div>
-				<div class="key-m" id="d">D</div>
-				<div class="key-m" id="e">E</div>
-				<div class="key-m" id="f">F</div>
-				<div class="key-m" id="g">G</div>
-				<div class="key-m" id="h">H</div>
-				<div class="key-m" id="i">I</div>
-				<div class="key-m" id="j">J</div>
-				<div class="key-m" id="k">K</div>
-				<div class="key-m" id="l">L</div>
-				<div class="key-m" id="m">M</div>
-				<div class="key-m" id="n">N</div>
-				<div class="key-m" id="o">O</div>
-				<div class="key-m" id="p">P</div>
-				<div class="key-m" id="q">Q</div>
-				<div class="key-m" id="r">R</div>
-				<div class="key-m" id="s">S</div>
-				<div class="key-m key-break" id="t">T</div>
-				<div class="key-m" id="u">U</div>
-				<div class="key-m" id="v">V</div>
-				<div class="key-m" id="x">X</div>
-				<div class="key-m" id="y">Y</div>
-				<div class="key-m" id="w">W</div>
-				<div class="key-m" id="z">Z</div>
-			</p>
-			<p>
-				<div class="key-m" id="1">1</div>
-				<div class="key-m" id="2">2</div>
-				<div class="key-m" id="3">3</div>
-				<div class="key-m" id="4">4</div>
-				<div class="key-m" id="5">5</div>
-				<div class="key-m" id="6">6</div>
-				<div class="key-m" id=".">.</div>
-				<div class="key-m" id="space">" "</div>
-				<div class="key-m" id="back"><—</div>
-				<div id="clean">clean</div>
-			</p>
-		</div>
--->
 		<div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
 		</div>
 
@@ -107,5 +59,5 @@ require('core/footer.php');
 </div>
 
 <?php
-
+	require('core/footer.php');
 ?>

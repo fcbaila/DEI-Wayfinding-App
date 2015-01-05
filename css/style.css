@@ -354,12 +354,8 @@ a{
   margin-bottom:2px !important;
   margin-left:2px !important;
   margin-right:2px !important;
-  pointer-events: all;
+  pointer-events: all !important;
   float: left;
-}
-
-.slot_empty {
-  opacity: 0.3;
 }
 
 #map-filter{
