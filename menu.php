@@ -36,7 +36,7 @@ require('core/functions.php');
           <div id="opt-3" class="opts">A Service</div>
         </div>
 
-        <div id="search" class="text absolute grid-h-25 grid-2 button type-48 underline medium">
+        <div id="search" class="text absolute grid-h-27 grid-2 button type-48 underline medium">
           <p><b2>Free Search</b2></p>
         </div>
 

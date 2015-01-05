@@ -308,6 +308,7 @@ app.keyboard = function() {
       $(".side_"+cfloor).fadeOut(300);
       $(".side_"+new_floor).fadeIn(600);
       $('#c-floor').html(new_floor);
+      $('#step-current').html("Currently in <b>Floor "+new_floor+"</b>");
     }
   });
 
@@ -318,6 +319,18 @@ app.keyboard = function() {
       $(".side_"+cfloor).fadeOut(300);
       $(".side_"+new_floor).fadeIn(600);
       $('#c-floor').html(new_floor);
+      $('#step-current').html("Currently in <b>Floor "+new_floor+"</b>");
+    }
+  });
+
+  $("#step-i").click(function() {
+    var cfloor = document.getElementById('c-floor').innerHTML;
+    if(cfloor < 6) {
+      new_floor = parseInt(cfloor,10)+1;
+      $(".side_"+cfloor).fadeOut(300);
+      $(".side_1").fadeIn(600);
+      $('#c-floor').html("1");
+      $('#step-current').html("Currently in <b>Floor 1</b>");
     }
   });
 
@@ -760,8 +773,11 @@ function transitionLoop_2 (view, floor, block) {
     if (loop_2 < map_count+1) {
       transitionLoop_2(view, floor, block);
     } else {
-      $('#step-up').fadeIn(100);
-      $('#step-down').fadeIn(100);
+      $('#step-current').fadeIn(300);
+      $('#step-current').html("Currently in <b>Floor "+floor+"</b>");
+      $('#step-i').fadeIn(300);
+      $('#step-up').fadeIn(300);
+      $('#step-down').fadeIn(300);
       return;
     }
   }, 10);
@@ -874,7 +890,7 @@ function filterRoom(room) {
       for(var i = 0; i < res.length; i++) {
         var res_2 = res[i].split(", ");
         if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
-          $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
+          $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 100);
           click_slot = ".slot_side_"+k+"_"+j;
         }
       }
@@ -904,5 +920,8 @@ function checkRoom(room) {
 }
 
 function getName(name) {
-  document.getElementById('map-feedback').innerHTML = '<p>You destination is <b>'+ name +'</b>. <br>Follow the path on the map.</p>';
+  if(!name || name == "Corredor" || name == "Outdoor Passage") {
+  } else {
+    document.getElementById('map-feedback').innerHTML = '<p>You destination is <b>'+ name +'</b>. Follow the path on the map.</p>';
+  }
 }
