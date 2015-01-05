@@ -43,7 +43,7 @@ require('core/functions.php');
 		</div>
 
 		<div id="map-feedback" class="text medium absolute grid-h-26 grid-2 type-32">
-			<p>Touch the map to select an area.</p>
+			<p>This is <b>DEI's</b> map. Touch it to select a tower.</p>
 		</div>
 
 		<div id="clock" class="text absolute grid-32 grid-h-2 button type-24">

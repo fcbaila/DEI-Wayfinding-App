@@ -150,6 +150,9 @@ function getRoomData() {
     , '</script>'
     ;
   }
+  if ($room_floor != 1){
+    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="first-floor" class="step">First Floor</div></div>';
+  }
 }
 
 function getServices() {
@@ -206,6 +209,9 @@ function getServiceData() {
   , 'filterRoom("'.$room_number.'");'
   , '</script>'
   ;
+  if ($room_floor != 1){
+    echo '<div class="text button underline absolute grid-25 grid-h-8 button type-32 regular"><div id="first-floor" class="step">First Floor</div></div>';
+  }
 }
 
 function showFrontMap() {
