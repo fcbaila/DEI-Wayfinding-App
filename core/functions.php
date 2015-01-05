@@ -29,6 +29,7 @@ function getTeacherData() {
     }
   }
   $room_id = 0;
+  $room_floor = 0;
   $office = mysql_query("SELECT * from office_hours WHERE teacher_id = '$teacher_id' LIMIT 3");
   if (!$office || mysql_num_rows($office) == 0) {
     echo 'There are no office hours available at the moment.';
@@ -43,11 +44,31 @@ function getTeacherData() {
       } else {
         while($fetch_rooms = mysql_fetch_object($room)){
           echo '<p class="button underline office">'.$fetch_office_hours->weekday.' from '.$fetch_office_hours->hour_begin.'.00 to '.$fetch_office_hours->hour_end.'.00 at '.$fetch_rooms->room_block.''.$fetch_rooms->room_floor.'.'.$fetch_rooms->room_number.'</p>';
+          $room_floor = $fetch_rooms->room_floor;
           }
       }
     }
+
+    $room_loc = mysql_query("SELECT * FROM map_slots WHERE room_id = $room_id LIMIT 1");
+
+    if($room_loc) {
+      while ($row = mysql_fetch_object($room_loc)) {
+        $room_number = $row->floor_id.', '.$row->map_x.', '.$row->map_y;
+      }
+    }
+
     echo '</div>';
-    echo '<div id="construct_mapa" class="grid-2 grid-h-13" style="background-color: red;">'.showMap(1).'</div>';
+    echo '<div id="construct_mapa" class="grid-2 grid-h-13 side_1" style="display:none;">';
+    echo showMap(1);
+    echo '</div>';
+
+    echo '<div id="construct_mapa" class="grid-2 grid-h-13 side_'.$room_floor.'">';
+    echo showMap($room_floor);
+    echo '</div>';
+    echo '<script type="text/javascript">'
+    , 'filterRoom("'.$room_number.'");'
+    , '</script>'
+    ;
   }
 }
 

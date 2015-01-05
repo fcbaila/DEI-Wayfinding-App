@@ -851,7 +851,6 @@ function filterRoom(room) {
         var res_2 = res[i].split(", ");
         if(r_z == res_2[0] && r_x == res_2[1] && r_y == res_2[2]){
           $(".slot_side_"+k+"_"+j).animate({opacity: '1'}, 300);
-          console.log('MATCH: '+r_z+' '+r_x+' '+r_y);
         }
       }
     }

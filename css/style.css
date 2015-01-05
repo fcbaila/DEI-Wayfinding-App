@@ -346,6 +346,7 @@ a{
   height: calc(32px * 16);
   pointer-events: none;
 }
+
 .mapa_slot {
   width: 60px;
   height: 60px;
@@ -353,9 +354,10 @@ a{
   margin-bottom:2px !important;
   margin-left:2px !important;
   margin-right:2px !important;
-  float: left;
   pointer-events: all;
+  float: left;
 }
+
 #map-filter{
   width: calc(32px * 23);
   pointer-events: none;
