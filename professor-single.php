@@ -23,6 +23,11 @@ require('core/footer.php');
       <div id="page_container">
         <?php getTeacherData(); ?>
 
+<<<<<<< HEAD
+=======
+        <div id="map-feedback" class="text medium absolute grid-2 grid-h-11 type-32">
+        </div>
+>>>>>>> FETCH_HEAD
 
         <div id="clock" class="text absolute grid-32 grid-h-2 button type-24">
         </div>
