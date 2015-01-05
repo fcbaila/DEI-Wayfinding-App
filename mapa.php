@@ -13,17 +13,6 @@ require('core/functions.php');
 
 <div id="construct_container">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<div id="grid_container">
-		<?php /*
-		for($i = 1; $i <= 40; $i++) {
-			echo '<div class="grid"></div>';
-		}
-
-		for($i = 1; $i <= 32; $i++) {
-			echo '<div class="grid-h"></div>';
-		} */
-		?>
-	</div>
 	<div id="frame" class="absolute">
 		<div id="frame-top" class="absolute"></div>
 		<div id="frame-right" class="absolute"></div>
